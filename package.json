@@ -35,6 +35,7 @@
     "build": "webpack --env production --mode production"
   },
   "dependencies": {
-    "autoprefixer": "^9.7.0"
+    "autoprefixer": "^9.7.0",
+    "locomotive-scroll": "^4.1.3"
   }
 }

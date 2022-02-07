@@ -2,5 +2,11 @@
 extends _base/_layout
 block content
     include components/_header
-    
-    include components/_footer
+    include components/_spines
+    main(data-scroll-container) 
+        
+        include components/_cover
+        include components/_section1
+        include components/_section2
+        include components/_section3
+        include components/_section4
