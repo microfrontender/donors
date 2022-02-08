@@ -14,14 +14,12 @@ export default function Scroller() {
 	let spines = document.querySelectorAll('.spine[data-spine-section]');
 
 
-	scroll.on('scroll', (args) => {
+	scroll.on('scroll', () => {
 
-		spines.forEach((spine, index) => {
+		spines.forEach((spine) => {
 			let attr = spine.getAttribute('data-spine-section');
 			let section = document.querySelector(`section[data-spine-section='${attr}']`);
-			// console.log(spine.offsetWidth * attr);
-			// if (section.getBoundingClientRect().left <= window.innerWidth && section.getBoundingClientRect().left >= 0) {
-
+			
 				if (section.getBoundingClientRect().left <= spine.offsetWidth * attr ) {
 					spine.classList.add('fixed');
 					spine.classList.remove('active');
@@ -41,15 +39,13 @@ export default function Scroller() {
 				}
 
 
-
-			// }
 		});
 	});
 
 
-	scroll.scrollTo(document.querySelector('#section-1'),{
-		duration: 10,
-		offset: -64
-	});
+	// scroll.scrollTo(document.querySelector('#section-1'),{
+	// 	duration: 10,
+	// 	offset: -64
+	// });
 	
 }

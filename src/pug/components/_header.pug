@@ -5,3 +5,92 @@ header.header
         .spine__title.header__title Инфографика х donorsearch
         .header__social
             include ../../img/social.svg
+
+    .header__popup
+        .header__menu
+            .header__menu-inner 
+                .header__menu-item.header__menu-item--main
+                    a(href="#").header__menu-link Главная
+                    .header__menu-img
+                        img(src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
+                
+                .header__menu-item.header__menu-item--prep
+                    .header__menu-number 01
+                    a(href="#").header__menu-link Подготовка
+                    .header__menu-img
+                        img(src=require('../../img/menu-icon-2.png') srcset=require('../../img/menu-icon-2-2x.png') + ' 2x' alt="")
+                
+                .header__menu-item.header__menu-item--donation
+                    .header__menu-number 02
+                    a(href="#").header__menu-link Сдача 
+                        span
+                        | крови
+                    .header__menu-img
+                        img(src=require('../../img/menu-icon-3.png') srcset=require('../../img/menu-icon-3-2x.png') + ' 2x' alt="")
+                
+                .header__menu-item.header__menu-item--test
+                    .header__menu-number 03
+                    a(href="#").header__menu-link Куда идет кровь
+                    .header__menu-img
+                        img(src=require('../../img/menu-icon-4.png') srcset=require('../../img/menu-icon-4-2x.png') + ' 2x' alt="")
+                
+                .header__menu-item.header__menu-item--benefit
+                    .header__menu-number 04
+                    a(href="#").header__menu-link Польза 
+                        span
+                        | для донора
+                    .header__menu-img
+                        img(src=require('../../img/menu-icon-5.png') srcset=require('../../img/menu-icon-5-2x.png') + ' 2x' alt="")
+                
+                .header__menu-item.header__menu-item--about
+                
+                    a(href="#").header__menu-link О проекте
+                    .header__menu-img
+                        img(src=require('../../img/menu-icon-6.png') srcset=require('../../img/menu-icon-6-2x.png') + ' 2x' alt="")
+        .header__about
+            .header__about-inner
+                h2.header__about-title О проекте
+                .header__about-body 
+                    .header__about-col
+                        .header__about-text Проект «Быть донором» создан агентством Инфографика в партнерстве с некоммерческой организацией DonorSearch. Если у вас остались вопросы про донорство крови, на которые мы не ответили, напишите нам в соцсетях!
+                        .header__about-socials
+                            a(href="").header__about-social
+                            a(href="").header__about-social
+                            a(href="").header__about-social
+                            a(href="").header__about-social
+                            a(href="").header__about-social
+                        .header__about-text Если вы хотите помочь, но не можете быть донором — поделитесь этим проектом с друзьями!
+                    .header__about-col
+                        .header__about-team
+                            .header__about-team-title Команда проекта
+                            .header__about-team-row 
+                                span Идея:
+                                span 
+                                    a(href="https://infografika.agency/" target="_blank")  Агентство Инфографика
+                                    |, 
+                                    a(href="https://donorsearch.org/" target="_blank") DonorSeаrch 
+                            .header__about-team-row 
+                                span Руководитель проекта: 
+                                span Ирина Подгурская
+                            .header__about-team-row 
+                                span Арт-директор: 
+                                span Артем Колеганов
+                            .header__about-team-row 
+                                span Дизайн: 
+                                span Анастасия Балагурова
+                            .header__about-team-row 
+                                span Иллюстрации и анимация: 
+                                span Лиза Романова
+                            .header__about-team-row 
+                                span Разработка: 
+                                span Алексей Калиновский
+                            .header__about-team-row 
+                                span Типографика: 
+                                span 
+                                    a(href="https://typetype.org/ru/" target="_blank") TypeType
+
+                button.header__about-back
+                    .header__about-back-img   
+                        img(src=require('../../img/arrow-down.svg'), alt="")                
+                    .header__about-back-text Обратно в меню                   
+    //- .header__about
