@@ -8,6 +8,7 @@ export default function Scroller() {
 		el: document.querySelector('[data-scroll-container]'),
 		smooth: true,
 		direction: 'horizontal',
+		resetNativeScroll: false
 	});
 
 	let spines = document.querySelectorAll('.spine[data-spine-section]');
@@ -18,10 +19,10 @@ export default function Scroller() {
 		spines.forEach((spine, index) => {
 			let attr = spine.getAttribute('data-spine-section');
 			let section = document.querySelector(`section[data-spine-section='${attr}']`);
+			// console.log(spine.offsetWidth * attr);
+			// if (section.getBoundingClientRect().left <= window.innerWidth && section.getBoundingClientRect().left >= 0) {
 
-			if (section.getBoundingClientRect().left < window.innerWidth && section.getBoundingClientRect().left > 0) {
-
-				if (section.getBoundingClientRect().left <= spine.offsetWidth * attr) {
+				if (section.getBoundingClientRect().left <= spine.offsetWidth * attr ) {
 					spine.classList.add('fixed');
 					spine.classList.remove('active');
 					spine.style.left = '';
@@ -41,7 +42,7 @@ export default function Scroller() {
 
 
 
-			}
+			// }
 		});
 	});
 
@@ -50,15 +51,5 @@ export default function Scroller() {
 		duration: 10,
 		offset: -64
 	});
-	// function jump(h){
-	// 	let url = location.href;              
-	// 	let spine = document.querySelector(`.spine[data-spine-section='${h}']`);
-	// 	console.log(spine);
-	// 	location.href = "#section-"+h;         
-	// 	history.replaceState(null,null,url);  
-	// 	spine.classList = 'spine fixed';
-	// }
-	// jump('1');
-
-	// document.querySelector('#section-2').scrollIntoView(true);
+	
 }
