@@ -3,7 +3,117 @@ section( data-spine-section="1")#section-1.section.prep
 	.container 
 		.section__inner.prep__inner
 			.section__header 
-				h2.prep__title Что нужно, чтобы стать донором
-				.prep__title Какой центр сдачи крови выбрать, что можно есть накануне и что нужно взять с собой
-			.section__body 
-				.prep
+				h2.section__title.prep__title Что нужно, чтобы стать донором
+				.section__subtitle.title.prep__subtitle Какой центр сдачи крови выбрать, что можно есть накануне и что нужно взять с собой
+			.section__body.prep__body
+				.prep__bg
+					.prep__img.prep__img--1
+						picture
+							//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-1.png')+', ' + require('../../img/prep-img-1-2x.png')+' 2x')
+							img(src=require('../../img/prep-img-1.png') srcset=require('../../img/prep-img-1-2x.png')+' 2x' alt="")
+					.prep__img.prep__img--2
+						picture
+							//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-3.png')+', ' + require('../../img/prep-img-3-2x.png')+' 2x')
+							img(src=require('../../img/prep-img-3.png') srcset=require('../../img/prep-img-3-2x.png')+' 2x' alt="")
+				.prep__items
+					.prep__item.prep__item--1
+						.prep__number 01
+						.prep__text Проверьте, что у вас нет 
+							span.prep__hover противопоказаний.
+						
+					.prep__item.prep__item--2
+						.prep__number 02
+						.prep__text Выберите удобный центр сдачи крови в своем городе и сверьтесь 
+							span.prep__hover с «Донорским светофором».
+					.prep__item.prep__item--3
+						.prep__number 03
+						.prep__text Запланируйте сдачу крови через 3 полных дня, утром четвертого дня.
+						
+					.prep__item.prep__item--4
+						.prep__number 04
+						.prep__list
+							.prep__list-item.prep__list-item--1 
+								.prep__list-title за 3 дня до сдачи
+								.prep__list-text Не принимайте анальгетики и аспирин.
+							.prep__list-item.prep__list-item--2 
+								.prep__list-title за 2 дня
+								.prep__list-text Не пейте алкоголь.
+							.prep__list-item.prep__list-item--3 
+								.prep__list-title за 1 день
+								.prep__list-text 
+									span.prep__hover Соблюдайте диету.
+
+					.prep__food.food 
+						.food__item
+							.food__desc Посмотри, какие продукты 
+								br
+								|можно есть накануне 
+								br
+								|сдачи крови
+							.food__img 
+								picture
+									//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-mobile-2x.png')+' 2x')
+									img(src=require('../../img/prep-img-2.png') srcset=require('../../img/prep-img-2-2x.png')+' 2x' alt="")
+							.food__img.food__img--open 
+								picture
+									//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-mobile-2x.png')+' 2x')
+									img(src=require('../../img/prep-img-2-open.png') srcset=require('../../img/prep-img-2-open-2x.png')+' 2x' alt="")
+							.food__icon
+								img(src=require('../../img/food-icon.svg'), alt="")
+						.food__popup
+							.food__wrap
+								.food__bg 
+									picture
+										//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-mobile-2x.png')+' 2x')
+										img(src=require('../../img/food-popup.png') srcset=require('../../img/food-popup-2x.png')+' 2x' alt="")
+								.food__btns
+									.food__btn.active Нельзя
+									.food__btn Можно
+								.food__tabs
+									.food__tab.food__tab--1.active
+										.food__tab-img
+											picture
+												//- source(media="(max-width: 767px)", srcset=require('../../img/tab-items-1-mobile.png')+', ' + require('../../img/tab-items-1-mobile-2x.png')+' 2x')
+												img(src=require('../../img/tab-items-1.png') srcset=require('../../img/tab-items-1-2x.png')+' 2x' alt="")
+										.food__tab-items
+											.food__tab-item.food__tab-item--1 жирное
+											.food__tab-item.food__tab-item--2 острое
+											.food__tab-item.food__tab-item--3 копченое
+											.food__tab-item.food__tab-item--4 яйца, жирные мясо и рыба
+											.food__tab-item.food__tab-item--5 масло и молочные продукты
+											.food__tab-item.food__tab-item--6 орехи и финики
+											.food__tab-item.food__tab-item--7 шоколад
+											.food__tab-item.food__tab-item--8 бананы, авокадо
+											.food__tab-item.food__tab-item--9 свёклу и чернику
+
+									.food__tab.food__tab--2
+										.food__tab-img
+											picture
+												//- source(media="(max-width: 767px)", srcset=require('../../img/tab-items-2-mobile.png')+', ' + require('../../img/tab-items-2-mobile-2x.png')+' 2x')
+												img(src=require('../../img/tab-items-2.png') srcset=require('../../img/tab-items-2-2x.png')+' 2x' alt="")
+										.food__tab-items
+											.food__tab-item.food__tab-item--10 фрукты (кроме бананов)
+											.food__tab-item.food__tab-item--11 тушеные овощи или на пару
+											.food__tab-item.food__tab-item--12 свежие овощи
+											.food__tab-item.food__tab-item--13 каши без масла и на воде (греча, овсянка, рис)
+											.food__tab-item.food__tab-item--14 макароны без масла
+											.food__tab-item.food__tab-item--15 хлеб
+											.food__tab-item.food__tab-item--16 соки, морсы, компоты
+											.food__tab-item.food__tab-item--17 кофе без молока/сливок и чай
+
+					.prep__item.prep__item--5
+						.prep__number 05
+						.prep__text Хорошо позавтракайте утром перед сдачей крови.
+					.prep__item.prep__item--6
+						.prep__number 06
+						.prep__text За 1 час до сдачи крови не курите.
+					.prep__item.prep__item--7
+						.prep__number 07
+						.prep__text Перед выходом не забудьте паспорт.
+					.section__find.prep__find 
+						.section__find-text Теперь вы знаете, как происходит донация крови
+						a(href="").section__find-btn Найти свой
+							span 
+							| центр сдачи крови
+							.section__find-btn-icon 
+								img(src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")

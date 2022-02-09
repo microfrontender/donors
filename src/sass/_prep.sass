@@ -1,1 +1,117 @@
 .prep
+	&__title
+		width: 36.56rem
+
+	&__subtitle
+		width: 31.56rem
+	&__body
+		padding-right: 43.75rem
+	&__bg
+		height: 100%
+		width: 100%
+		position: absolute
+		display: flex
+		align-items: flex-start
+		justify-content: flex-start
+		
+		pointer-events: none
+	&__img
+		position: absolute
+		&--1
+			top: 0
+			left: 0
+			width: 142.31rem
+			height: 43.69rem
+		&--2
+			top: 0
+			right: 0
+			width: 200.50rem
+			height: 46.38rem
+	&__items
+		padding-bottom: 2.50rem
+		display: flex
+		align-items: flex-end
+		height: 100%
+	&__item
+		&--1
+			width: 13.06rem
+		&--2
+			margin-left: 21.25rem
+			width: 16.94rem
+		&--3
+			margin-left: 17.69rem
+			width: 17.88rem
+		&--4
+			margin-left: 17.13rem
+			width: 54.88rem
+		&--5
+			margin-left: 17.81rem
+			width: 16.69rem
+		&--6
+			margin-left: 59.19rem
+			width: 11.13rem
+		&--7
+			margin-left: 6.56rem
+			width: 12.88rem
+	&__number
+		font-size: 3.75rem
+		line-height: 4.88rem
+		color: $dark-purple
+		font-weight: 500
+		font-family: 'TT Travels Next', sans-serif
+
+	&__text
+		line-height: 1.31rem
+	&__hover
+		position: relative
+		font-style: italic
+		color: $dark-purple
+		cursor: pointer
+		&::after
+			position: absolute
+			content: ''
+			left: 0
+			bottom: -0.06rem
+			width: calc(100% - 0.16rem)
+			height: 0
+			border-bottom: 0.06rem dashed rgba(120, 92, 186, 0.3)
+	&__list
+		display: flex
+		align-items: flex-start
+		justify-content: flex-start
+	&__list-item
+		position: relative
+		&::after
+			position: absolute
+			content: ''
+			top: 0.69rem
+			height: 0.03rem
+			background: $almost-black
+		&--1
+			width: 11.13rem
+			&::after
+				right: -8.63rem
+				width: 8.25rem
+		&--2
+			margin-left: 10.31rem
+			width: 9.25rem
+			&::after
+				right: -10.81rem
+				width: 13.56rem
+		&--3
+			margin-left: 11.38rem
+			width: 12.81rem
+			&::after
+				display: none
+	&__list-title
+
+		font-family: 'TT Travels Next', sans-serif
+		font-weight: bold
+	&__list-text
+	&__food
+		margin-left: -16.9rem
+		margin-bottom: 7.6rem
+	&__find
+		margin-left: 15.50rem
+		margin-bottom: 18.3rem
+		width: 23.88rem

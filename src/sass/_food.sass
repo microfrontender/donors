@@ -1,0 +1,163 @@
+.food
+	position: relative
+	min-width: 19.13rem
+	height: 30.38rem
+	
+	&.open
+		.food__img
+			display: none
+		.food__img--open
+			display: block
+		
+		.food__popup
+			opacity: 1
+	&.active
+		
+		.food__popup
+			pointer-events: auto
+		.food__btns
+			transform: translateY(0rem)
+			opacity: 1
+		.food__tabs
+			opacity: 1
+		.food__desc
+			opacity: 0
+		.food__icon
+			opacity: 0
+	&__item
+		position: absolute
+		top: 0
+		left: -1rem
+		width: 19.13rem
+		height: 30.38rem
+		z-index: 10
+		cursor: pointer
+	&__desc
+		position: absolute
+		top: -4.63rem
+		left: 0
+		width: 19.13rem
+		text-align: center
+		text-transform: uppercase
+		font-family: 'TT Travels Next', sans-serif
+		font-size: 0.63rem
+		line-height: 0.81rem
+		font-weight: 500
+		letter-spacing: 0.05em
+		color: #4D4D4D
+		transition: opacity ease 0.5s
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		height: 30.38rem
+		width: 19.13rem
+		pointer-events: none
+		&--open
+			width: 36.94rem
+			height: 43.69rem
+			left: 1.3rem
+			top: -8.8rem
+			display: none
+	&__icon
+		position: absolute
+		top: -1.25rem
+		right: 2.13rem
+		width: 3.38rem
+		height: 3.38rem
+		border-radius: 50%
+		z-index: 10
+		transition: opacity ease 0.5s
+		
+	&__popup
+		position: relative
+		top: -1.4rem
+		left: 2rem
+		width: 13.83rem
+		opacity: 0
+		height: 100%
+		overflow: hidden
+		transition: width ease 1s
+		pointer-events: none
+	&__wrap
+		position: absolute
+		top: 0
+		right: 0
+		width: 68.25rem
+		height: 26.75rem
+	&__btns
+		position: absolute
+		left: 33rem
+		top: 0.25rem
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 11.75rem
+		height: 2.31rem
+		border-radius: 0.50rem
+		overflow: hidden
+		box-shadow: 0px 20px 30px rgba(19, 30, 183, 0.3)
+		z-index: 1
+		transform: translateY(2rem);
+		opacity: 0
+		transition: all ease 1s
+	&__btn
+		width: 50%
+		height: 100%
+		background: $white
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		font-family: 'TT Travels Next', sans-serif
+		font-size: 0.75rem
+		font-weight: 500
+		cursor: pointer
+		&.active
+			background: $yellow
+	&__tabs
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		transition: opacity ease 1s
+	&__tab
+		position: absolute
+		top: 3.31rem
+		left: 18.25rem
+		padding-left: 7.38rem
+		width: 41.7rem
+		height: 20.63rem
+		
+		display: none
+		&.active
+			display: block
+		&--2
+			padding-left: 6.58rem
+			width: 43.8rem
+			.food__tab-item
+				width: 8.28rem
+	&__tab-img
+		position: absolute
+		top: 0
+		left: 0
+		width: 35.88rem
+	&__tab-items
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		align-content: space-between
+	&__tab-item
+		width: 6.24rem
+		height: 33%
+		display: flex
+		align-items: center
+		color: $white
+		// &--3
+		// 	margin-right: 5.68rem
+		// &--6
+		// 	margin-right: 4.18rem
