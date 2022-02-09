@@ -1,5 +1,6 @@
 
-section( data-spine-section="1")#section-1.section.prep
+section( data-spine-section="1")#prep.section.prep
+
 	.container 
 		.section__inner.prep__inner
 			.section__header 
@@ -15,20 +16,44 @@ section( data-spine-section="1")#section-1.section.prep
 						picture
 							//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-3.png')+', ' + require('../../img/prep-img-3-2x.png')+' 2x')
 							img(src=require('../../img/prep-img-3.png') srcset=require('../../img/prep-img-3-2x.png')+' 2x' alt="")
+
+				.prep__slider 
+					.prep__slider-btns
+						.prep__slider-btn.prep__slider-btn--prev
+							img(src=require('../../img/arrow-slider.svg'), alt="")
+						.prep__slider-btn.prep__slider-btn--next
+							img(src=require('../../img/arrow-slider.svg'), alt="")
+					.prep__slider-wrap 
+						.prep__slider-slide.prep__slider-slide--1.show
+							.prep__slider-title Завтрак №1
+							.prep__slider-text Овсянка с изюмом, сладкий кофе, тост, яблоко
+							.prep__slider-img
+						.prep__slider-slide.prep__slider-slide--2
+							.prep__slider-title Завтрак №2
+							.prep__slider-text Салат из свежих овощей, черный хлеб, компот
+							.prep__slider-img
+								picture
+									img(src=require('../../img/prep-slide-2.png') srcset=require('../../img/prep-slide-2-2x.png')+' 2x' alt="")
+						.prep__slider-slide.prep__slider-slide--3
+							.prep__slider-title Завтрак №3
+							.prep__slider-text Отварной картофель, свежие овощи, булочка, сладкий чай
+							.prep__slider-img
+								picture
+									img(src=require('../../img/prep-slide-3.png') srcset=require('../../img/prep-slide-3-2x.png')+' 2x' alt="")
 				.prep__items
 					.prep__item.prep__item--1
 						.prep__number 01
 						.prep__text Проверьте, что у вас нет 
-							span.prep__hover противопоказаний.
-						
+							span.section__hover.prep__hover(data-hint='0') противопоказаний.
+
 					.prep__item.prep__item--2
 						.prep__number 02
 						.prep__text Выберите удобный центр сдачи крови в своем городе и сверьтесь 
-							span.prep__hover с «Донорским светофором».
+							span.section__hover.prep__hover(data-hint='1') с «Донорским светофором».
 					.prep__item.prep__item--3
 						.prep__number 03
 						.prep__text Запланируйте сдачу крови через 3 полных дня, утром четвертого дня.
-						
+
 					.prep__item.prep__item--4
 						.prep__number 04
 						.prep__list
@@ -41,7 +66,7 @@ section( data-spine-section="1")#section-1.section.prep
 							.prep__list-item.prep__list-item--3 
 								.prep__list-title за 1 день
 								.prep__list-text 
-									span.prep__hover Соблюдайте диету.
+									span.section__hover.prep__hover(data-hint='2') Соблюдайте диету.
 
 					.prep__food.food 
 						.food__item
@@ -117,3 +142,33 @@ section( data-spine-section="1")#section-1.section.prep
 							| центр сдачи крови
 							.section__find-btn-icon 
 								img(src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
+
+	.section__hints
+		.section__hint.section__hint--1(data-hint='0')
+			.section__hint-body 
+				.section__hint-close 
+					img(src=require('../../img/close-hint.svg'), alt="")
+				.section__hint-title Критерии допуска к сдаче крови
+				.section__hint-text
+					ul 
+						li Возраст от 18 лет
+						li Вес от 50 кг. и индекс массы тела от 18,5 и не более 40
+						li Температура тела 37  °С и ниже
+						li Пульс от 55 до 95 ударов в минуту
+						li Давление — 90–149 мм рт. ст. (систолическое), 60–89 мм рт. ст. (диастолическое)
+						li Отсутствие противопоказаний из списка 
+							a(href="#") абсолютных и временных противопоказаний
+		.section__hint.section__hint--2(data-hint='1')
+			.section__hint-body 
+				.section__hint-close 
+					img(src=require('../../img/close-hint.svg'), alt="")
+				.section__hint-title Донорский светофор — что это?
+				.section__hint-text
+					p Центры сдачи крови актуализируют информацию о своих запасах. В центре Х может быть нехватка B(III) Rh-, а в центре Y — может заканчиваться 0(I) Rh+. 
+					p Вы можете выбрать тот центр, где вам удобнее, или тот, где есть потребность в вашей группе крови. Даже если в удобном вам центре ваша группа крови отмечена зеленым цветом на светофоре — это не значит, что она не нужна.
+		.section__hint.section__hint--3(data-hint='2')
+			.section__hint-body 
+				.section__hint-close 
+					img(src=require('../../img/close-hint.svg'), alt="")
+				.section__hint-title Почему важно соблюдать диету перед сдачей крови?
+				.section__hint-text Когда вы едите жирную пищу или животные белки, в крови повышается уровень жиров (триглицеридов). Это проходящее состояние, но при повышенных триглицеридах кровь для сдачи непригодна. Жиры препятствуют разделению крови на компоненты, а значит, такая кровь будет утилизирована.

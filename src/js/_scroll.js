@@ -45,7 +45,7 @@ export default function Scroller() {
 
 	// scroll.scrollTo(document.querySelector('#section-1'),{
 	// 	duration: 10,
-	// 	offset: 4000
+	// 	offset: 2564
 	// });
 	
 }

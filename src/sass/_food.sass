@@ -11,6 +11,11 @@
 		
 		.food__popup
 			opacity: 1
+		
+		.food__desc
+			opacity: 0
+		.food__icon
+			opacity: 0
 	&.active
 		
 		.food__popup
@@ -20,10 +25,6 @@
 			opacity: 1
 		.food__tabs
 			opacity: 1
-		.food__desc
-			opacity: 0
-		.food__icon
-			opacity: 0
 	&__item
 		position: absolute
 		top: 0
@@ -45,7 +46,7 @@
 		font-weight: 500
 		letter-spacing: 0.05em
 		color: #4D4D4D
-		transition: opacity ease 0.5s
+		// transition: opacity ease 0.5s
 	&__img
 		position: absolute
 		top: 0
@@ -67,7 +68,7 @@
 		height: 3.38rem
 		border-radius: 50%
 		z-index: 10
-		transition: opacity ease 0.5s
+		// transition: opacity ease 0.5s
 		
 	&__popup
 		position: relative
