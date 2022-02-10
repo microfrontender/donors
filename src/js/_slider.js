@@ -1,7 +1,7 @@
 export default function Slider(){
 
-	let sliderBtnPrev= document.querySelector('.prep__slider-btn--prev');
-	let sliderBtnNext= document.querySelector('.prep__slider-btn--next');
+	let sliderBtnPrev= document.querySelector('.slider__btn--prev');
+	let sliderBtnNext= document.querySelector('.slider__btn--next');
 	
 	let currentSlide = 1 ;
 
@@ -25,8 +25,8 @@ export default function Slider(){
 		}else{
 			sliderBtnNext.style.visibility = 'visible';
 		}
-		document.querySelector('.prep__slider-slide.show').classList.remove('show');
-		document.querySelector(`.prep__slider-slide--${index}`).classList.add('show');
+		document.querySelector('.slider__slide.show').classList.remove('show');
+		document.querySelector(`.slider__slide--${index}`).classList.add('show');
 	};
 
 	setSlide(1);

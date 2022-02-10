@@ -7,3 +7,81 @@ section( data-spine-section="2")#donation.section.donation
 				h2.section__title.donation__title Что происходит в центре сдачи крови
 				.section__subtitle.title.donation__subtitle Вся процедура от входа в центр сдачи крови до выхода из него занимает 1-2 часа.
 			.section__body.donation__body
+				.donation__bg
+					.donation__img.donation__img--1
+						picture
+							//- source(media="(max-width: 767px)", srcset=require('../../img/donation-img-1.png')+', ' + require('../../img/donation-img-1-2x.png')+' 2x')
+							source(media="(min-width: 1921px)", srcset=require('../../img/donation-img-1-2x.png'))
+							img(src=require('../../img/donation-img-1.png') srcset=require('../../img/donation-img-1-2x.png')+' 2x' alt="")
+					.donation__img.donation__img--2
+						picture
+							//- source(media="(max-width: 767px)", srcset=require('../../img/donation-img-3.png')+', ' + require('../../img/donation-img-3-2x.png')+' 2x')
+							img(src=require('../../img/donation-img-2.png') srcset=require('../../img/donation-img-2-2x.png')+' 2x' alt="")
+				.donation__items
+					.donation__item.donation__item--1
+						.donation__title Регистрация
+						.donation__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+					.donation__item.donation__item--2
+						.donation__title Осмотр у врача
+						.donation__text Пройдите беседу с врачом-трансфузиологом. Сдайте экспресс-анализ крови из пальца.
+					.donation__item.donation__item--3
+						.donation__title Донация крови
+						.donation__text Донор садится в комфортное донорское кресло.
+					.donation__item.donation__item--4
+						.donation__text На предплечье ему накладывают резиновый жгут и дезинфицируют кожу.
+					.donation__item.donation__item--5
+						.donation__text При заборе крови или ее компонентов используются только стерильные одноразовые инструменты.
+					.donation__item.donation__item--6
+						.donation__text В конце процедуры на локтевой сгиб накладывается повязка — ее можно снять через 4 часа. Не мочите и не напрягайте руку, чтобы избежать синяков.
+					.donation__item.donation__item--7
+						.donation__text Отдохните 15 минут после донации. Получите справку о донации и компенсацию на обед.
+					.donation__item.donation__item--8
+						.donation__title Ура, вы сдали кровь! А что делать дальше?
+					.donation__circles.circles 
+						.circles__img 
+							.circles__man.circles__man--1
+								picture
+									img(src=require('../../img/circles-man-1.png') srcset=require('../../img/circles-man-1-2x.png')+' 2x' alt="") 
+							
+							.circles__man.circles__man--2
+								picture
+									img(src=require('../../img/circles-man-2.png') srcset=require('../../img/circles-man-2-2x.png')+' 2x' alt="") 
+							
+						.circles__desc 
+							.circles__desc-icon
+								img(src=require('../../img/icon-hand.svg'), alt="")
+							.circles__desc-text выберите, что делать дальше
+						.circles__wrap
+							.circles__path.circles__path--top
+								.circles__body 	
+									.circles__front
+										.circles__title Хочу сдавать кровь регулярно
+									.circles__back 
+										.circles__img 
+											picture
+												img(src=require('../../img/circles-img-1.png') srcset=require('../../img/circles-img-1-2x.png')+' 2x' alt="")
+										.circles__items
+											.circles__item.circles__item--1 Рекомендуемый интервал — 60 дней между сдачами.
+											.circles__item.circles__item--2 Есть ограничение по количеству донаций: мужчинам 5 раз в год, женщинам — 4 раза.
+											.circles__item.circles__item--3 Летом и зимой центры сдачи крови особенно рады донорам, так как в эти периоды поток донаций сокращается.
+							.circles__path-img
+								picture
+									img(src=require('../../img/circles-path-img.png') srcset=require('../../img/circles-path-img-2x.png')+' 2x' alt="") 
+							.circles__path.circles__path--bottom
+								.circles__body 	
+									.circles__front
+										.circles__title Пока не знаю наверняка
+									.circles__back
+										.circles__img 
+											picture
+												img(src=require('../../img/circles-img-2.png') srcset=require('../../img/circles-img-2-2x.png')+' 2x' alt="")
+										.circles__items
+											.circles__item.circles__item--4 Через 120 дней (около 4 месяцев) после донации нужно обязательно вернуться в центр и сдать анализ на вирусы и скрытые инфекции.
+											.circles__item.circles__item--5 Плазма, которую вы сдавали, хранится на карантине и может быть использована только после подтверждения, что вы по-прежнему здоровы.
+					.section__find.donation__find 
+						.section__find-text Теперь вы знаете, как происходит донация крови
+						a(href="").section__find-btn Найти свой
+							span 
+							| центр сдачи крови
+							.section__find-btn-icon 
+								img(src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")

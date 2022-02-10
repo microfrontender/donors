@@ -6,3 +6,25 @@ section( data-spine-section="3")#test.section.test
 				h2.section__title.test__title Что будут делать с моей кровью
 				.section__subtitle.title.test__subtitle Чтобы убедиться, что кровь донора безопасна, каждая сданная доза проходит исследования и карантин
 			.section__body.test__body
+				.test__bg
+					.test__img
+						picture
+							//- source(media="(max-width: 767px)", srcset=require('../../img/test-img-1.png')+', ' + require('../../img/test-img-1-2x.png')+' 2x')
+							source(media="(min-width: 1921px)", srcset=require('../../img/test-img-1-2x.png'))
+							img(src=require('../../img/test-img-1.png') srcset=require('../../img/test-img-1-2x.png')+' 2x' alt="")
+				.test__items
+					.test__item.test__item--1
+						.test__title Регистрация
+						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+					.test__item.test__item--2
+						.test__title Регистрация
+						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+					.test__item.test__item--3
+						.test__title Регистрация
+						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+					.test__item.test__item--4
+						.test__title Регистрация
+						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+					.test__item.test__item--5
+						.test__title Регистрация
+						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
