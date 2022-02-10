@@ -12,21 +12,44 @@ export default function Scroller() {
 	});
 
 	let spines = document.querySelectorAll('.spine[data-spine-section]');
+	let wrap = document.querySelector('.wrap');
 
+	window.onresize = ()=>{
+		// scroll.update();
+		console.log('ddd');
+	};
+	window.addEventListener("resize", ()=>{
+		scroll.update();
+		console.log('ddd');
+	});
+
+	let updater = false;
+	function updateScroll(){
+		if(!updater){
+			updater = true;
+			
+			setTimeout(()=>{
+				scroll.update();
+				updater = false;
+			}, 5000);
+		}
+	}
 
 	scroll.on('scroll', () => {
-
+		updateScroll();
 		spines.forEach((spine) => {
 			let attr = spine.getAttribute('data-spine-section');
 			let section = document.querySelector(`section[data-spine-section='${attr}']`);
 			
 				if (section.getBoundingClientRect().left <= spine.offsetWidth * attr ) {
 					spine.classList.add('fixed');
+					spine.classList.remove('init');
 					spine.classList.remove('active');
 					spine.style.left = '';
 				} else if (section.getBoundingClientRect().left >= window.innerWidth - spine.offsetWidth * (5 - attr)) {
 					spine.classList.add('init');
 					spine.classList.remove('active');
+					spine.classList.remove('fixed');
 					spine.style.left = '';
 				} else {
 					spine.classList.add('active');
@@ -43,9 +66,9 @@ export default function Scroller() {
 	});
 
 
-	// scroll.scrollTo(document.querySelector('#section-1'),{
-	// 	duration: 10,
-	// 	offset: 2564
-	// });
+	scroll.scrollTo(document.querySelector('#prep'),{
+		duration: 10,
+		offset: 2700
+	});
 	
 }

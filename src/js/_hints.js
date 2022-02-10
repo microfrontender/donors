@@ -1,7 +1,7 @@
 export default function Hints(){
 
 	let hoverItem = document.querySelectorAll('.section__hover');
-	let hints = document.querySelector('.section__hints');
+	let currentHintParent ;
 	let currentHint ;
 
 	hoverItem.forEach(element => {
@@ -11,16 +11,16 @@ export default function Hints(){
 	});
 	
 	const showHint = (index)=>{
-		console.log(index);
+		
 		currentHint = document.querySelector(`.section__hint[data-hint='${index}']`);
-		console.log(currentHint);
-		hints.classList.add('show');
+		currentHintParent = currentHint.closest('.section__hints');
+		currentHintParent.classList.add('show');
 		currentHint.classList.add('show');
 		currentHint.addEventListener('mouseleave', hideHint);
 	}
 	const hideHint = ()=>{
 		currentHint.classList.remove('show');
-		hints.classList.remove('show');
+		currentHintParent.classList.remove('show');
 		currentHint.removeEventListener('mouseleave', hideHint, false);
 		currentHint = null;
 	}

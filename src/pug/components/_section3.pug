@@ -14,17 +14,65 @@ section( data-spine-section="3")#test.section.test
 							img(src=require('../../img/test-img-1.png') srcset=require('../../img/test-img-1-2x.png')+' 2x' alt="")
 				.test__items
 					.test__item.test__item--1
-						.test__title Регистрация
-						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+						.test__title Проверка крови
+						.test__text Определяется группа крови и резус, другие параметры, отсутствие инфекций. Если при исследовании обнаружится то, что может быть опасно для вашего здоровья, — вам обязательно сообщат, соблюдая конфиденциальность.
 					.test__item.test__item--2
-						.test__title Регистрация
-						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+						.test__title Разделение на компоненты 
+						.test__text Каждую дозу цельной крови разделяют на плазму, тромбоциты и эритроцитную взвесь. Пациент получает именно тот компонент, который ему необходим. Так кровь одного донора может спасти несколько жизней.
 					.test__item.test__item--3
-						.test__title Регистрация
-						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+						.test__title 120 дней карантина 
+						.test__text В карантине проходит 
+							span.section__hover.prep__hover(data-hint='3') серонегативный период инфекции.
+							| Все это время компоненты хранятся в холодильниках.
 					.test__item.test__item--4
-						.test__title Регистрация
-						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+						.test__text Далее кровь отправляется в медицинские учреждения в специальных термоизоляционных контейнерах или рефрижераторах.
+
 					.test__item.test__item--5
-						.test__title Регистрация
-						.test__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
+						.test__title Где нужна донорская кровь
+						.test__text У донорской крови много назначений, но в основном ее везут в больницы — там она нужна всегда.
+					.test__accordions 
+						.accordion.accordion--1 
+							.accordion__header
+								.accordion__icon 
+									img(src=require('../../img/icon-accordion.svg'), alt="")
+								.accordion__title Реанимация
+							.accordion__body В экстренных ситуациях используют все компоненты: плазму для лечения шоковых состояний, эритроцитную взвесь — при потере крови, тромбоциты — для онкобольных.
+						.accordion.accordion--2
+							.accordion__header
+								.accordion__icon 
+									img(src=require('../../img/icon-accordion.svg'), alt="")
+								.accordion__title Родильное отделение
+							.accordion__body Донорская плазма помогает при лечении сбоев в свертываемости крови и больших кровопотерях.
+						.accordion.accordion--3
+							.accordion__header
+								.accordion__icon 
+									img(src=require('../../img/icon-accordion.svg'), alt="")
+								.accordion__title Лаборатория
+							.accordion__body В некоторых случаях донорскую кровь используют для научных медицинских исследований, когда использование другого материала невозможно.
+						.accordion.accordion--4
+							.accordion__header
+								.accordion__icon 
+									img(src=require('../../img/icon-accordion.svg'), alt="")
+								.accordion__title Стационар
+							.accordion__body Для проведения плановых операций каждый стационар нуждается во всех типах и компонентах крови.
+						.accordion.accordion--5
+							.accordion__header
+								.accordion__icon 
+									img(src=require('../../img/icon-accordion.svg'), alt="")
+								.accordion__title Производство медикаментов
+							.accordion__body При производстве иммунологических и кровеостанавливающих лекарств используют различные компоненты донорской крови.
+					.section__find.test__find 
+						.section__find-text Теперь вы знаете, кому помогает ваша кровь
+						a(href="").section__find-btn Найти свой
+							span 
+							| центр сдачи крови
+							.section__find-btn-icon 
+								img(src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
+
+	.section__hints
+		.section__hint.section__hint--1(data-hint='3')
+			.section__hint-body 
+				.section__hint-close 
+					img(src=require('../../img/close-hint.svg'), alt="")
+				.section__hint-title Серонегативный период инфекции
+				.section__hint-text Период, когда человек уже заразился, но вирус еще нельзя определить
