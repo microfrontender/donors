@@ -13,9 +13,17 @@
       .header__title 
          color: $white
       svg
+         overflow: unset
          path 
             fill: $white
             stroke: $white
+      .burger-line--up
+         transform: rotate(45deg) translate(0, 0.4rem)
+      .burger-line--center
+         opacity: 0
+      .burger-line--bottom
+         transform: rotate(-45deg) translate(0, -0.4rem)
+
    &__spine
       border-left: none !important
       border-right: 0.06rem solid $beige
@@ -23,6 +31,8 @@
       pointer-events: auto !important
    &__burger
       cursor: pointer
+      svg
+         overflow: unset
    &__title
       transform: rotate(-90deg) !important
 
@@ -202,3 +212,7 @@
       font-weight: 500
       font-size: 0.75rem
       font-family: 'TT Travels Next', sans-serif
+
+.burger-line
+   transition: all ease 0.5s
+   transform-origin: center center
