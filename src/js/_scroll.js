@@ -12,17 +12,7 @@ export default function Scroller() {
 	});
 
 	let spines = document.querySelectorAll('.spine[data-spine-section]');
-	let wrap = document.querySelector('.wrap');
-
-	window.onresize = ()=>{
-		// scroll.update();
-		console.log('ddd');
-	};
-	window.addEventListener("resize", ()=>{
-		scroll.update();
-		console.log('ddd');
-	});
-
+	
 	let updater = false;
 	function updateScroll(){
 		if(!updater){
@@ -66,9 +56,9 @@ export default function Scroller() {
 	});
 
 
-	scroll.scrollTo(document.querySelector('#prep'),{
-		duration: 10,
-		offset: 2700
-	});
+	// scroll.scrollTo(document.querySelector('#benefit'),{
+	// 	duration: 10,
+	// 	offset: -276
+	// });
 	
 }
