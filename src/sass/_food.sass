@@ -1,7 +1,7 @@
 .food
 	position: relative
-	min-width: 19.13rem
-	height: 30.38rem
+	min-width: 20.75rem
+	height: 37.75rem
 	
 	&.open
 		.food__img
@@ -23,21 +23,24 @@
 		.food__btns
 			transform: translateY(0rem)
 			opacity: 1
+		.food__picture
+			transform: translateY(0rem)
+			opacity: 1
 		.food__tabs
 			opacity: 1
 	&__item
 		position: absolute
 		top: 0
 		left: -1rem
-		width: 19.13rem
-		height: 30.38rem
+		width: 20.75rem
+		height: 37.75rem
 		z-index: 10
 		cursor: pointer
 	&__desc
 		position: absolute
-		top: -4.63rem
+		top: -4.13rem
 		left: 0
-		width: 19.13rem
+		width: 20.75rem
 		text-align: center
 		text-transform: uppercase
 		font-family: 'TT Travels Next', sans-serif
@@ -51,19 +54,19 @@
 		position: absolute
 		top: 0
 		left: 0
-		height: 30.38rem
-		width: 19.13rem
+		height: 37.75rem
+		width: 20.75rem
 		pointer-events: none
 		&--open
 			width: 36.94rem
 			height: 43.69rem
-			left: 1.3rem
-			top: -8.8rem
+			left: 2.6rem
+			top: -8.7rem
 			display: none
 	&__icon
 		position: absolute
-		top: -1.25rem
-		right: 2.13rem
+		top: -0.85rem
+		right: 2.03rem
 		width: 3.38rem
 		height: 3.38rem
 		border-radius: 50%
@@ -72,23 +75,35 @@
 		
 	&__popup
 		position: relative
-		top: -1.4rem
+		top: -7rem
 		left: 2rem
 		width: 13.83rem
 		opacity: 0
-		height: 100%
+		height: 32.50rem
 		overflow: hidden
 		transition: width ease 1s
 		pointer-events: none
 	&__wrap
 		position: absolute
-		top: 0
+		bottom: 0
 		right: 0
-		width: 68.25rem
+		width: 71.00rem
 		height: 26.75rem
+	&__bg
+		width: 68.25rem
+	&__picture
+		position: absolute
+		width: 17.44rem
+		height: 11.50rem
+		top: -5.9rem
+		right: 1.1rem
+		
+		opacity: 0
+		transition: all ease 1s
+		transform: translateY(3rem)
 	&__btns
 		position: absolute
-		left: 33rem
+		left: 31.9rem
 		top: 0.25rem
 		display: flex
 		align-items: center
@@ -99,7 +114,7 @@
 		overflow: hidden
 		box-shadow: 0px 20px 30px rgba(19, 30, 183, 0.3)
 		z-index: 1
-		transform: translateY(2rem);
+		transform: translateY(2rem)
 		opacity: 0
 		transition: all ease 1s
 	&__btn
@@ -127,7 +142,7 @@
 	&__tab
 		position: absolute
 		top: 3.31rem
-		left: 18.25rem
+		left: 17.65rem
 		padding-left: 7.38rem
 		width: 41.7rem
 		height: 20.63rem

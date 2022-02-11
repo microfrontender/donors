@@ -56,9 +56,9 @@ export default function Scroller() {
 	});
 
 
-	// scroll.scrollTo(document.querySelector('#benefit'),{
-	// 	duration: 10,
-	// 	offset: -276
-	// });
+	scroll.scrollTo(document.querySelector('#prep'),{
+		duration: 10,
+		// offset: -276
+	});
 	
 }

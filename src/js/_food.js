@@ -4,7 +4,7 @@ export default function Menu(){
 	let foodItem = document.querySelector('.food__item');
 	let foodPopup = document.querySelector('.food__popup');
 	let foodWrap = document.querySelector('.food__wrap');
-	let foodPopupWidth = foodPopup.offsetWidth;
+	let foodPopupWidth = foodItem.offsetWidth*.85;
 	let food__btns = document.querySelectorAll('.food__btn');
 	let open = false;
 	let isActive = false;
