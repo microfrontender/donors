@@ -56,7 +56,7 @@ export default function Scroller() {
 	});
 
 
-	scroll.scrollTo(document.querySelector('#prep'),{
+	scroll.scrollTo(document.querySelector('#donation'),{
 		duration: 10,
 		// offset: -276
 	});
