@@ -2,27 +2,37 @@ header.header
     .header__spine.spine
         .header__burger
             include ../../img/burger.svg 
-        .spine__title.header__title Инфографика х donorsearch
+        .spine__title.header__title(data-spine-section="0" data-href='cover') Инфографика х donorsearch
         .header__social
             include ../../img/social.svg
-
+            .header__social-wrap 
+                .header__social-link.header__social-link--link
+                    include ../../img/icon-link.svg
+                .header__social-link.header__social-link--tg
+                    include ../../img/icon-tg.svg
+                .header__social-link.header__social-link--tw
+                    include ../../img/icon-tw.svg
+                .header__social-link.header__social-link--fb
+                    include ../../img/icon-fb.svg
+                .header__social-link.header__social-link--vk
+                    include ../../img/icon-vk.svg
     .header__popup
         .header__menu
             .header__menu-inner 
                 .header__menu-item.header__menu-item--main
-                    a(href="#").header__menu-link Главная
+                    div(data-href='cover').header__menu-link Главная
                     .header__menu-img
                         img(src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
                 
                 .header__menu-item.header__menu-item--prep
                     .header__menu-number 01
-                    a(href="#").header__menu-link Подготовка
+                    div(data-href='prep').header__menu-link Подготовка
                     .header__menu-img
                         img(src=require('../../img/menu-icon-2.png') srcset=require('../../img/menu-icon-2-2x.png') + ' 2x' alt="")
                 
                 .header__menu-item.header__menu-item--donation
                     .header__menu-number 02
-                    a(href="#").header__menu-link Сдача 
+                    div(data-href='donation').header__menu-link Сдача 
                         span
                         | крови
                     .header__menu-img
@@ -30,13 +40,13 @@ header.header
                 
                 .header__menu-item.header__menu-item--test
                     .header__menu-number 03
-                    a(href="#").header__menu-link Куда идет кровь
+                    div(data-href='test').header__menu-link Куда идет кровь
                     .header__menu-img
                         img(src=require('../../img/menu-icon-4.png') srcset=require('../../img/menu-icon-4-2x.png') + ' 2x' alt="")
                 
                 .header__menu-item.header__menu-item--benefit
                     .header__menu-number 04
-                    a(href="#").header__menu-link Польза 
+                    div(data-href='benefit').header__menu-link Польза 
                         span
                         | для донора
                     .header__menu-img
@@ -44,7 +54,7 @@ header.header
                 
                 .header__menu-item.header__menu-item--about
                 
-                    a(href="#").header__menu-link О проекте
+                    .header__menu-link О проекте
                     .header__menu-img
                         img(src=require('../../img/menu-icon-6.png') srcset=require('../../img/menu-icon-6-2x.png') + ' 2x' alt="")
         .header__about
@@ -52,14 +62,16 @@ header.header
                 h2.header__about-title О проекте
                 .header__about-body 
                     .header__about-col
-                        .header__about-text Проект «Быть донором» создан агентством Инфографика в партнерстве с некоммерческой организацией DonorSearch. Если у вас остались вопросы про донорство крови, на которые мы не ответили, напишите нам в соцсетях!
+                        .header__about-text
+                            p Проект «Быть донором» создан агентством Инфографика в партнерстве с некоммерческой организацией DonorSearch. Если у вас остались вопросы про донорство крови, на которые мы не ответили, напишите нам в соцсетях!
+                            p Если вы хотите помочь, но не можете быть донором — поделитесь этим проектом с друзьями!
                         .header__about-socials
                             a(href="").header__about-social
                             a(href="").header__about-social
                             a(href="").header__about-social
                             a(href="").header__about-social
                             a(href="").header__about-social
-                        .header__about-text Если вы хотите помочь, но не можете быть донором — поделитесь этим проектом с друзьями!
+                            
                     .header__about-col
                         .header__about-team
                             .header__about-team-title Команда проекта
@@ -85,9 +97,9 @@ header.header
                                 span Разработка: 
                                 span Алексей Калиновский
                             .header__about-team-row 
-                                span Типографика: 
+                                span Шрифт TT Travels Next 
                                 span 
-                                    a(href="https://typetype.org/ru/" target="_blank") TypeType
+                                    a(href="https://typetype.org/ru/" target="_blank") от студии TypeType 
 
                 button.header__about-back
                     .header__about-back-img   

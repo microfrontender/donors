@@ -8,6 +8,8 @@ export default function Scroller() {
 		el: document.querySelector('[data-scroll-container]'),
 		smooth: true,
 		direction: 'horizontal',
+		gestureDirection: 'both',
+		touchMultiplier: 1,
 		resetNativeScroll: false
 	});
 
@@ -56,6 +58,45 @@ export default function Scroller() {
 	});
 
 
+
+	const menuItems = document.querySelectorAll('.header__menu-link[data-href]');
+	
+	const spineItems = document.querySelectorAll('.spine[data-href], .spine__title[data-href]');
+	const header = document.querySelector('.header');
+	
+	const burger = document.querySelector('.header__burger');
+	const headerSpine = document.querySelector('.header__spine');
+	const popup = document.querySelector('.header__popup');
+
+	menuItems.forEach((item, index) => {
+		item.addEventListener('click', ()=>{
+			let href = item.getAttribute('data-href');
+			closePopup();
+			goToSection(href, index);
+			
+		});
+	});
+
+	spineItems.forEach((item) => {
+		item.addEventListener('click', ()=>{
+			let href = item.getAttribute('data-href');
+			let index = item.getAttribute('data-spine-section')
+			goToSection(href, index);
+			
+		});
+	});
+	function closePopup(){
+		
+		burger.classList.remove('header__burger--open');
+		header.classList.remove('header--open');
+		popup.classList = 'header__popup';
+	}
+	function goToSection(href, index){
+		scroll.scrollTo(document.querySelector(`#${href}`),{
+			duration: 100,
+			offset: 1-headerSpine.offsetWidth*index,
+		});
+	}
 	// scroll.scrollTo(document.querySelector('#benefit'),{
 	// 	duration: 10,
 	// 	// offset: -276

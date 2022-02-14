@@ -6,45 +6,50 @@
 	height: 100%
 	z-index: 100
 	pointer-events: none
+.has-scroll-scrolling
+	.spine
+		
+		pointer-events: none
 .spine
 	position: absolute
 	top: 0
 	left: 0
-	width: 4rem
+	width: 4.13rem
 	height: 100%
 	z-index: 100
-	padding: 2.3rem 1.25rem
+	padding: 2rem 1.25rem
 	display: flex
 	align-items: center
 	flex-direction: column
 	justify-content: space-between
 	background: $bg
-	pointer-events: none
+	pointer-events: auto
+	cursor: pointer
 	border-left: 0.06rem solid $beige
 	font-family: 'TT Travels Next', sans-serif
 	font-weight: 500
 	&[data-spine-section='1']
 		&.init
-			left: calc(100vw - (4rem * 4))
+			left: calc(100vw - (4.13rem * 4))
 		&.fixed
-			left: calc(4rem*1)
+			left: calc(4.13rem*1)
 
 			border-left: none
 	&[data-spine-section='2']
 		&.init
-			left: calc(100vw - (4rem * 3))
+			left: calc(100vw - (4.13rem * 3))
 		&.fixed
-			left: calc(4rem*2)
+			left: calc(4.13rem*2)
 	&[data-spine-section='3']
 		&.init
-			left: calc(100vw - (4rem * 2))
+			left: calc(100vw - (4.13rem * 2))
 		&.fixed
-			left: calc(4rem*3)
+			left: calc(4.13rem*3)
 	&[data-spine-section='4']
 		&.init
-			left: calc(100vw - (4rem * 1))
+			left: calc(100vw - (4.13rem * 1))
 		&.fixed
-			left: calc(4rem*4)
+			left: calc(4.13rem*4)
 
 	&__title
 		position: relative
