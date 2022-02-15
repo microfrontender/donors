@@ -11,7 +11,7 @@ section( data-spine-section="3")#test.section.test
 						picture
 							//- source(media="(max-width: 767px)", srcset=require('../../img/test-img-1.png')+', ' + require('../../img/test-img-1-2x.png')+' 2x')
 							source(media="(min-width: 1921px)", srcset=require('../../img/test-img-1-2x.png'))
-							img(src=require('../../img/test-img-1.png') srcset=require('../../img/test-img-1-2x.png')+' 2x' alt="")
+							img(loading="lazy" src=require('../../img/test-img-1.png') srcset=require('../../img/test-img-1-2x.png')+' 2x' alt="")
 				.test__items
 					.test__item.test__item--1
 						.test__item-title Проверка крови
@@ -34,35 +34,35 @@ section( data-spine-section="3")#test.section.test
 						.accordion.accordion--1
 							.accordion__header
 								.accordion__icon 
-									img(src=require('../../img/icon-accordion.svg'), alt="")
+									img(loading="lazy" src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Реанимация
 							.accordion__body
 								.accordion__inner В экстренных ситуациях используют все компоненты: плазму для лечения шоковых состояний, эритроцитную взвесь — при потере крови, тромбоциты — для онкобольных.
 						.accordion.accordion--2
 							.accordion__header
 								.accordion__icon 
-									img(src=require('../../img/icon-accordion.svg'), alt="")
+									img(loading="lazy" src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Родильное отделение
 							.accordion__body
 								.accordion__inner Донорская плазма помогает при лечении сбоев в свертываемости крови и больших кровопотерях.
 						.accordion.accordion--3
 							.accordion__header
 								.accordion__icon 
-									img(src=require('../../img/icon-accordion.svg'), alt="")
+									img(loading="lazy" src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Лаборатория
 							.accordion__body
 								.accordion__inner В некоторых случаях донорскую кровь используют для научных медицинских исследований, когда использование другого материала невозможно.
 						.accordion.accordion--4
 							.accordion__header
 								.accordion__icon 
-									img(src=require('../../img/icon-accordion.svg'), alt="")
+									img(loading="lazy" src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Стационар
 							.accordion__body
 								.accordion__inner Для проведения плановых операций каждый стационар нуждается во всех типах и компонентах крови.
 						.accordion.accordion--5
 							.accordion__header
 								.accordion__icon 
-									img(src=require('../../img/icon-accordion.svg'), alt="")
+									img(loading="lazy" src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Производство медикаментов
 							.accordion__body
 								.accordion__inner При производстве иммунологических и кровеостанавливающих лекарств используют различные компоненты донорской крови.
@@ -72,12 +72,12 @@ section( data-spine-section="3")#test.section.test
 							span 
 							| центр сдачи крови
 							.section__find-btn-icon 
-								img(src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
+								img(loading="lazy" src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
 
 	.section__hints
 		.section__hint.section__hint--4(data-hint='3')
 			.section__hint-body 
 				.section__hint-close 
-					img(src=require('../../img/close-hint.svg'), alt="")
+					img(loading="lazy" src=require('../../img/close-hint.svg'), alt="")
 				.section__hint-title Серонегативный период инфекции
 				.section__hint-text Период, когда человек уже заразился, но вирус еще нельзя определить

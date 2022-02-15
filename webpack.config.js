@@ -8,6 +8,7 @@ const babel = require('./webpack/babel');
 const sass = require('./webpack/sass');
 const uglifyjs = require('./webpack/uglifyjs');
 const images = require('./webpack/images');
+const imagesWebp = require('./webpack/imagesWebp');
 const files = require('./webpack/files');
 const php = require('./webpack/php');
 const fonts = require('./webpack/fonts');
@@ -51,7 +52,6 @@ const common = merge([
   pug(),
   babel(),
   sass(),
-  images(),
   files(),
   php(),
   fonts()
@@ -61,12 +61,14 @@ module.exports = function(env) {
   if (env === 'production'){
       return merge([
           common,
+          imagesWebp(),
           uglifyjs()
       ]);
   }
   if (env === 'development'){
       return merge([
           common,
+          images(),
           devserver()
       ])
   }

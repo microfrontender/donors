@@ -6,18 +6,18 @@ section( data-spine-section="4")#benefit.section.benefit
 				h2.section__title.benefit__title Зачем мне быть донором
 				.section__subtitle.title.benefit__subtitle Сдача крови полезна не только пациенту, нуждающемуся в переливании, но и самому донору.
 				.section__icon.benefit__icon
-					img(src=require('../../img/benefit-icon.png') srcset=require('../../img/benefit-icon-2x.png')+' 2x' alt="")
+					img(loading="lazy" src=require('../../img/benefit-icon.png') srcset=require('../../img/benefit-icon-2x.png')+' 2x' alt="")
 			.section__body.benefit__body
 				.benefit__bg
 					.benefit__img.benefit__img--1
 						picture
 							//- source(media="(max-width: 767px)", srcset=require('../../img/benefit-img-1.png')+', ' + require('../../img/benefit-img-1-2x.png')+' 2x')
 							source(media="(min-width: 1921px)", srcset=require('../../img/benefit-img-1-2x.png'))
-							img(src=require('../../img/benefit-img-1.png') srcset=require('../../img/benefit-img-1-2x.png')+' 2x' alt="")
+							img(loading="lazy" src=require('../../img/benefit-img-1.png') srcset=require('../../img/benefit-img-1-2x.png')+' 2x' alt="")
 					.benefit__img.benefit__img--2
 						picture
 							//- source(media="(max-width: 767px)", srcset=require('../../img/benefit-img-3.png')+', ' + require('../../img/benefit-img-3-2x.png')+' 2x')
-							img(src=require('../../img/benefit-img-2.png') srcset=require('../../img/benefit-img-2-2x.png')+' 2x' alt="")
+							img(loading="lazy" src=require('../../img/benefit-img-2.png') srcset=require('../../img/benefit-img-2-2x.png')+' 2x' alt="")
 				.benefit__items
 					.benefit__item.benefit__item--1
 						.benefit__item-title Регулярная проверка здоровья
@@ -41,6 +41,6 @@ section( data-spine-section="4")#benefit.section.benefit
 							span 
 							| центр сдачи крови
 							.section__find-btn-icon 
-								img(src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
+								img(loading="lazy" src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
 				.benefit__logo 
-					img(src=require('../../img/logo-end.svg'), alt="")
+					img(loading="lazy" src=require('../../img/logo-end.svg'), alt="")
