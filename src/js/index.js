@@ -11,8 +11,14 @@ import Slider from './_slider';
 import Circles from './_circles';
 import Accordion from './_accordion';
 import LazyLoad from "vanilla-lazyload";
+import Page from './_mobile-pages';
 Menu();
-Scroller();
+if(window.innerWidth > 767){
+
+	Scroller();
+}else{
+	Page();
+}
 Food();
 Hints();
 Slider();

@@ -69,7 +69,7 @@ h2
     align-items: center
     justify-content: center
     color: $white
-    
+
     font-family: 'TT Travels Next', sans-serif
     font-weight: 500
     font-size: 0.75rem
@@ -82,4 +82,45 @@ h2
         width: 0.75rem
         height: 1.25rem
         margin-right: 0.38rem
-    
+
+@media screen and ( max-width: 768px )
+    html
+        font-size: 4.267vw
+    body
+        overflow: unset
+    main
+        height: auto
+        overflow: unset
+    .wrap
+        flex-direction: column
+        width: 100%
+    h1, h2
+        font-size: 3.75rem
+        line-height: 3.63rem
+    .page-cover
+        .cover
+            display: block
+        .header__number
+            display: none
+        .spines
+            height: calc(100% + 2.88rem*4)
+    .page-prep
+        .prep
+            display: block
+        .spines
+            height: calc(100% + 2.88rem*3)
+    .page-donation
+        .donation
+            display: block
+        .spines
+            height: calc(100% + 2.88rem*2)
+    .page-test
+        .test
+            display: block
+        .spines
+            height: calc(100% + 2.88rem*1)
+    .page-benefit
+        .benefit
+            display: block
+        .spines
+            height: calc(100%)

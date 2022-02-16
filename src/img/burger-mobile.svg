@@ -1,0 +1,5 @@
+<svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="burger-line burger-line--center" d="M6 5.51056L19 5.51056" stroke="#BBA67B" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="burger-line burger-line--up" d="M1 0.668427H19" stroke="#BBA67B" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="burger-line burger-line--bottom" d="M1 10.3527H19" stroke="#BBA67B" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

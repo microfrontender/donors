@@ -7,12 +7,14 @@ section( data-spine-section="1")#prep.section.prep
 			.section__header.prep__header
 			
 				h2.section__title.prep__title Что нужно, чтобы стать донором
-				.section__subtitle.title.prep__subtitle Какой центр сдачи крови выбрать, что можно есть накануне и что нужно взять с собой
+				.section__subtitle.prep__subtitle Какой центр сдачи крови выбрать, что можно есть накануне и что нужно взять с собой
 				.prep__checklist-wrap#prep__header
 					a(href="" data-scroll data-scroll-sticky data-scroll-target="#prep__header").prep__checklist 
 						.prep__checklist-icon 
 							img(  src=require('../../img/arrow-down-white.svg'), alt="")
 						span Скачать чек-лист
+				.section__arrow 
+					img(src=require('../../img/arrow-down-mobile.png'), alt="")
 			.section__body.prep__body
 				.prep__bg
 					.prep__lottie.prep__lottie--1 
@@ -20,7 +22,7 @@ section( data-spine-section="1")#prep.section.prep
 					
 					.prep__img.prep__img--1.lazy
 						picture
-							//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-1.png')+', ' + require('../../img/prep-img-1-2x.png')+' 2x')
+							source(media="(max-width: 767px)", srcset=require('../../img/prep-img-1-mobile.png')+', ' + require('../../img/prep-img-1-2x-mobile.png')+' 2x')
 							img(  data-src=require('../../img/prep-img-1.png') data-srcset=require('../../img/prep-img-1-2x.png')+' 2x' alt="")
 					.prep__img.prep__img--2.lazy
 						picture
@@ -95,7 +97,7 @@ section( data-spine-section="1")#prep.section.prep
 									//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-mobile-2x.png')+' 2x')
 									img(  data-src=require('../../img/prep-img-2-open.png') data-srcset=require('../../img/prep-img-2-open-2x.png')+' 2x' alt="")
 							.food__icon
-								img(  src=require('../../img/food-icon.svg'), alt="")
+								include ../../img/food-icon.svg
 						.food__popup.lazy
 							.food__wrap
 								.food__bg 

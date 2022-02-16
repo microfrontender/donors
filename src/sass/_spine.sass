@@ -65,3 +65,54 @@
 		font-size: 0.75rem
 		line-height: 1.06rem
 		color: #9A9281
+
+@media screen and ( max-width: 768px )
+	.spines
+		position: absolute
+	.spine
+		width: 100%
+		height: 2.88rem
+		border-left: none
+		border-top: 0.06rem solid $beige
+		padding: 0 1.25rem
+		top: unset
+		flex-direction: row-reverse
+		justify-content: flex-end
+		align-items: center
+		&.init
+			left: 0 !important
+			bottom: 0
+		&[data-spine-section='1']
+			&.init
+				left: 0
+				bottom: calc(2.88rem*3)
+		&[data-spine-section='2']
+			&.init
+				left: 0
+				bottom: calc(2.88rem*2)
+		&[data-spine-section='3']
+			&.init
+				left: 0
+				bottom: calc(2.88rem*1)
+		&[data-spine-section='4']
+			&.init
+				left: 0
+				bottom: 0
+		&__title
+			transform: none
+			color: #BBA67B
+		&__number
+            display: block
+            margin-right: 2.55rem
+            position: relative
+            font-size: 0.75rem
+            line-height: 1.06rem
+            color: #BBA67B
+            &::after
+                position: absolute
+                content: ''
+                top: 50%
+                left: calc(100% + 0.4rem)
+                width: 1.75rem
+                height: 0.06rem
+                background: #BBA67B

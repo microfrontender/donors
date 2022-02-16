@@ -21,6 +21,8 @@
 		font-size: 1.25rem
 		line-height: 1.50rem
 		opacity: 0.7
+	&__arrow
+		display: none
 	&__body
 		height: 100%
 		position: relative
@@ -165,3 +167,35 @@
 			line-height: 1.29rem
 		p+p
 			margin-top: 0.6rem
+
+@media screen and ( max-width: 768px )
+	.section
+		height: auto
+		min-height: 100vh
+		width: 100%	
+		display: none
+		&__inner
+			padding: 0 1.25rem 1.25rem
+		&__header
+			position: relative
+			top: unset
+			left: unset
+			width: 100%
+			padding: 5.06rem 0 1.25rem
+			height: 100vh
+			display: flex
+			flex-direction: column
+		&__subtitle
+			margin-top: auto
+			font-size: 1rem
+			line-height: 1.19rem
+		&__arrow
+			position: absolute
+			bottom: 0
+			right: -0.5rem
+			display: block
+			width: 3.38rem
+			height: 5.69rem
+		&__body
+			width: 100%
+			height: auto

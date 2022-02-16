@@ -6,6 +6,10 @@ export default function Menu(){
 	let back = document.querySelector('.header__about-back');
 	let popup = document.querySelector('.header__popup');
 
+	if(window.innerWidth < 768){
+		burger = document.querySelector('.header__burger--mobile');
+	}
+
 	function closePopup(){
 		header.classList.remove('header--open');
 		popup.classList = 'header__popup';
@@ -18,6 +22,7 @@ export default function Menu(){
 	}
 
 	burger.addEventListener('click', ()=>{
+		console.log('ss');
 		if(burger.classList.contains('header__burger--open')){
 			closePopup();
 			burger.classList.remove('header__burger--open');

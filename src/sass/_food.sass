@@ -71,8 +71,38 @@
 		height: 3.38rem
 		border-radius: 50%
 		z-index: 10
+		svg
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 4.94rem
+			height: 4.94rem
+		#food-btn-text
+			opacity: 0
+			
+			transition: all ease 0.2s
+		&::after
+			position: absolute
+			content: ''
+			border-radius: 50%
+			
+			width: 3.38rem
+			height: 3.38rem
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background: #FFD965
+			z-index: -1
+			transition: all ease 0.2s
 		// transition: opacity ease 0.5s
-		
+		&:hover
+			#food-btn-text
+				opacity: 1
+			&::after
+				width: 4.94rem
+				
+				height: 4.94rem
 	&__popup
 		position: relative
 		top: -7rem

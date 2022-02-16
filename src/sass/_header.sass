@@ -1,310 +1,372 @@
 .header
-   position: fixed
-   left: 0
-   top: 0
-   height: 100%
-   z-index: 1000
-   &--open
-      .header__popup
-         display: block
-      .header__spine
-         background: $very-peri  
-         border-color: $white
-      .header__title 
-         color: $white
-      svg
-         overflow: unset
-         path 
-            fill: $white
-            stroke: $white
-      
-      .header__social-link
-         svg
+    position: fixed
+    left: 0
+    top: 0
+    height: 100%
+    z-index: 1000
+    &--open
+        .header__popup
+            display: block
+        .header__spine
+            background: $very-peri
+            border-color: $white
+        .header__title
+            color: $white
+        .header__number
+            color: $white
+            &::after
+                background: $white
+        svg
             overflow: unset
-            path 
-               stroke: none
-               fill: $white
-               
-      .header__social-link--link
-         svg
             path
-               stroke: $white
-               fill: none
-      .burger-line--up
-         transform: rotate(45deg) translate(0, 40%)
-      .burger-line--center
-         opacity: 0
-      .burger-line--bottom
-         transform: rotate(-45deg) translate(0, -40%)
+                fill: $white
+                stroke: $white
 
-   &__spine
-      border-left: none !important
-      border-right: 0.06rem solid $beige
-      z-index: 100
-      padding: 2.3rem 1.25rem !important
-      pointer-events: auto !important
-      cursor: unset !important
-   &__burger
-      width: 1.25rem
-      cursor: pointer
-      svg
-         overflow: unset
-         
-         width: 100%
-         height: auto
-   &__title
-      transform: rotate(-90deg) !important
-      cursor: pointer
-      margin-bottom: 0.6rem
-   &__social
-      position: relative
-      cursor: pointer
-      
-      width: 1.25rem
-      height: 1.38rem
-      &:hover
-         .header__social-wrap
-            pointer-events: auto
-         .header__social-link
-            opacity: 1
-      svg
-         overflow: unset
-         
-         width: 100%
-         height: auto
-   &__social-wrap
-      position: absolute
-      padding-bottom: 2rem
-      bottom: 0
-      left: 50%
-      transform: translate(-50%)
-      width: 1.63rem
-      pointer-events: none
-   &__social-link
-      margin-bottom: 0.63rem
-      width: 1.63rem
-      height: 1.63rem
-      transition: all .1s ease-out
-      opacity: 0
-      // pointer-events: auto
-      svg
-         width: 100%
-         height: auto
-         path
-            fill: #837C6D
-            transition: all .1s ease-out
-      &:hover
-         svg
-            path
-               fill: #B0B5F3
-      &--link
-         
-         transition-delay: 80ms
-         svg
-            path
-               stroke: #837C6D
-               fill: none
-               transition: all .1s ease-out
-         &:hover
+        .header__social-link
             svg
-               path
-                  stroke: #B0B5F3
-                  fill: none
-      &--tg
-         transition-delay: 60ms
-      &--tw
-         transition-delay: 40ms
-      &--fb
-         transition-delay: 20ms
-      &--vk
+                overflow: unset
+                path
+                    stroke: none
+                    fill: $white
+            &:hover
+                svg
+                    path
+                        fill: #B0B5F3
 
-   &__popup
-      display: none
-      position: absolute
-      top: 0
-      left: 0
-      width: 100vw
-      height: 100vh
-      z-index: 10
-      background: $very-peri
-         
-      &--menu
-         .header__menu
-            opacity: 1
-            pointer-events: auto
-      &--about
-         .header__about
-            opacity: 1
-            pointer-events: auto
-   &__menu
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      opacity: 0
-      display: flex
-      align-items: center
-      justify-content: center
-      pointer-events: none
-   &__menu-inner
-      width: 50.81rem
-   &__menu-item
-      margin-bottom: 3.73rem
-      position: relative
-      height: 3.31rem
-      font-family: 'TT Travels Next', sans-serif
-      font-weight: 500
-      z-index: 10
-      &:last-child
-         margin-bottom: 0
-      &--main
-         .header__menu-img
-            bottom: 0rem
-            left: 8.44rem
-            z-index: -1
-            width: 5.88rem
-      &--prep
-         .header__menu-img
-            bottom: -0.31rem
-            left: 27.19rem
-            z-index: 0
-            width: 6.81rem
-      &--donation
-         .header__menu-img
-            bottom: -1.21rem
-            left: 15.63rem
-            z-index: 0
-            width: 5.25rem
-         .header__menu-link
-            span 
-               margin: 0 2.2rem
-      &--test
-         .header__menu-img
-            top: 0rem
-            left: 35.69rem
-            z-index: 0
-            width: 8.63rem
-      &--benefit
-         .header__menu-img
-            bottom: -1.56rem
-            left: 14.75rem
-            z-index: 10
-            width: 6.44rem
-         .header__menu-link
-            span 
-               margin: 0 1.1rem
-      &--about
-         .header__menu-img
-            bottom: -0.60rem
-            left: 22.00rem
-            z-index: 10
-            width: 4.94rem
-   &__menu-number
-      position: absolute
-      left: -3.8rem
-      bottom: 0
-      text-transform: uppercase
-      color: $yellow
-      font-size: 0.75rem
+        .header__social-link--link
+            svg
+                path
+                    stroke: $white
+                    fill: none
+            &:hover
+                svg
+                    path
+                        stroke: #B0B5F3
+        .burger-line--up
+            transform: rotate(45deg) translate(0, 40%)
+        .burger-line--center
+            opacity: 0
+        .burger-line--bottom
+            transform: rotate(-45deg) translate(0, -40%)
 
-   &__menu-link
-      display: block
-      font-size: 3.88rem
-      line-height: 3.31rem
-      text-decoration: none
-      color: $white
-      cursor: pointer
+    &__spine
+        border-left: none
+        border-right: 0.06rem solid $beige
+        z-index: 100
+        padding: 2.3rem 1.25rem
+        pointer-events: auto
+        cursor: unset
+        
+    &__burger
+        width: 1.25rem
+        cursor: pointer
+        svg
+            overflow: unset
 
-   &__menu-img
-      position: absolute
-      pointer-events: none
-   &__about
-      
-      position: absolute
-      top: 0
-      left: 0
-      opacity: 0
-      width: 100%
-      height: 100%
-      pointer-events: none
-      display: flex
-      justify-content: center
-      align-items: flex-start
-   &__about-inner
-      padding-top: 6.88rem
-      padding-bottom: 2.50rem
-      display: flex
-      flex-direction: column
-      align-items: flex-start
-      width: 59.50rem
-      height: 100%
-      color: $white
-   &__about-title
-      color: $white
-      margin-left: -0.4rem
-   &__about-body
-      margin-top: 3.78rem
-      display: flex
-      justify-content: flex-start
-      align-items: flex-start
-      width: 100%
-   &__about-col
-      margin-right: 6.75rem
-      &:last-child
-         margin-right: 0
-   &__about-text
-      width: 27.75rem
-      p+p
-         margin-top: 0.6rem
-   &__about-socials
-      margin: 5.00rem 0 0
-      display: flex
-      align-items: center
+            width: 100%
+            height: auto
+        &--mobile
+            display: none
 
-   &__about-social
-      margin-right: 0.63rem
-      width: 2.38rem
-      height: 2.38rem
-      border-radius: 50%
-      border: 0.06rem solid $white
+    &__title
+        transform: rotate(-90deg)
+        cursor: pointer
+        margin-bottom: 0.6rem
+    &__number
+        display: none
+    &__social
+        position: relative
+        cursor: pointer
 
-   &__about-team
-      width: 25.00rem
-   &__about-team-title
-      margin-bottom: 0.2rem
-      font-weight: bold
-      font-family: 'TT Travels Next', sans-serif
-   &__about-team-row
+        width: 1.25rem
+        height: 1.38rem
+        &:hover
+            .header__social-wrap
+                pointer-events: auto
+            .header__social-link
+                opacity: 1
+        svg
+            overflow: unset
+
+            width: 100%
+            height: auto
+    &__social-wrap
+        position: absolute
+        padding-bottom: 2rem
+        bottom: 0
+        left: 50%
+        transform: translate(-50%)
+        width: 1.63rem
+        pointer-events: none
+    &__social-link
+        margin-bottom: 0.63rem
+        width: 1.63rem
+        height: 1.63rem
+        transition: all .1s ease-out
+        opacity: 0
+        // pointer-events: auto
+        svg
+            width: 100%
+            height: auto
+            path
+                fill: #837C6D
+                transition: all .1s ease-out
+        &:hover
+            svg
+                path
+                    fill: #BBA67B
+        &--link
+
+            transition-delay: 80ms
+            svg
+                path
+                    stroke: #837C6D
+                    fill: none
+                    transition: all .1s ease-out
+            &:hover
+                svg
+                    path
+                        stroke: #BBA67B
+                        fill: none
+        &--tg
+            transition-delay: 60ms
+        &--tw
+            transition-delay: 40ms
+        &--fb
+            transition-delay: 20ms
+        &--vk
+
+    &__popup
+        display: none
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: 10
+        background: $very-peri
+
+        &--menu
+            .header__menu
+                opacity: 1
+                pointer-events: auto
+        &--about
+            .header__about
+                opacity: 1
+                pointer-events: auto
+    &__menu
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        pointer-events: none
+    &__menu-inner
+        width: 50.81rem
+    &__menu-item
+        margin-bottom: 3.73rem
+        position: relative
+        height: 3.31rem
+        font-family: 'TT Travels Next', sans-serif
+        font-weight: 500
+        z-index: 10
+        &:last-child
+            margin-bottom: 0
+        &--main
+            .header__menu-img
+                bottom: 0rem
+                left: 8.44rem
+                z-index: -1
+                width: 5.88rem
+        &--prep
+            .header__menu-img
+                bottom: -0.31rem
+                left: 27.19rem
+                z-index: 0
+                width: 6.81rem
+        &--donation
+            .header__menu-img
+                bottom: -1.21rem
+                left: 15.63rem
+                z-index: 0
+                width: 5.25rem
+            .header__menu-link
+                span
+                    margin: 0 2.2rem
+        &--test
+            .header__menu-img
+                top: 0rem
+                left: 35.69rem
+                z-index: 0
+                width: 8.63rem
+        &--benefit
+            .header__menu-img
+                bottom: -1.56rem
+                left: 14.75rem
+                z-index: 10
+                width: 6.44rem
+            .header__menu-link
+                span
+                    margin: 0 1.1rem
+        &--about
+            .header__menu-img
+                bottom: -0.60rem
+                left: 22.00rem
+                z-index: 10
+                width: 4.94rem
+    &__menu-number
+        position: absolute
+        left: -3.8rem
+        bottom: 0
+        text-transform: uppercase
+        color: $yellow
+        font-size: 0.75rem
+
+    &__menu-link
+        display: block
+        font-size: 3.88rem
+        line-height: 3.31rem
+        text-decoration: none
+        color: $white
+        cursor: pointer
+
+    &__menu-img
+        position: absolute
+        pointer-events: none
+    &__about
+
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        width: 100%
+        height: 100%
+        pointer-events: none
+        display: flex
+        justify-content: center
+        align-items: flex-start
+    &__about-inner
+        padding-top: 6.88rem
+        padding-bottom: 2.50rem
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: 59.50rem
+        height: 100%
+        color: $white
+    &__about-title
+        color: $white
+        margin-left: -0.4rem
+    &__about-body
+        margin-top: 3.78rem
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        width: 100%
+    &__about-col
+        margin-right: 6.75rem
+        &:last-child
+            margin-right: 0
+    &__about-text
+        width: 27.75rem
+        p+p
+            margin-top: 0.6rem
+    &__about-socials
+        margin: 5.00rem 0 0
+        display: flex
+        align-items: center
+
+    &__about-social
+        margin-right: 0.63rem
+        width: 2.38rem
+        height: 2.38rem
+        border-radius: 50%
+        border: 0.06rem solid $white
+
+    &__about-team
+        width: 25.00rem
+    &__about-team-title
+        margin-bottom: 0.2rem
+        font-weight: bold
+        font-family: 'TT Travels Next', sans-serif
+    &__about-team-row
       // display: flex
-      margin-bottom: 0.3rem
-      line-height: 1.19rem
-      &:last-child
-         margin-top: 1.9rem
+        margin-bottom: 0.3rem
+        line-height: 1.19rem
+        &:last-child
+            margin-top: 1.9rem
 
-   &__about-back
-      margin-top: auto
-      display: flex
-      align-items: center
-      background: none
-      cursor: pointer
-   &__about-back-img
-      position: relative
-      margin-right: 0.63rem
-      height: 0.75rem
-      width: 1.25rem
-      img 
-         position: absolute
-         top: 0
-         left: 0
-   &__about-back-text
-      display: block
-      height: 0.96rem
-      line-height: 1.06rem
-      font-weight: 500
-      font-size: 0.75rem
-      font-family: 'TT Travels Next', sans-serif
+    &__about-back
+        margin-top: auto
+        display: flex
+        align-items: center
+        background: none
+        cursor: pointer
+    &__about-back-img
+        position: relative
+        margin-right: 0.63rem
+        height: 0.75rem
+        width: 1.25rem
+        img
+            position: absolute
+            top: 0
+            left: 0
+    &__about-back-text
+        display: block
+        height: 0.96rem
+        line-height: 1.06rem
+        font-weight: 500
+        font-size: 0.75rem
+        font-family: 'TT Travels Next', sans-serif
 
 .burger-line
-   transition: all ease 0.5s
-   transform-origin: center center
+    transition: all ease 0.5s
+    transform-origin: center center
+
+@media screen and ( max-width: 768px )
+    .header
+        width: 100%
+        height: auto
+        &__spine
+            padding: 0 1.25rem
+            border-top: none
+            border-right: none
+            border-bottom: 0.06rem solid $beige
+        &__title
+            transform: none
+            margin-bottom: 0
+            
+            color: #BBA67B
+        &__burger
+            display: none
+        &__number
+            display: block
+            margin-right: 2.55rem
+            position: relative
+            font-size: 0.75rem
+            line-height: 1.06rem
+            color: #BBA67B
+            &::after
+                position: absolute
+                content: ''
+                top: 50%
+                left: calc(100% + 0.4rem)
+                width: 1.75rem
+                height: 0.06rem
+                background: #BBA67B
+        &__social
+            display: none
+        &__burger--mobile
+            margin-left: auto
+            display: block
+            width: 1.13rem
+            height: auto
+            cursor: pointer
+            svg
+                path
+                    stroke-width: 0.06rem
+                    width: 1.13rem
