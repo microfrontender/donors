@@ -1,5 +1,6 @@
 
 import lottie from "lottie-web";
+;
 
 import '../sass/index.sass';
 import Scroller from './_scroll';
@@ -9,7 +10,6 @@ import Hints from './_hints';
 import Slider from './_slider';
 import Circles from './_circles';
 import Accordion from './_accordion';
-import Lazy from './_lazyloading';
 import LazyLoad from "vanilla-lazyload";
 Menu();
 Scroller();
@@ -19,7 +19,7 @@ Slider();
 Circles();
 Accordion();
 window.onload = () =>{
-
+	
 	const lazysliders = new LazyLoad({
         elements_selector: ".lazy img"
       });

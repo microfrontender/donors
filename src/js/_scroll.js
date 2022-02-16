@@ -1,5 +1,4 @@
 import LocomotiveScroll from 'locomotive-scroll';
-import Lazy from './_lazyloading';
 
 export default function Scroller() {
 
@@ -28,8 +27,6 @@ export default function Scroller() {
 	}
 
 	scroll.on('scroll', () => {
-		
-		// Lazy();
 		updateScroll();
 		spines.forEach((spine) => {
 			let attr = spine.getAttribute('data-spine-section');

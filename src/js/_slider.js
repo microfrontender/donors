@@ -1,29 +1,19 @@
 export default function Slider(){
 
-	let sliderBtnPrev= document.querySelector('.slider__btn--prev');
-	let sliderBtnNext= document.querySelector('.slider__btn--next');
+	let sliderBtn= document.querySelector('.slider__btn');
 	
 	let currentSlide = 1 ;
 
-	sliderBtnPrev.addEventListener('click', ()=>{
-		setSlide(--currentSlide);
-
-	});
-	sliderBtnNext.addEventListener('click', ()=>{
+	sliderBtn.addEventListener('click', ()=>{
 		setSlide(++currentSlide);
 
 	});
 	
-	const setSlide = (index) =>{
-		if(index == 1){
-			sliderBtnPrev.style.visibility = 'hidden';
-		}else{
-			sliderBtnPrev.style.visibility = 'visible';
-		}
-		if(index == 3){
-			sliderBtnNext.style.visibility = 'hidden';
-		}else{
-			sliderBtnNext.style.visibility = 'visible';
+	const setSlide = (number) =>{
+		let index = number;
+		if(index > 3){
+			currentSlide = 1;
+			index = 1;
 		}
 		document.querySelector('.slider__slide.show').classList.remove('show');
 		document.querySelector(`.slider__slide--${index}`).classList.add('show');

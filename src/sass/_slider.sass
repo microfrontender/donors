@@ -1,9 +1,9 @@
 .slider
 	&__btns
 		position: absolute
-		top: 50%
+		top: -1.6rem
 		left: 50%
-		transform: translate(-50%, -50%)
+		transform: translate(-50%)
 		width: calc(100% + 6.4rem)
 		height: 0
 		z-index: 10
@@ -12,17 +12,19 @@
 		align-items: center
 		justify-content: space-between
 	&__btn
+		margin-left: auto
 		pointer-events: auto
-		width: 3.19rem
-		height: 3.19rem
+		width: 3.38rem
+		height: 3.38rem
 		border-radius: 50%
 		background: $yellow
 		cursor: pointer
 		img
-			margin-top: 0.81rem
-			margin-left: 1.38rem
-			width: 0.75rem
-			height: 1.5rem
+			margin-top: 0.66rem
+			margin-left: 0.66rem
+			width: 2.00rem
+			height: 2.00rem
+			pointer-events: none
 		&--prev
 			transform: rotate(180deg)
 	&__wrap

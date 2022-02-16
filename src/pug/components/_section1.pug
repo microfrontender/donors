@@ -3,13 +3,16 @@ section( data-spine-section="1")#prep.section.prep
 
 	.container 
 		.section__inner.prep__inner
-			.section__header 
+			
+			.section__header.prep__header
+			
 				h2.section__title.prep__title Что нужно, чтобы стать донором
 				.section__subtitle.title.prep__subtitle Какой центр сдачи крови выбрать, что можно есть накануне и что нужно взять с собой
-				a(href="").prep__checklist 
-					.prep__checklist-icon 
-						img(  src=require('../../img/arrow-down-white.svg'), alt="")
-					span Скачать чек-лист
+				.prep__checklist-wrap#prep__header
+					a(href="" data-scroll data-scroll-sticky data-scroll-target="#prep__header").prep__checklist 
+						.prep__checklist-icon 
+							img(  src=require('../../img/arrow-down-white.svg'), alt="")
+						span Скачать чек-лист
 			.section__body.prep__body
 				.prep__bg
 					.prep__lottie.prep__lottie--1 
@@ -26,10 +29,8 @@ section( data-spine-section="1")#prep.section.prep
 
 				.prep__slider.slider
 					.slider__btns
-						.slider__btn.slider__btn--prev
-							img(  src=require('../../img/arrow-slider.svg'), alt="")
-						.slider__btn.slider__btn--next
-							img(  src=require('../../img/arrow-slider.svg'), alt="")
+						.slider__btn
+							img(  src=require('../../img/icon-rotate.svg'), alt="")
 					.slider__wrap 
 						.slider__slide.slider__slide--1.show
 							.slider__title Завтрак №1
