@@ -1,5 +1,5 @@
 import LocomotiveScroll from 'locomotive-scroll';
-
+import Lazy from './_lazyloading';
 
 export default function Scroller() {
 
@@ -10,7 +10,7 @@ export default function Scroller() {
 		direction: 'horizontal',
 		gestureDirection: 'both',
 		touchMultiplier: 1,
-		resetNativeScroll: false
+		resetNativeScroll: true
 	});
 
 	let spines = document.querySelectorAll('.spine[data-spine-section]');
@@ -28,6 +28,8 @@ export default function Scroller() {
 	}
 
 	scroll.on('scroll', () => {
+		
+		// Lazy();
 		updateScroll();
 		spines.forEach((spine) => {
 			let attr = spine.getAttribute('data-spine-section');

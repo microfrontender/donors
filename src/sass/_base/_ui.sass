@@ -35,6 +35,11 @@ a, button, p, ul, li
 
 img
     width: 100%
+    &[data-src]
+        opacity: 0
+        transition: opacity ease 0.2s
+    &.loaded
+        opacity: 1
 main
     height: 100vh
     width: 100vw
