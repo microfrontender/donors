@@ -24,7 +24,7 @@ export default function Page(){
 		headerTitle.textContent = data[href];
 		headerNumber.textContent = `0${index}`;
 		// включить на прод
-		// window.scrollTo( 0, 0 );
+		window.scrollTo( 0, 0 );
 	}
 	menuItems.forEach((item, index) => {
 		item.addEventListener('click', ()=>{
@@ -50,5 +50,5 @@ export default function Page(){
 	}
 
 	
-	setPage('prep', 1);
+	setPage('cover', 1);
 }

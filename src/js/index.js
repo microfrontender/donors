@@ -1,6 +1,5 @@
 
 import lottie from "lottie-web";
-;
 
 import '../sass/index.sass';
 import Scroller from './_scroll';

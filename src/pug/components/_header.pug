@@ -51,7 +51,7 @@ header.header
                     .header__menu-number 04
                     div(data-href='benefit').header__menu-link Польза 
                         span
-                        | для донора
+                        | для донора
                     .header__menu-img
                         img(src=require('../../img/menu-icon-5.png') srcset=require('../../img/menu-icon-5-2x.png') + ' 2x' alt="")
                 
@@ -70,11 +70,15 @@ header.header
                             p Если вы хотите помочь, но не можете быть донором — поделитесь этим проектом с друзьями!
                         .header__about-socials
                             a(href="").header__about-social
+                                include ../../img/icon-about-vk.svg
                             a(href="").header__about-social
+                                include ../../img/icon-about-fb.svg
                             a(href="").header__about-social
+                                include ../../img/icon-about-tw.svg
                             a(href="").header__about-social
+                                include ../../img/icon-about-tg.svg
                             a(href="").header__about-social
-                            
+                                include ../../img/icon-about-link.svg
                     .header__about-col
                         .header__about-team
                             .header__about-team-title Команда проекта
@@ -100,12 +104,21 @@ header.header
                                 span Разработка: 
                                 span Алексей Калиновский
                             .header__about-team-row 
-                                span Шрифт TT Travels Next 
+                                span Шрифт TT Travels Next:
                                 span 
-                                    a(href="https://typetype.org/ru/" target="_blank") от студии TypeType 
-
+                                    a(href="https://typetype.org/ru/" target="_blank") TypeType 
+                        
+                        .header__about-partner
+                            .header__about-partner-title Партнеры
+                            .header__about-partner-list
+                                a(href="").header__about-partner-item.header__about-partner-item--1 
+                                    img(src=require('../../img/partner-icon-1.svg'), alt="")
+                                a(href="").header__about-partner-item.header__about-partner-item--2
+                                    img(src=require('../../img/partner-icon-2.svg'), alt="")
                 button.header__about-back
                     .header__about-back-img   
                         img(src=require('../../img/arrow-down.svg'), alt="")                
                     .header__about-back-text Обратно в меню                   
+                .header__about-icon
+                    img(src=require('../../img/menu-icon-5.png') srcset=require('../../img/menu-icon-5-2x.png') + ' 2x' alt="")          
     //- .header__about

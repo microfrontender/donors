@@ -16,11 +16,12 @@
             color: $white
             &::after
                 background: $white
-        svg
-            overflow: unset
-            path
-                fill: $white
-                stroke: $white
+        .header__spine
+            svg
+                overflow: unset
+                path
+                    fill: $white
+                    stroke: $white
 
         .header__social-link
             svg
@@ -31,6 +32,7 @@
             &:hover
                 svg
                     path
+                        
                         fill: #B0B5F3
 
         .header__social-link--link
@@ -42,6 +44,7 @@
                 svg
                     path
                         stroke: #B0B5F3
+                        fill: none
         .burger-line--up
             transform: rotate(45deg) translate(0, 40%)
         .burger-line--center
@@ -176,6 +179,9 @@
         z-index: 10
         &:last-child
             margin-bottom: 0
+        &:hover
+            .header__menu-img
+                transform: translateY(-1rem)
         &--main
             .header__menu-img
                 bottom: 0rem
@@ -237,6 +243,7 @@
     &__menu-img
         position: absolute
         pointer-events: none
+        transition: all ease 0.5s
     &__about
 
         position: absolute
@@ -250,6 +257,7 @@
         justify-content: center
         align-items: flex-start
     &__about-inner
+        position: relative
         padding-top: 6.88rem
         padding-bottom: 2.50rem
         display: flex
@@ -276,27 +284,44 @@
         p+p
             margin-top: 0.6rem
     &__about-socials
-        margin: 5.00rem 0 0
+        margin: 2.00rem 0 0
         display: flex
         align-items: center
+        
 
     &__about-social
-        margin-right: 0.63rem
-        width: 2.38rem
-        height: 2.38rem
-        border-radius: 50%
-        border: 0.06rem solid $white
-
+        margin-right: 0.81rem
+        width: 2.06rem
+        height: 2.06rem
+        svg
+            width: 100%
+            height: auto
+            path
+                
+                transition: all .1s ease-out
+        &:hover
+            svg
+                path
+                    fill: #B0B5F3
+        &:last-child
+            &:hover
+                svg
+                    path
+                        stroke: #B0B5F3
+                        fill: none
     &__about-team
         width: 25.00rem
+        
+        line-height: 1.50rem
     &__about-team-title
         margin-bottom: 0.2rem
+        
+        line-height: 1.19rem
         font-weight: bold
         font-family: 'TT Travels Next', sans-serif
     &__about-team-row
       // display: flex
         margin-bottom: 0.3rem
-        line-height: 1.19rem
         &:last-child
             margin-top: 1.9rem
 
@@ -322,7 +347,27 @@
         font-weight: 500
         font-size: 0.75rem
         font-family: 'TT Travels Next', sans-serif
-
+    &__about-partner
+        margin-top: 3.50rem
+    &__about-partner-title
+        font-weight: bold
+        font-family: 'TT Travels Next', sans-serif
+    &__about-partner-list
+        margin-top: 1.19rem
+        display: flex
+    &__about-partner-item
+        &--1
+            margin-top: 1.13rem
+            width: 7.75rem
+        &--2
+            margin-left: 1.88rem
+            width: 8.38rem
+    &__about-icon
+        position: absolute
+        width: 6.44rem
+        height: 6.69rem
+        left: 8.7rem
+        bottom: 1rem
 .burger-line
     transition: all ease 0.5s
     transform-origin: center center
@@ -331,6 +376,19 @@
     .header
         width: 100%
         height: auto
+        &--open
+            .header__spine
+                border: none
+            .spine__title
+                display: none
+            .header__number
+                display: none
+            .burger-line--up
+                transform: rotate(45deg) translate(0, 40%)  scaleX(1.3)
+                stroke-width: 0.13rem
+            .burger-line--bottom
+                transform: rotate(-45deg) translate(0, -40%)  scaleX(1.3)
+                stroke-width: 0.13rem
         &__spine
             padding: 0 1.25rem
             border-top: none
@@ -370,3 +428,108 @@
                 path
                     stroke-width: 0.06rem
                     width: 1.13rem
+        &__popup
+            position: fixed
+            width: 100vw
+            height: auto
+            min-height: 100vh
+        &__menu-inner
+            margin-top: 1.5rem
+            margin-left: 0.7rem
+            width: 16.63rem
+        &__menu-item
+            margin-bottom: 2.88rem
+            height: auto
+            &:hover
+                .header__menu-img
+                    transform: none
+
+            &--main
+                margin-bottom: 1.41rem
+                .header__menu-img
+                    left: 3.44rem
+                    z-index: 1
+                    width: 3.38rem
+            &--prep
+                margin-bottom: 2.25rem
+                .header__menu-img
+                    left: 12.09rem
+                    width: 4.25rem
+            &--donation
+                margin-bottom: 2.48rem
+                .header__menu-img
+                    bottom: -0.41rem
+                    left: 6.93rem
+                    width: 2.69rem
+                .header__menu-link
+                    span
+                        margin: 0 1.2rem
+            &--test
+                margin-bottom: 2rem
+                .header__menu-img
+                    top: 0.6rem
+                    left: 6.19rem
+                    width: 4.25rem
+            &--benefit
+                margin-bottom: 1.75rem
+                .header__menu-img
+                    bottom: -0.46rem
+                    left: 11.95rem
+                    z-index: 10
+                    width: 3.56rem
+                .header__menu-link
+                    span
+                        display: none
+            &--about
+                .header__menu-img
+                    bottom: -0.60rem
+                    left: 9.5rem
+                    z-index: -1
+                    width: 4.06rem
+
+        &__menu-number
+            bottom: unset
+            top: 0.6rem
+            font-size: 0.63rem
+            left: -2.13rem
+        &__menu-link
+            display: flex
+            font-size: 1.75rem
+            line-height: 2.13rem
+        &__about
+            overflow-x: scroll
+        &__about-inner
+            width: 100%
+            height: auto
+            padding: 4.38rem 1.25rem 2.56rem
+        &__about-title
+            margin-left: 0
+            font-size: 1.75rem
+            line-height: 2.13rem
+        &__about-body
+            margin-top: 0.88rem
+            flex-direction: column
+        &__about-col
+            margin-right: 0
+        &__about-text
+            width: 19.65rem
+        &__about-socials
+            margin-top: 1.88rem
+        &__about-social
+        &__about-team
+            margin-top: 4.75rem
+            
+        &__about-partner
+            margin-top: 4.75rem
+        &__about-partner-list
+            margin-top: 1.56rem
+        &__about-partner-item
+            &--1
+                margin-top: 1rem
+            &--2
+                margin-left: 1.63rem 
+        &__about-back
+            margin-top: 13.19rem
+        &__about-icon
+            left: 16rem
+            

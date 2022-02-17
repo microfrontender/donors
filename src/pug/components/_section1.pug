@@ -8,16 +8,17 @@ section( data-spine-section="1")#prep.section.prep
 			
 				h2.section__title.prep__title Что нужно, чтобы стать донором
 				.section__subtitle.prep__subtitle Какой центр сдачи крови выбрать, что можно есть накануне и что нужно взять с собой
-				.prep__checklist-wrap#prep__header
-					a(href="" data-scroll data-scroll-sticky data-scroll-target="#prep__header").prep__checklist 
-						.prep__checklist-icon 
-							img(  src=require('../../img/arrow-down-white.svg'), alt="")
-						span Скачать чек-лист
+				
 				.section__icon.prep__icon
 					img(  src=require('../../img/prep-icon.png') srcset=require('../../img/prep-icon-2x.png')+' 2x' alt="")
 				.section__arrow 
 					img(src=require('../../img/arrow-down-mobile.png'), alt="")
 			.section__body.prep__body
+				.prep__checklist-wrap#prep__checklist-wrap
+					a(href="" data-scroll data-scroll-sticky data-scroll-target="#prep__checklist-wrap").prep__checklist 
+						.prep__checklist-icon 
+							img(  src=require('../../img/arrow-down-white.svg'), alt="")
+						span Скачать чек-лист
 				.prep__bg
 					.prep__lottie.prep__lottie--1 
 						//- lottie-player(autoplay loop src='./lottie/1/data.json')
@@ -108,7 +109,7 @@ section( data-spine-section="1")#prep.section.prep
 							.stories__icon
 								img(src=require('../../img/icon-stories.svg'), alt="")
 							.stories__text 
-								span Cоздать сторис
+								span Cохранить картинку для сторис
 						.food__popup.lazy
 							.food__popup-close 
 								img(src=require('../../img/close-popup.svg'), alt="")
@@ -168,7 +169,7 @@ section( data-spine-section="1")#prep.section.prep
 						.prep__number 07
 						.prep__text Перед выходом не забудьте паспорт.
 					.section__find.prep__find 
-						.section__find-text Теперь вы знаете, как происходит донация крови
+						.section__find-text Теперь вы знаете, как подготовиться к сдаче крови
 						a(href="").section__find-btn Найти свой
 							span 
 							| центр сдачи крови
@@ -176,6 +177,7 @@ section( data-spine-section="1")#prep.section.prep
 								img(  src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
 
 	.section__hints
+		.section__hints-overlay
 		.section__hint.section__hint--1(data-hint='0')
 			.section__hint-body 
 				.section__hint-close 

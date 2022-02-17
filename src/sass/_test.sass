@@ -58,6 +58,16 @@
 	&__hover
 		&::after
 			display: none
+		span
+			position: relative
+			&::after
+				position: absolute
+				content: ''
+				left: 0
+				bottom: -0.06rem
+				width: calc(100% - 0.16rem)
+				height: 0
+				border-bottom: 0.06rem dashed rgba(120, 92, 186, 0.3)
 	&__accordions
 		margin-bottom: 11.53rem
 		position: relative

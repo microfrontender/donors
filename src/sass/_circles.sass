@@ -2,11 +2,13 @@
 	position: relative
 	width: 34.88rem
 	height: 33.13rem
+	
+	transition: all ease 0.5s
 	&.active
 		.circles__desc
-			display: none
+			opacity: 0
 		.circles__path-img
-			display: none
+			opacity: 0
 		.circles__wrap
 			width: 45.19rem
 			left: 22.08rem
@@ -18,13 +20,16 @@
 		width: 66.38rem
 		.circles__path--bottom
 			top: 15.1rem
+			.circles__back
+				transition-duration: 0.1s
 		.circles__path--top
 			top: -7.6rem
 			width: 37.06rem
 			height: 37.06rem
 			.circles__back
-				display: block
-
+				// display: block
+				opacity: 1
+				transition-delay: 0.3s
 			.circles__front
 				top: 4.13rem
 				width: 10.88rem
@@ -42,14 +47,18 @@
 		.circles__path--top
 			top: -8.3rem
 			left: -3rem
+			.circles__back
+				transition-duration: 0.1s
 		.circles__path--bottom
 			top: -6.2rem
 			right: 1rem
 			width: 37.06rem
 			height: 37.06rem
 			.circles__back
-				display: block
-
+				// display: block
+				
+				transition-delay: 0.3s
+				opacity: 1
 			.circles__front
 				top: 3.83rem
 				
@@ -85,6 +94,8 @@
 		left: 21.65rem
 		display: flex
 		align-items: center
+		
+		transition: opacity ease 0.1s
 	&__desc-icon
 		width: 1.50rem
 		height: 1.94rem
@@ -104,12 +115,15 @@
 		top: 3.3rem
 		width: 16.00rem
 		height: 100%
+		transition: all ease 0.5s
 	&__path
 		position: absolute
 		width: 16.00rem
 		height: 16.00rem
 		border-radius: 50%
 		cursor: pointer
+		overflow: hidden
+		transition: all ease 0.5s
 		&--top
 			left: 0
 			top: 0
@@ -139,6 +153,8 @@
 		left: 50%
 		transform: translate(-50%)
 		width: 9.88rem
+		
+		transition: top ease 0.5s
 	&__title
 		font-size: 0.81rem
 		line-height: 1.13rem
@@ -147,10 +163,17 @@
 		font-family: 'TT Travels Next', sans-serif
 	&__back
 		position: relative
-		display: none
+		// display: none
 		padding: 1px
-		width: 100%
-		height: 100%
+		
+		width: 37.06rem
+		height: 37.06rem
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		opacity: 0
+		pointer-events: none
+		transition: all ease 0.5s
 	&__img
 		position: absolute
 	&__items
@@ -187,3 +210,5 @@
 		width: 9.63rem
 		height: 9.31rem
 		z-index: 100
+		
+		transition: opacity ease 0.1s

@@ -24,7 +24,9 @@ section( data-spine-section="3")#test.section.test
 					.test__item.test__item--3
 						.test__item-title 120 дней карантина 
 						.test__text В карантине проходит 
-							span.section__hover.prep__hover(data-hint='3') серонегативный период инфекции. 
+							span.section__hover.test__hover(data-hint='3') 
+								span серонегативный 
+								span период инфекции. 
 							| Все это время компоненты хранятся в холодильниках.
 					.test__item.test__item--4
 						.test__text Далее кровь отправляется в медицинские учреждения в специальных термоизоляционных контейнерах или рефрижераторах.
@@ -77,6 +79,8 @@ section( data-spine-section="3")#test.section.test
 								img(  src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
 
 	.section__hints
+		
+		.section__hints-overlay
 		.section__hint.section__hint--4(data-hint='3')
 			.section__hint-body 
 				.section__hint-close 

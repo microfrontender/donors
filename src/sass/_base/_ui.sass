@@ -134,18 +134,25 @@ h2
             display: block
         .spines
             height: calc(100% + 2.88rem*3)
+        .spine[data-spine-section='1']
+            display: none
     .page-donation
         .donation
             display: block
         .spines
             height: calc(100% + 2.88rem*2)
+        .spine[data-spine-section='1'], .spine[data-spine-section='2']
+            display: none
     .page-test
         .test
             display: block
         .spines
             height: calc(100% + 2.88rem*1)
+        .spine[data-spine-section='1'], .spine[data-spine-section='2'], .spine[data-spine-section='3']
+            display: none
     .page-benefit
         .benefit
             display: block
         .spines
             height: calc(100%)
+            display: none

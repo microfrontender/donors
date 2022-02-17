@@ -36,4 +36,6 @@ export default function Menu(){
 	back.addEventListener('click', ()=>{
 		openPopup('menu');
 	});
+
+	// openPopup('about');
 }
