@@ -12,14 +12,21 @@ import Circles from './_circles';
 import Accordion from './_accordion';
 import LazyLoad from "vanilla-lazyload";
 import Page from './_mobile-pages';
+import FoodMobile from './_food-mobile';
+import Stories from './_stories';
+
+
+
 Menu();
 if(window.innerWidth > 767){
 
 	Scroller();
+	Food();
 }else{
 	Page();
+	FoodMobile();
+	Stories();
 }
-Food();
 Hints();
 Slider();
 Circles();

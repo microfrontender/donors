@@ -1,4 +1,4 @@
-export default function Menu(){
+export default function Food(){
 
 	let food = document.querySelector('.food');
 	let foodItem = document.querySelector('.food__item');

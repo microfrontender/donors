@@ -23,7 +23,8 @@ export default function Page(){
 		document.body.classList = `page-${href}`;
 		headerTitle.textContent = data[href];
 		headerNumber.textContent = `0${index}`;
-		window.scrollTo( 0, 0 );
+		// включить на прод
+		// window.scrollTo( 0, 0 );
 	}
 	menuItems.forEach((item, index) => {
 		item.addEventListener('click', ()=>{
@@ -49,5 +50,5 @@ export default function Page(){
 	}
 
 	
-	// setPage('prep', 1);
+	setPage('prep', 1);
 }

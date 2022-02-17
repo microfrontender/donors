@@ -13,6 +13,8 @@ section( data-spine-section="1")#prep.section.prep
 						.prep__checklist-icon 
 							img(  src=require('../../img/arrow-down-white.svg'), alt="")
 						span Скачать чек-лист
+				.section__icon.prep__icon
+					img(  src=require('../../img/prep-icon.png') srcset=require('../../img/prep-icon-2x.png')+' 2x' alt="")
 				.section__arrow 
 					img(src=require('../../img/arrow-down-mobile.png'), alt="")
 			.section__body.prep__body
@@ -26,7 +28,7 @@ section( data-spine-section="1")#prep.section.prep
 							img(  data-src=require('../../img/prep-img-1.png') data-srcset=require('../../img/prep-img-1-2x.png')+' 2x' alt="")
 					.prep__img.prep__img--2.lazy
 						picture
-							//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-3.png')+', ' + require('../../img/prep-img-3-2x.png')+' 2x')
+							source(media="(max-width: 767px)", srcset=require('../../img/prep-img-3-mobile.png')+', ' + require('../../img/prep-img-3-2x-mobile.png')+' 2x')
 							img(  data-src=require('../../img/prep-img-3.png') data-srcset=require('../../img/prep-img-3-2x.png')+' 2x' alt="")
 
 				.prep__slider.slider
@@ -88,26 +90,38 @@ section( data-spine-section="1")#prep.section.prep
 								|можно есть накануне 
 								br
 								|сдачи крови
+							.food__desc.food__desc--mobile 
+								.food__desc-icon
+									img(  src=require('../../img/icon-hand.svg'), alt="")
+								.food__desc-text нажмите на холодильник, чтобы посмотреть диету
 							.food__img.lazy 
 								picture
-									//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-mobile-2x.png')+' 2x')
+									source(media="(max-width: 767px)", srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-2x-mobile.png')+' 2x')
 									img(  data-src=require('../../img/prep-img-2.png') data-srcset=require('../../img/prep-img-2-2x.png')+' 2x' alt="")
 							.food__img.food__img--open.lazy 
 								picture
-									//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-mobile-2x.png')+' 2x')
+									source(media="(max-width: 767px)", srcset='')
 									img(  data-src=require('../../img/prep-img-2-open.png') data-srcset=require('../../img/prep-img-2-open-2x.png')+' 2x' alt="")
 							.food__icon
 								include ../../img/food-icon.svg
+						a(href="" download).food__stories.stories
+							.stories__icon
+								img(src=require('../../img/icon-stories.svg'), alt="")
+							.stories__text 
+								span Cоздать сторис
 						.food__popup.lazy
+							.food__popup-close 
+								img(src=require('../../img/close-popup.svg'), alt="")
 							.food__wrap
 								.food__bg 
 									picture
-										//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-mobile-2x.png')+' 2x')
+										source(media="(max-width: 767px)", srcset='')
 										img(  data-src=require('../../img/food-popup.png') data-srcset=require('../../img/food-popup-2x.png')+' 2x' alt="")
 								.food__picture 
 									picture
-										//- source(media="(max-width: 767px)", srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-mobile-2x.png')+' 2x')
+										source(media="(max-width: 767px)", srcset='')
 										img(  data-src=require('../../img/food-picture.png') data-srcset=require('../../img/food-picture-2x.png')+' 2x' alt="")
+								.food__popup-title Накануне донации крови
 								.food__btns
 									.food__btn.active Нельзя
 									.food__btn Можно
@@ -115,7 +129,7 @@ section( data-spine-section="1")#prep.section.prep
 									.food__tab.food__tab--1.active
 										.food__tab-img.lazy
 											picture
-												//- source(media="(max-width: 767px)", srcset=require('../../img/tab-items-1-mobile.png')+', ' + require('../../img/tab-items-1-mobile-2x.png')+' 2x')
+												source(media="(max-width: 767px)", srcset=require('../../img/tab-items-1-mobile.png')+', ' + require('../../img/tab-items-1-2x-mobile.png')+' 2x')
 												img(  data-src=require('../../img/tab-items-1.png') data-srcset=require('../../img/tab-items-1-2x.png')+' 2x' alt="")
 										.food__tab-items
 											.food__tab-item.food__tab-item--1 жирное
@@ -131,17 +145,18 @@ section( data-spine-section="1")#prep.section.prep
 									.food__tab.food__tab--2
 										.food__tab-img.lazy
 											picture
-												//- source(media="(max-width: 767px)", srcset=require('../../img/tab-items-2-mobile.png')+', ' + require('../../img/tab-items-2-mobile-2x.png')+' 2x')
+												source(media="(max-width: 767px)", srcset=require('../../img/tab-items-2-mobile.png')+', ' + require('../../img/tab-items-2-2x-mobile.png')+' 2x')
 												img(  data-src=require('../../img/tab-items-2.png') data-srcset=require('../../img/tab-items-2-2x.png')+' 2x' alt="")
 										.food__tab-items
 											.food__tab-item.food__tab-item--10 фрукты (кроме бананов)
 											.food__tab-item.food__tab-item--11 тушеные овощи или на пару
 											.food__tab-item.food__tab-item--12 свежие овощи
-											.food__tab-item.food__tab-item--13 каши без масла и на воде (греча, овсянка, рис)
+											.food__tab-item.food__tab-item--13 каши на воде, без масла
 											.food__tab-item.food__tab-item--14 макароны без масла
 											.food__tab-item.food__tab-item--15 хлеб
 											.food__tab-item.food__tab-item--16 соки, морсы, компоты
 											.food__tab-item.food__tab-item--17 кофе без молока/сливок и чай
+											.food__tab-item
 
 					.prep__item.prep__item--5
 						.prep__number 05
