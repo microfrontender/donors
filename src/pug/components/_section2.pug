@@ -4,28 +4,33 @@ section( data-spine-section="2")#donation.section.donation
 	.container 
 		.section__inner.donation__inner
 			.section__header 
-				h2.section__title.donation__title Что происходит в центре сдачи крови
+				h2.section__title.donation__title Что проис
+					span - 
+					|xодит в центре сдачи крови
 				.section__subtitle.title.donation__subtitle Вся процедура от входа в центр сдачи крови до выхода из него занимает 1-2 часа
+				.section__icon.donation__icon
+					img(  src=require('../../img/donation-icon.png') srcset=require('../../img/donation-icon-2x.png')+' 2x' alt="")
 				.section__arrow 
 					img(src=require('../../img/arrow-down-mobile.png'), alt="")
 			.section__body.donation__body
 				.donation__bg
 					.donation__img.donation__img--1.lazy
 						picture
-							//- source(media="(max-width: 767px)", srcset=require('../../img/donation-img-1.png')+', ' + require('../../img/donation-img-1-2x.png')+' 2x')
-							source(media="(min-width: 1921px)", srcset=require('../../img/donation-img-1-2x.png'))
+							source(media="(max-width: 767px)", data-srcset=require('../../img/donation-img-1-mobile.png')+', ' + require('../../img/donation-img-1-2x-mobile.png')+' 2x')
 							img(  data-src=require('../../img/donation-img-1.png') data-srcset=require('../../img/donation-img-1-2x.png')+' 2x' alt="")
 					.donation__img.donation__img--2.lazy
 						picture
-							//- source(media="(max-width: 767px)", srcset=require('../../img/donation-img-3.png')+', ' + require('../../img/donation-img-3-2x.png')+' 2x')
+							source(media="(max-width: 767px)", srcset='../../img/placeholder.png')
 							img(  data-src=require('../../img/donation-img-2.png') data-srcset=require('../../img/donation-img-2-2x.png')+' 2x' alt="")
 				.donation__items
 					.donation__item.donation__item--1
-						.donation__item-title Регистрация
+						.donation__item-title 
+							span.desktop Регистрация
+							span.mobile Сначала — регистратура
 						.donation__text Предъявите паспорт в регистратуре и заполните анкету донора, честно отвечая на все вопросы.
 					.donation__item.donation__item--2
 						.donation__item-title Осмотр у врача
-						.donation__text Пройдите беседу с врачом-трансфузиологом. Сдайте экспресс-анализ крови из пальца.
+						.donation__text Пройдите осмотр и беседу с врачом-трансфузиологом. Сдайте экспресс-анализ крови из пальца.
 					.donation__item.donation__item--3
 						.donation__item-title Донация крови
 						.donation__text Донор садится в комфортное донорское кресло.
@@ -36,13 +41,24 @@ section( data-spine-section="2")#donation.section.donation
 					.donation__item.donation__item--6
 						.donation__text В конце процедуры на локтевой сгиб накладывается повязка — ее можно снять через 4 часа. Не мочите и не напрягайте руку, чтобы избежать синяков.
 					.donation__item.donation__item--7
-						.donation__text Отдохните 15 минут после донации. Получите справку о донации и компенсацию на обед.
+						.donation__text Отдохните 15 минут после донации.
+							span.mobile  
+							| Получите справку о донации и компенсацию на обед.
 					.donation__item.donation__item--8
-						.donation__item-title Ура, вы сдали кровь! А что делать дальше?
+						.donation__item-title 
+							span.desktop Ура, вы сдали кровь! А что делать дальше?
+							span.mobile Вы сдали кровь, а что делать дальше?
 					.donation__circles.circles
+						a(href="" download).donation__stories.stories
+							.stories__icon
+								img(src=require('../../img/icon-stories.svg'), alt="")
+							.stories__text 
+								span Cохранить картинку для сторис
 						.circles__man-wrap 
 							.circles__man.circles__man--1.lazy
 								picture
+											
+									source(media="(max-width: 767px)", data-srcset=require('../../img/circles-man-1-mobile.png')+', ' + require('../../img/circles-man-1-2x-mobile.png')+' 2x')
 									img(  data-src=require('../../img/circles-man-1.png') data-srcset=require('../../img/circles-man-1-2x.png')+' 2x' alt="") 
 							
 							.circles__man.circles__man--2.lazy
@@ -52,34 +68,59 @@ section( data-spine-section="2")#donation.section.donation
 						.circles__desc 
 							.circles__desc-icon
 								img(  src=require('../../img/icon-hand.svg'), alt="")
-							.circles__desc-text выберите, что делать дальше
+							.circles__desc-text 
+								span.desktop выберите, что делать дальше
+								span.mobile выберите один из вариантов
 						.circles__wrap
 							.circles__path.circles__path--top
+								.circles__close 
+									img(src=require('../../img/close-circle-popup.svg'), alt="")
 								.circles__body 	
 									.circles__front
 										.circles__title Хочу сдавать кровь регулярно
 									.circles__back 
 										.circles__img.lazy 
 											picture
+											
+												source(media="(max-width: 767px)", data-srcset=require('../../img/circles-img-1-mobile.png')+', ' + require('../../img/circles-img-1-2x-mobile.png')+' 2x')
 												img(  data-src=require('../../img/circles-img-1.png') data-srcset=require('../../img/circles-img-1-2x.png')+' 2x' alt="")
 										.circles__items
 											.circles__item.circles__item--1 Рекомендуемый интервал — 60 дней между сдачами.
 											.circles__item.circles__item--2 Есть ограничение по количеству донаций: мужчинам 5 раз в год, женщинам — 4 раза.
 											.circles__item.circles__item--3 Летом и зимой центры сдачи крови особенно рады донорам, так как в эти периоды поток донаций сокращается.
+										.circles__man-inner.lazy 
+											picture
+											
+												source(media="(max-width: 767px)", data-srcset=require('../../img/circles-man-inner-1-mobile.png')+', ' + require('../../img/circles-man-inner-1-2x-mobile.png')+' 2x')
+												img(  src=require('../../img/placeholder.png') alt="")
 							.circles__path-img.lazy
 								picture
 									img(  data-src=require('../../img/circles-path-img.png') data-srcset=require('../../img/circles-path-img-2x.png')+' 2x' alt="") 
 							.circles__path.circles__path--bottom
+								.circles__close 
+									img(src=require('../../img/close-circle-popup.svg'), alt="")
 								.circles__body 	
 									.circles__front
 										.circles__title Пока не знаю наверняка
 									.circles__back
 										.circles__img.lazy 
 											picture
+											
+												source(media="(max-width: 767px)", data-srcset=require('../../img/circles-img-2-mobile.png')+', ' + require('../../img/circles-img-2-2x-mobile.png')+' 2x')
 												img(  data-src=require('../../img/circles-img-2.png') data-srcset=require('../../img/circles-img-2-2x.png')+' 2x' alt="")
 										.circles__items
-											.circles__item.circles__item--4 Через 120 дней (около 4 месяцев) после донации нужно обязательно вернуться в центр и сдать анализ на вирусы и скрытые инфекции.
+											.circles__item.circles__item--4 Через 120 дней (около 4 месяцев) после донации нужно обяза
+												span.mobile - 
+												|тельно вернуться в центр и сдать анализ на вирусы и скрытые инфекции.
 											.circles__item.circles__item--5 Плазма, которую вы сдавали, хранится на карантине и может быть использована только после подтверждения, что вы по‑прежнему здоровы.
+										
+											.circles__item.circles__item--6 Если вы не придете, плазму придется утилизировать.
+										
+										.circles__man-inner.lazy 
+											picture
+											
+												source(media="(max-width: 767px)", data-srcset=require('../../img/circles-man-inner-2-mobile.png')+', ' + require('../../img/circles-man-inner-2-2x-mobile.png')+' 2x')
+												img(  src=require('../../img/placeholder.png') alt="")
 					.section__find.donation__find 
 						.section__find-text Теперь вы знаете, как происходит донация крови
 						a(href="").section__find-btn Найти свой

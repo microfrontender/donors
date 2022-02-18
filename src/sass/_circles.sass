@@ -176,6 +176,8 @@
 		transition: all ease 0.5s
 	&__img
 		position: absolute
+	&__man-inner
+		display: none
 	&__items
 		width: 100%
 		height: 100%
@@ -202,6 +204,8 @@
 			margin-left: 4.5rem
 			width: 19.44rem
 			text-align: right
+		&--6
+			width: 15.63rem
 	&__path-img
 		pointer-events: none
 		position: absolute
@@ -212,3 +216,160 @@
 		z-index: 100
 		
 		transition: opacity ease 0.1s
+	&__close
+		display: none
+
+@media screen and ( max-width: 767px )
+	.circles
+		margin-left: 0
+		margin-bottom: 0
+		height: 64.38rem
+		width: 100%
+		transition: none
+		&--active-popup
+			
+			.circles__front
+				position: static
+				transform: none
+			.circles__title
+				font-weight: bold
+				text-align: left
+			.circles__back
+				opacity: 1
+			.circles__body
+				
+				padding: 2.19rem 1.88rem 0 1.25rem
+			.circles__close
+				display: block
+				pointer-events: auto
+			.circles__path-img
+				position: fixed
+				width: 9.63rem
+				height: 9.31rem
+				transform: rotate(-36.49deg)
+				top: unset
+				bottom: -1.6rem
+				left: 5.35rem
+		&--top-popup
+			
+			.circles__path--top
+				position: fixed
+				width: 100vw
+				height: 100vh
+				top: 0
+				left: 0
+				border-radius: 0
+				z-index: 10000
+		&--bottom-popup
+			.circles__path--bottom
+				position: fixed
+				width: 100vw
+				height: 100vh
+				top: 0
+				left: 0
+				border-radius: 0
+				z-index: 10000
+				border: none
+		&__man-wrap
+			bottom: 0.9rem
+			top: unset
+			left: 2.3rem
+			width: 21.50rem
+			height: 32.81rem
+		&__desc
+			left: 50%
+			transform: translate(-59%)
+		&__wrap
+			left: 0.7rem
+			// right: 0
+			width: 100%
+			transition: none
+		&__path
+			right: unset
+			left: 0
+			width: 18.44rem
+			height: 18.44rem
+			transition: none
+			overflow: unset
+			cursor: unset
+			&--top
+				left: 0
+				top: 0
+				background: $yellow
+				.circles__man-inner
+					width: 18.19rem
+				.circles__img
+					width: 5.13rem
+					bottom: unset
+					top: 7.00rem
+					left: 0.44rem
+			&--bottom
+				right: unset
+				left: 0
+				top: 15.1rem
+				.circles__man-inner
+					width: 21.50rem
+					right: -0.3rem
+				.circles__img
+					width: 6.25rem
+					bottom: unset
+					top: 5.94rem
+					left: 0rem
+		&__close
+			position: absolute
+			width: 0.94rem
+			height: 0.94rem
+			top: 1.25rem
+			right: 1.25rem
+			z-index: 10
+		&__front
+			top: 50%
+			width: 10.28rem
+			transform: translate(-50%, -50%)
+		&__title
+			font-size: 0.94rem
+			line-height: 1.31rem
+		&__back
+			padding: 6.56rem 0 0 6.25rem
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			transform: none
+			transition: none
+		&__man-inner
+			display: block
+			position: absolute
+			bottom: 0
+			right: 0
+			z-index: 10
+			img
+				position: absolute
+				bottom: 0
+				right: 0
+		&__item
+			margin-left: 0
+			&--1
+				margin-top: 1.25rem
+			&--2
+				margin-top: 3.44rem
+			&--3
+				margin-top: 2.25rem
+			&--4
+				margin-top: 0
+				width: 15.75rem
+			&--5
+				margin-top: 2.5rem
+				width: 15.75rem
+				text-align: left
+			&--6
+				display: block
+				margin-top: 2.8rem
+		&__path-img
+			z-index: 100000
+			top: 9.2rem
+			left: 3.65rem
+			width: 11.06rem
+			height: 10.75rem
+			transition: none

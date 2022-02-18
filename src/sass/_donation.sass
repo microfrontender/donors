@@ -1,7 +1,11 @@
 .donation
 	&__title
 		width: 48.56rem
-
+		span
+			display: none
+	
+	&__icon
+		display: none
 	&__subtitle
 		margin-top: 1rem
 		width: 31.56rem
@@ -86,3 +90,85 @@
 		margin-left: 9.4rem
 		margin-bottom: 13.6rem
 		width: 23.88rem
+@media screen and ( max-width: 767px )
+	.donation
+		&__title
+			width: 100%
+			span
+				display: inline
+		&__header
+			
+			width: 100%
+		&__icon
+			display: block
+			width: 6.44rem
+			height: 7.69rem
+			top: 19.6rem
+			left: 14.3rem
+		&__body
+			padding-right: unset
+			padding-bottom: 6.31rem
+		&__subtitle
+			margin-top: auto
+			width: 17.38rem
+		&__bg
+		&__img
+			&--1
+				top: 7rem
+				left: -5.4rem
+				width: 29.75rem
+				height: 147.38rem
+			&--2
+				display: none
+		&__items
+			padding-bottom: 0
+			flex-direction: column
+			align-items: flex-start
+		&__lottie
+			&--1
+				display: none
+		&__item
+			margin-left: 0
+			margin-bottom: 0
+			&--2
+				margin-top: 22.1rem
+			&--3
+				margin-top: 9.2rem
+				.donation__text
+					margin-top: 1.1rem
+			&--4
+				margin-top: 0
+				width: 14rem
+			&--5
+				margin-left: 0.3rem
+				margin-top: 28rem
+			&--6
+				margin-left: 0.3rem
+				margin-top: 26rem
+				
+				width: 17.25rem
+			&--7
+				
+				margin-left: 0.5rem
+				margin-top: 8.1rem
+				width: 18rem
+				.mobile
+					height: 0.6rem
+					display: block
+			&--8
+				margin-left: 0.6rem
+				margin-top: 18.8rem
+		&__text
+			margin-top: 0.6rem
+		&__circles
+			margin-top: 2rem
+		&__stories
+			position: absolute
+			z-index: 1000
+			left: 0rem
+			bottom: 2.81rem
+		&__find
+			margin-top: 5.38rem
+			margin-left: 0
+			margin-bottom: 0
+			width: 100%

@@ -50,5 +50,5 @@ export default function Page(){
 	}
 
 	
-	setPage('cover', 1);
+	setPage('donation', 2);
 }

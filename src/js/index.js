@@ -13,6 +13,7 @@ import LazyLoad from "vanilla-lazyload";
 import Page from './_mobile-pages';
 import FoodMobile from './_food-mobile';
 import Stories from './_stories';
+import CirclesMobile from './_circles-mobile';
 
 
 
@@ -21,14 +22,16 @@ if(window.innerWidth > 767){
 
 	Scroller();
 	Food();
+	
+Circles();
 }else{
 	Page();
 	FoodMobile();
 	Stories();
+	CirclesMobile();
 }
 Hints();
 Slider();
-Circles();
 Accordion();
 window.onload = () =>{
 	

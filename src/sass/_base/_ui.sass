@@ -83,6 +83,7 @@ h2
         height: 1.25rem
         margin-right: 0.38rem
 .stories
+    display: none
     padding: 0.63rem
     position: relative
     align-items: center
@@ -108,6 +109,10 @@ h2
     &.active
         padding: 0.63rem 1.25rem
         border-radius: 6.25rem
+.desktop
+    display: block
+.mobile
+    display: none
 @media screen and ( max-width: 767px )
     html
         font-size: 4.267vw
@@ -156,3 +161,9 @@ h2
         .spines
             height: calc(100%)
             display: none
+    .desktop
+        display: none
+    .mobile
+        display: unset
+    .stories
+        display: flex
