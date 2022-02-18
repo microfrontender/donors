@@ -5,7 +5,7 @@ export default function Page(){
 	const spineItems = document.querySelectorAll('.spine[data-href]');
 	const header = document.querySelector('.header');
 	
-	const burger = document.querySelector('.header__burger');
+	const burger = document.querySelector('.header__burger--mobile');
 	const headerNumber = document.querySelector('.header__number');
 	const headerTitle = document.querySelector('.header__title');
 	const popup = document.querySelector('.header__popup');
@@ -50,5 +50,5 @@ export default function Page(){
 	}
 
 	
-	setPage('test', 3);
+	setPage('cover', 1);
 }

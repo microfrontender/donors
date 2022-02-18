@@ -6,7 +6,7 @@ export default function Accordion(){
 		
 		// element.classList.toggle('active');
 
-		element.addEventListener('click', ()=>{
+		element.querySelector('.accordion__header').addEventListener('click', ()=>{
 			toggleAccordion(element);
 		});
 	});
@@ -15,8 +15,8 @@ export default function Accordion(){
 		let isActive = element.classList.contains('active');
 		if(	document.querySelectorAll('.accordion.active').length > 0){
 
-			document.querySelector('.accordion.active .accordion__body').style.width = element.querySelector('.accordion__header').offsetWidth +'px';
-			document.querySelector('.accordion.active .accordion__body').style.height = element.querySelector('.accordion__header').offsetHeight +'px';
+			document.querySelector('.accordion.active .accordion__body').style.width = document.querySelector('.accordion.active .accordion__header').offsetWidth +'px';
+			document.querySelector('.accordion.active .accordion__body').style.height = document.querySelector('.accordion.active .accordion__header').offsetHeight +'px';
 			document.querySelector('.accordion.active').classList.remove('active');
 		}
 		if(isActive){

@@ -13,12 +13,11 @@ section( data-spine-section="4")#benefit.section.benefit
 				.benefit__bg
 					.benefit__img.benefit__img--1.lazy
 						picture
-							//- source(media="(max-width: 767px)", srcset=require('../../img/benefit-img-1.png')+', ' + require('../../img/benefit-img-1-2x.png')+' 2x')
-							source(media="(min-width: 1921px)", srcset=require('../../img/benefit-img-1-2x.png'))
+							source(media="(max-width: 767px)", data-srcset=require('../../img/benefit-img-1-mobile.png')+', ' + require('../../img/benefit-img-1-2x-mobile.png')+' 2x')
 							img(  data-src=require('../../img/benefit-img-1.png') data-srcset=require('../../img/benefit-img-1-2x.png')+' 2x' alt="")
 					.benefit__img.benefit__img--2.lazy
 						picture
-							//- source(media="(max-width: 767px)", srcset=require('../../img/benefit-img-3.png')+', ' + require('../../img/benefit-img-3-2x.png')+' 2x')
+							source(media="(max-width: 767px)", data-srcset=require('../../img/benefit-img-2-mobile.png')+', ' + require('../../img/benefit-img-2-2x-mobile.png')+' 2x')
 							img(  data-src=require('../../img/benefit-img-2.png') data-srcset=require('../../img/benefit-img-2-2x.png')+' 2x' alt="")
 				.benefit__items
 					.benefit__item.benefit__item--1
@@ -29,14 +28,22 @@ section( data-spine-section="4")#benefit.section.benefit
 						.benefit__text У вас вырабатывается иммунитет к незначительным кровопотерям, и организм привыкает к быстрому восстановлению.
 					.benefit__item.benefit__item--3
 						.benefit__item-title Здоровый образ жизни
-						.benefit__text Регулярное донорство помогает вести здоровый образ жизни: вам нужно высыпаться, периодически соблюдать диету, — так вы начинаете более осознанно относиться к своему состоянию.
+						.benefit__text Регулярное донорство помогает вести здоровый образ жизни: вам нужно высыпаться, периодически соблюдать диету, — так вы начинаете более осознанно относиться к состоянию своего здоровья.
 					.benefit__item.benefit__item--4
 						.benefit__item-title Дополнительные выходные
 						.benefit__text Вам положены 2 выходных дня после сдачи крови — это 8–10 дополнительных дней отдыха в год.
 					.benefit__item.benefit__item--5
 						.benefit__item-title Сообщество единомышленников
 						.benefit__text А еще доноры — это огромное сообщество осознанных и неравнодушных людей, к чьей компании приятно принадлежать.
-
+					.benefit__item.benefit__item--6
+						.benefit__text расскажите о проекте
+							br
+							| в соцсетях, чтобы больше людей узнали о донорстве
+						a(href="" download).benefit__stories.stories
+							.stories__icon
+								img(src=require('../../img/icon-stories.svg'), alt="")
+							.stories__text 
+								span Cохранить картинку для сторис
 					.section__find.benefit__find 
 						.section__find-text Теперь вы знаете, как и зачем сдавать кровь
 						a(href="").section__find-btn Найти свой
