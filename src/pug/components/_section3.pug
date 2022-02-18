@@ -5,18 +5,25 @@ section( data-spine-section="3")#test.section.test
 			.section__header 
 				h2.section__title.test__title Что будут делать с моей кровью
 				.section__subtitle.title.test__subtitle Чтобы убедиться, что кровь донора безопасна, каждая сданная доза проходит исследования и карантин
+				.section__icon.test__icon
+					img(  src=require('../../img/test-icon.png') srcset=require('../../img/test-icon-2x.png')+' 2x' alt="")
 				.section__arrow 
 					img(src=require('../../img/arrow-down-mobile.png'), alt="")
 			.section__body.test__body
+				
 				.test__bg
 					.test__img.lazy
 						picture
-							//- source(media="(max-width: 767px)", srcset=require('../../img/test-img-1.png')+', ' + require('../../img/test-img-1-2x.png')+' 2x')
-							source(media="(min-width: 1921px)", srcset=require('../../img/test-img-1-2x.png'))
+							source(media="(max-width: 767px)", data-srcset=require('../../img/test-img-1-mobile.png')+', ' + require('../../img/test-img-1-2x-mobile.png')+' 2x')
 							img(  data-src=require('../../img/test-img-1.png') data-srcset=require('../../img/test-img-1-2x.png')+' 2x' alt="")
+					.test__lottie.test__lottie--1 
+						img(src=require('../../img/test-lottie.png'), alt="")
+						//- lottie-player(autoplay loop src='./lottie/1/data.json')
 				.test__items
 					.test__item.test__item--1
-						.test__item-title Проверка крови
+						.test__item-title 
+							span.desktop Проверка крови
+							span.mobile Исследования
 						.test__text Определяется группа крови и резус, другие параметры, отсутствие инфекций. Если при исследовании обнаружится то, что может быть опасно для вашего здоровья, — вам обязательно сообщат, соблюдая конфиденциальность.
 					.test__item.test__item--2
 						.test__item-title Разделение на компоненты 
@@ -29,11 +36,19 @@ section( data-spine-section="3")#test.section.test
 								span период инфекции. 
 							| Все это время компоненты хранятся в холодильниках.
 					.test__item.test__item--4
-						.test__text Далее кровь отправляется в медицинские учреждения в специальных термоизоляционных контейнерах или рефрижераторах.
+						.test__text.desktop Далее кровь отправляется в медицинские учреждения в специальных термоизоляционных контейнерах или рефрижераторах.
+						.test__text.mobile
+							p После карантина и подтверждения безопасности крови ее можно использовать. 
+							p Кровь отправляется в медицинские учреждения в специальных термоизоляционных контейнерах или рефрижераторах.
 
 					.test__item.test__item--5
-						.test__item-title Где нужна донорская кровь
-						.test__text У донорской крови много назначений, но в основном ее везут в больницы — там она нужна всегда.
+						.test__item-title 
+							span.desktop Где нужна донорская кровь
+							span.mobile В больнице
+						.test__text У донорской крови много назначений, но в основном ее везут в больницы
+							span.desktop  — т
+							span.mobile . Т
+							|ам она нужна всегда.
 					.test__accordions 
 						.accordion.accordion--1
 							.accordion__header
@@ -41,35 +56,65 @@ section( data-spine-section="3")#test.section.test
 									img(  src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Реанимация
 							.accordion__body
-								.accordion__inner В экстренных ситуациях используют все компоненты: плазму для лечения шоковых состояний, эритроцитную взвесь — при потере крови, тромбоциты — для онкобольных.
+								.accordion__inner
+									.accordion__text В экстренных ситуациях используют все компоненты: плазму для лечения шоковых состояний, эритроцитную взвесь — при потере крови, тромбоциты — для онкобольных.
+									.accordion__img.lazy
+										picture
+											source(media="(max-width: 767px)", data-srcset=require('../../img/accordon-img-1.png')+', ' + require('../../img/accordon-img-1-2x.png')+' 2x')
+											img( src=require('../../img/placeholder.png') alt="") 	
+														
 						.accordion.accordion--2
 							.accordion__header
 								.accordion__icon 
 									img(  src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Родильное отделение
 							.accordion__body
-								.accordion__inner Донорская плазма помогает при лечении сбоев в свертываемости крови и больших кровопотерях.
+								.accordion__inner
+									.accordion__text Донорская плазма помогает при лечении сбоев в свертываемости крови и больших кровопотерях.
+									.accordion__img.lazy
+										picture
+											source(media="(max-width: 767px)", data-srcset=require('../../img/accordon-img-2.png')+', ' + require('../../img/accordon-img-2-2x.png')+' 2x')
+											img( src=require('../../img/placeholder.png') alt="") 		
+										
 						.accordion.accordion--3
 							.accordion__header
 								.accordion__icon 
 									img(  src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Лаборатория
 							.accordion__body
-								.accordion__inner В некоторых случаях донорскую кровь используют для научных медицинских исследований, когда использование другого материала невозможно.
+								.accordion__inner
+									.accordion__text В некоторых случаях донорскую кровь используют для научных медицинских исследований, когда использование другого материала невозможно.
+									.accordion__img.lazy
+										picture
+											source(media="(max-width: 767px)", data-srcset=require('../../img/accordon-img-3.png')+', ' + require('../../img/accordon-img-3-2x.png')+' 2x')
+											img( src=require('../../img/placeholder.png') alt="") 	
+										
 						.accordion.accordion--4
 							.accordion__header
 								.accordion__icon 
 									img(  src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Стационар
 							.accordion__body
-								.accordion__inner Для проведения плановых операций каждый стационар нуждается во всех типах и компонентах крови.
+								.accordion__inner
+									.accordion__text Для проведения плановых операций каждый стационар нуждается во всех типах и компонентах крови.
+									.accordion__img.lazy
+										picture
+											source(media="(max-width: 767px)", data-srcset=require('../../img/accordon-img-4.png')+', ' + require('../../img/accordon-img-4-2x.png')+' 2x')
+											img( src=require('../../img/placeholder.png') alt="") 	
+										
 						.accordion.accordion--5
 							.accordion__header
 								.accordion__icon 
 									img(  src=require('../../img/icon-accordion.svg'), alt="")
 								.accordion__title Производство медикаментов
 							.accordion__body
-								.accordion__inner При производстве иммунологических и кровеостанавливающих лекарств используют различные компоненты донорской крови.
+								.accordion__inner
+									.accordion__text При производстве иммунологических и кровеостанавливающих лекарств используют различные компоненты донорской крови.
+									.accordion__img.lazy
+										picture
+											source(media="(max-width: 767px)", data-srcset=require('../../img/accordon-img-5.png')+', ' + require('../../img/accordon-img-5-2x.png')+' 2x')
+											img( src=require('../../img/placeholder.png') alt="") 	
+										
 					.section__find.test__find 
 						.section__find-text Теперь вы знаете, кому помогает ваша кровь
 						a(href="").section__find-btn Найти свой

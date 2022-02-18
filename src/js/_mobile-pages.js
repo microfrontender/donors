@@ -50,5 +50,5 @@ export default function Page(){
 	}
 
 	
-	setPage('donation', 2);
+	setPage('test', 3);
 }
