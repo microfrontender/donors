@@ -20,7 +20,9 @@ section( data-spine-section="1")#prep.section.prep
 							img(  src=require('../../img/arrow-down-white.svg'), alt="")
 						span Скачать чек-лист
 				.prep__bg
-					.prep__lottie.prep__lottie--1 
+					.prep__lottie.prep__lottie--1.lottie-item 
+					.prep__lottie.prep__lottie--3.lottie-item 
+					.prep__lottie.prep__lottie--4.lottie-item
 						//- lottie-player(autoplay loop src='./lottie/1/data.json')
 					
 					.prep__img.prep__img--1.lazy
@@ -31,7 +33,7 @@ section( data-spine-section="1")#prep.section.prep
 						picture
 							source(media="(max-width: 767px)", data-srcset=require('../../img/prep-img-3-mobile.png')+', ' + require('../../img/prep-img-3-2x-mobile.png')+' 2x')
 							img(  data-src=require('../../img/prep-img-3.png') data-srcset=require('../../img/prep-img-3-2x.png')+' 2x' alt="")
-
+						
 				.prep__slider.slider
 					.slider__btns
 						.slider__btn
@@ -95,14 +97,15 @@ section( data-spine-section="1")#prep.section.prep
 								.food__desc-icon
 									img(  src=require('../../img/icon-hand.svg'), alt="")
 								.food__desc-text нажмите на холодильник, чтобы посмотреть диету
-							.food__img.lazy 
-								picture
-									source(media="(max-width: 767px)", data-srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-2x-mobile.png')+' 2x')
-									img(  data-src=require('../../img/prep-img-2.png') data-srcset=require('../../img/prep-img-2-2x.png')+' 2x' alt="")
+							.food__img.food__img--1.prep__lottie--2.lottie-item 
+								//- picture
+								//- 	source(media="(max-width: 767px)", data-srcset=require('../../img/prep-img-2-mobile.png')+', ' + require('../../img/prep-img-2-2x-mobile.png')+' 2x')
+								//- 	img(  data-src=require('../../img/prep-img-2.png') data-srcset=require('../../img/prep-img-2-2x.png')+' 2x' alt="")
 							.food__img.food__img--open.lazy 
 								picture
-									source(media="(max-width: 767px)", srcset=require('../../img/placeholder.png'))
+									source(media="(max-width: 767px)", data-srcset=require('../../img/placeholder.png'))
 									img(  data-src=require('../../img/prep-img-2-open.png') data-srcset=require('../../img/prep-img-2-open-2x.png')+' 2x' alt="")
+								//- .prep__lottie--6
 							.food__icon
 								include ../../img/food-icon.svg
 						a(href="" download).food__stories.stories
@@ -173,8 +176,8 @@ section( data-spine-section="1")#prep.section.prep
 						a(href="").section__find-btn Найти свой
 							span 
 							| центр сдачи крови
-							.section__find-btn-icon 
-								img(  src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
+							.section__find-btn-icon.prep__lottie--5  
+								//- img(  src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
 
 	.section__hints
 		.section__hints-overlay

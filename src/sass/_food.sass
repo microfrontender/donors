@@ -5,10 +5,11 @@
 	
 	&.open
 		.food__img
-			display: none
+			// display: none
+			opacity: 0
 		.food__img--open
-			display: block
-		
+			// display: block
+			opacity: 1
 		.food__popup
 			opacity: 1
 		
@@ -64,7 +65,12 @@
 			height: 43.69rem
 			left: 2.6rem
 			top: -8.7rem
-			display: none
+			// display: none
+			opacity: 0
+		&--1
+			top: -0.6rem
+			height: 25.75rem
+			width: 19.75rem
 	&__stories
 		display: none
 	&__icon

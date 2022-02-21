@@ -1,5 +1,5 @@
 
-import lottie from "lottie-web";
+
 
 import '../sass/index.sass';
 import Scroller from './_scroll';
@@ -14,6 +14,7 @@ import Page from './_mobile-pages';
 import FoodMobile from './_food-mobile';
 import Stories from './_stories';
 import CirclesMobile from './_circles-mobile';
+import Lottie from './_lottie';
 
 
 
@@ -35,19 +36,9 @@ Slider();
 Accordion();
 window.onload = () =>{
 	
-	const lazysliders = new LazyLoad({
-        elements_selector: ".lazy img"
-      });
-	let lottie1 = require("./lottie/1/data.json");
-
-	let lottieSvg1 = lottie.loadAnimation({
-		container: document.querySelector('.prep__lottie'), // the dom element that will contain the animation
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		animationData: lottie1  // the path to the animation json
-	  });
-	
-
+	// const lazysliders = new LazyLoad({
+    //     elements_selector: ".lazy img",
+	// 	unobserve_entered: true
+    //   });
 
 }

@@ -12,12 +12,16 @@ section( data-spine-section="3")#test.section.test
 			.section__body.test__body
 				
 				.test__bg
+				
+					.test__lottie.test__lottie--1.lottie-item 
+					.test__lottie.test__lottie--2.lottie-item
+					.test__lottie.test__lottie--3.lottie-item
 					.test__img.lazy
 						picture
 							source(media="(max-width: 767px)", data-srcset=require('../../img/test-img-1-mobile.png')+', ' + require('../../img/test-img-1-2x-mobile.png')+' 2x')
 							img(  data-src=require('../../img/test-img-1.png') data-srcset=require('../../img/test-img-1-2x.png')+' 2x' alt="")
-					.test__lottie.test__lottie--1 
-						img(src=require('../../img/test-lottie.png'), alt="")
+					//- .test__lottie.test__lottie--1 
+					//- 	img(src=require('../../img/test-lottie.png'), alt="")
 						//- lottie-player(autoplay loop src='./lottie/1/data.json')
 				.test__items
 					.test__item.test__item--1
@@ -125,8 +129,8 @@ section( data-spine-section="3")#test.section.test
 						a(href="").section__find-btn Найти свой
 							span 
 							| центр сдачи крови
-							.section__find-btn-icon 
-								img(  src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
+							.section__find-btn-icon.test__lottie--4.lottie-item
+								//- img(  src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
 
 	.section__hints
 		

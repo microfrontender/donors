@@ -37,7 +37,7 @@ img
     width: 100%
     &[data-src]
         opacity: 0
-        transition: opacity ease 0.1s
+        transition: opacity ease 0.2s
     &.loaded
         opacity: 1
 main
@@ -113,6 +113,18 @@ h2
     display: unset
 .mobile
     display: none
+.lottie-item
+    -webkit-transform:translate3d(0,0,0)
+    canvas
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+    img
+        position: absolute
+        top: 0
+        left: 0
+
 @media screen and ( max-width: 767px )
     html
         font-size: 4.267vw
@@ -167,3 +179,5 @@ h2
         display: unset
     .stories
         display: flex
+    .lottie-item
+        display: none
