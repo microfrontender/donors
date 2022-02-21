@@ -1,6 +1,6 @@
 import LocomotiveScroll from 'locomotive-scroll';
-import Lottie from './_lottie';
-
+// import Lottie from './_lottie';
+import lottie from "lottie-web";
 import srcLottie1 from '/lottie/1/data.json';
 import srcLottie2 from '/lottie/2/data.json';
 import srcLottie3 from '/lottie/3/data.json';
@@ -95,15 +95,7 @@ export default function Scroller() {
 	
 	let init = false;
 
-	if(!init){
-		init = true;
-		data.forEach((element) => {
-			let img = new Image();
-			img.src = element.src.assets[0].u+element.src.assets[0].p;
-			document.querySelector(element.selector).appendChild(img);
-
-		});
-	}
+	
 
 	const scroll = new LocomotiveScroll({
 		el: document.querySelector('[data-scroll-container]'),
@@ -129,32 +121,58 @@ export default function Scroller() {
 	}
 	
 
-	// let lottieOffset = [];
-	// dataLottie.forEach(element => {
-	// 	lottieOffset.push(document.querySelector(element.selector).getBoundingClientRect().left);
-	// });
-	// console.log(lottieOffset);
 
+	// let items = document.querySelectorAll('.lottie-item');
+	// let lottieItems = [];
+	if(!init){
+		init = true;
+		data.forEach((element) => {
+			let img = new Image();
+			img.src = element.src.assets[0].u+element.src.assets[0].p;
+			document.querySelector(element.selector).appendChild(img);
+
+		});
+	}
+
+	
+	
 	function checkLottie(){
-		let items = document.querySelectorAll('.lottie-item');
-		items.forEach((element, index) => {
-			if(!element.classList.contains('init') && element.getBoundingClientRect().left - window.innerWidth < 0 && element.getBoundingClientRect().left + window.innerWidth > 0){
-				element.classList.add('init')
+		
+		data.forEach((element, index) => {
+			
+			if(!document.querySelector(element.selector).classList.contains('init') && document.querySelector(element.selector).getBoundingClientRect().left - window.innerWidth*2 < 0 && init){
 				
-				
-				Lottie(index);
+				document.querySelector(element.selector).classList.add('init');
+			
+				let lottieItem = lottie.loadAnimation({
+					container: document.querySelector(element.selector), // the dom element that will contain the animation
+					renderer: 'canvas',
+					loop: true,
+					autoplay: true,
+					animationData: element.src  
+				  });
+				  
+					lottieItem.addEventListener('loaded_images', ()=>{
+					// lottie.setQuality('medium') ;
+					
+					document.querySelector(`${element.selector} img`).style.opacity = '0';
+					document.querySelector(`${element.selector} canvas`).style.opacity = '1';
+					lottieItem.play();
+					
+				  });
 			}
 			
 		});
 		// Lottie(lottieElement);
+		
 	}
 
 
 	function lazyload(){
 		let items = document.querySelectorAll('.lazy');
 		items.forEach((element, index) => {
-			if(!element.classList.contains('loaded') && element.getBoundingClientRect().left - window.innerWidth < 0 && element.getBoundingClientRect().left + window.innerWidth > 0){
-				console.log(element.querySelectorAll('[data-srcset]').length);
+			if(!element.classList.contains('loaded') && element.getBoundingClientRect().left - window.innerWidth*2 < 0 ){
+				// console.log(element.querySelectorAll('[data-srcset]').length);
 				element.classList.add('loaded');
 				if(element.querySelectorAll('[data-srcset]').length > 0){
 					element.querySelectorAll('[data-srcset]').forEach((item)=>{
@@ -173,9 +191,15 @@ export default function Scroller() {
 			
 		});
 	}
-	scroll.on('scroll', () => {
-		updateScroll();
+	scroll.on('scroll', (args) => {
+		if(typeof args.currentElements['cover-container'] === 'object') {
+			let progress = args.currentElements['cover-container'].progress;
+			console.log(progress);
+			// ouput log example: 0.34
+			// gsap example : myGsapAnimation.progress(progress);
+		}
 		checkLottie();
+		updateScroll();
 		lazyload();
 		spines.forEach((spine) => {
 			let attr = spine.getAttribute('data-spine-section');

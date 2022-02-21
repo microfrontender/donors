@@ -106,7 +106,7 @@ export default function Lottie(index){
 	// 	document.querySelector('.prep__food.food').classList = 'prep__food food';
 	// }
 	  lottieItem.addEventListener('loaded_images', ()=>{
-		lottie.setQuality('medium') ;
+		// lottie.setQuality('medium') ;
 		document.querySelector(`${data[index].selector} img`).style.opacity = '0';
 		document.querySelector(`${data[index].selector} canvas`).style.opacity = '1';
 		lottieItem.play();
