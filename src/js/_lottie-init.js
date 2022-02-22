@@ -15,7 +15,7 @@ import srcLottie12 from '/lottie/12/data.json';
 import srcLottie13 from '/lottie/13/data.json';
 import srcLottie14 from '/lottie/14/data.json';
 
-export default function Lottie(){
+export default function LottieInit() {
 
 
 	const data = [
@@ -90,33 +90,21 @@ export default function Lottie(){
 		
 	];
 
-
 	
-	data.forEach((element, index) => {
-		
-		if(!document.querySelector(element.selector).classList.contains('init') && document.querySelector(element.selector).getBoundingClientRect().left - window.innerWidth*2 < 0){
-			
-			document.querySelector(element.selector).classList.add('init');
-		
-			let lottieItem = lottie.loadAnimation({
-				container: document.querySelector(element.selector), // the dom element that will contain the animation
-				renderer: 'canvas',
-				loop: true,
-				autoplay: false,
-				animationData: element.src  
-				});
-				
-				lottieItem.addEventListener('loaded_images', ()=>{
-				lottie.setQuality('low') ;
-				
-				document.querySelector(`${element.selector} img`).style.opacity = '0';
-				document.querySelector(`${element.selector} canvas`).style.opacity = '1';
-				lottieItem.play();
-				
-				});
-		}
-		
-	});
+	let init = false;
+
+
+	if(!init){
+		init = true;
+		data.forEach((element) => {
+			let img = new Image();
+			img.src = element.src.assets[0].u+element.src.assets[0].p;
+			document.querySelector(element.selector).appendChild(img);
+
+		});
+	}
+	
+	
 	
 	
 }

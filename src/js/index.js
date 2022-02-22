@@ -14,10 +14,11 @@ import Page from './_mobile-pages';
 import FoodMobile from './_food-mobile';
 import Stories from './_stories';
 import CirclesMobile from './_circles-mobile';
-import Lottie from './_lottie';
+import LottieInit from './_lottie-init';
 
 
 
+LottieInit();
 Menu();
 if(window.innerWidth > 767){
 
@@ -36,9 +37,9 @@ Slider();
 Accordion();
 window.onload = () =>{
 	
-	// const lazysliders = new LazyLoad({
-    //     elements_selector: ".lazy img",
-	// 	unobserve_entered: true
-    //   });
+	const lazysliders = new LazyLoad({
+        elements_selector: ".lazy img",
+		unobserve_entered: true
+      });
 
 }
