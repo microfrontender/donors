@@ -42,4 +42,26 @@ window.onload = () =>{
 		unobserve_entered: true
       });
 
+	//   let items = document.querySelectorAll('.lazy');
+	//   	items.forEach((element, index) => {
+	//   		// if(!element.classList.contains('loaded') && element.getBoundingClientRect().left - window.innerWidth*2 < 0 ){
+	//   			// console.log(element.querySelectorAll('[data-srcset]').length);
+	//   			element.classList.add('loaded');
+	//   			if(element.querySelectorAll('[data-srcset]').length > 0){
+	//   				element.querySelectorAll('[data-srcset]').forEach((item)=>{
+	//   					item.srcset = item.getAttribute('data-srcset');
+	//   				});
+	//   			}
+				  
+	//   			if(element.querySelectorAll('[data-src]').length > 0){
+	//   			element.querySelector('[data-src]').src = element.querySelector('[data-src]').getAttribute('data-src');
+				  
+	//   			element.querySelector('[data-src]').onload = ()=>{
+	//   				element.querySelector('[data-src]').classList.add('loaded');
+	//   			}
+	//   			}
+	//   		// }
+			  
+	//   	});
+
 }

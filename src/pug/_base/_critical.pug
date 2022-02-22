@@ -1,0 +1,386 @@
+
+style(type='text/css').
+	html {
+	width: 100%;
+	height: 100%;
+	background: #F8F1E6;
+	font-size: 16px;
+	font-size: 1.95vh; }
+
+	body {
+	position: relative;
+	background-color: #F8F1E6;
+	overflow: hidden;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+	font-size: 100%;
+	line-height: 1.31rem;
+	font-family: 'Proxima Nova', sans-serif;
+	color: #383737; }
+
+	*, :after, :before {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	flex-shrink: 0; }
+
+	a, button, p, ul, li {
+	font: inherit;
+	color: inherit; }
+
+	img {
+	width: 100%; }
+	img[data-src] {
+		opacity: 0;
+		transition: opacity ease 0.2s; }
+	img.loaded {
+		opacity: 1; }
+
+	main {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	overflow: hidden; }
+
+	h1, h2 {
+	font-family: 'TT Travels Next', sans-serif;
+	font-weight: 500;
+	color: #422B8F; }
+
+	h1 {
+	font-size: 5.75rem;
+	line-height: 4.88rem; }
+
+	h2 {
+	font-size: 3.13rem;
+	line-height: 3rem; }
+
+	sub {
+	vertical-align: baseline;
+	font-size: 0.7em; }
+
+	.wrap {
+	display: flex; }
+		
+	.cover {
+		min-width: auto;
+		width: 200vw
+	}
+
+	.cover .container {
+		width: 100vw
+	}
+
+	.cover--stage-1 .cover__title {
+		opacity: 1
+	}
+
+	.cover--stage-1 .cover__text {
+		opacity: .4
+	}
+
+	.cover--stage-1 .cover__row-path--top {
+		transform: translateY(0)
+	}
+
+	.cover--stage-1 .cover__row-path--bottom {
+		transform: translateY(100%)
+	}
+
+	.cover--stage-1 .cover__icon--top img {
+		transform: translateY(0)
+	}
+
+	.cover--stage-1 .cover__icon--bottom img {
+		transform: translateY(100%)
+	}
+
+	.cover--stage-2 .cover__title {
+		opacity: .4
+	}
+
+	.cover--stage-2 .cover__text {
+		opacity: 1
+	}
+
+	.cover--stage-2 .cover__row-path--top {
+		transform: translateY(-100%)
+	}
+
+	.cover--stage-2 .cover__row-path--bottom {
+		transform: translateY(0)
+	}
+
+	.cover--stage-2 .cover__icon--top img {
+		transform: translateY(-100%)
+	}
+
+	.cover--stage-2 .cover__icon--bottom img {
+		transform: translateY(0)
+	}
+
+	.cover--stage-2 .cover__label--top {
+		width: 12.31rem
+	}
+
+	.cover--stage-2 .cover__label-path--top {
+		transform: translateY(-100%)
+	}
+
+	.cover--stage-2 .cover__label-path--bottom {
+		transform: translateY(0)
+	}
+
+	.cover__inner {
+		width: 100vw;
+		padding: 2.2rem 0 0 7.43rem;
+		display: flex;
+		flex-direction: column
+	}
+
+	.cover__logo {
+		margin-top: 7.8rem;
+		margin-left: .9rem;
+		height: 2.13rem;
+		width: 19.75rem
+	}
+
+	.cover__label {
+		width: 13.31rem;
+		height: 2.5rem;
+		border-radius: .88rem;
+		text-transform: uppercase;
+		font-size: .75rem;
+		line-height: 1.06rem;
+		font-family: TT Travels Next, sans-serif;
+		font-weight: 500;
+		background: #ffd965;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all .5s ease
+	}
+
+	.cover__label--top {
+		margin-left: .5rem
+	}
+
+	.cover__label--bottom {
+		position: absolute;
+		z-index: 100;
+		width: 13.88rem;
+		height: 13.88rem;
+		border-radius: 50%;
+		right: 18rem;
+		bottom: 2.7rem;
+		font-size: .94rem;
+		line-height: 1.31rem;
+		font-weight: 700
+	}
+
+	.cover__label--bottom .cover__label-row {
+		height: 30%
+	}
+
+	.cover__label--bottom .cover__label-path {
+		padding: 0 2.38rem
+	}
+
+	.cover__label-icon {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		bottom: 1.1rem;
+		width: 1.65rem
+	}
+
+	.cover__label-row {
+		position: relative;
+		height: .86rem;
+		overflow: hidden
+	}
+
+	.cover__label-path, .cover__label-row {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center
+	}
+
+	.cover__label-path {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		text-align: center;
+		transition: all .5s ease
+	}
+
+	.cover__label-path--bottom {
+		transform: translateY(100%)
+	}
+
+	.cover__title {
+		margin-top: 1.1rem;
+		font-size: 4.5rem;
+		line-height: 4.75rem;
+		text-transform: uppercase;
+		transition: all .5s ease
+	}
+
+	.cover__wrap {
+		position: relative
+	}
+
+	.cover__text {
+		font-family: TT Travels Next, sans-serif;
+		font-weight: 500;
+		color: #422b8f;
+		font-size: 4.5rem;
+		line-height: 4.75rem;
+		text-transform: uppercase;
+		opacity: .4;
+		transition: all .5s ease
+	}
+
+	.cover__icons {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10
+	}
+
+	.cover__icon-row {
+		position: relative;
+		height: 4.75rem
+	}
+
+	.cover__icon-row:first-child .cover__icon img {
+		transition-delay: .1s
+	}
+
+	.cover__icon-row:nth-child(2) .cover__icon img {
+		transition-delay: .2s
+	}
+
+	.cover__icon-row:nth-child(3) .cover__icon img {
+		transition-delay: .3s
+	}
+
+	.cover__icon-row:nth-child(4) .cover__icon img {
+		transition-delay: .4s
+	}
+
+	.cover__icon-row:nth-child(5) .cover__icon img {
+		transition-delay: .5s
+	}
+
+	.cover__icon-row:nth-child(6) .cover__icon img {
+		transition-delay: .6s
+	}
+
+	.cover__icon {
+		position: absolute;
+		overflow: hidden
+	}
+
+	.cover__icon img {
+		transition: all .5s ease
+	}
+
+	.cover__icon--bottom img {
+		transform: translateY(100%)
+	}
+
+	.cover__icon--1 {
+		top: -.4rem;
+		left: -.5rem;
+		width: 5.31rem
+	}
+
+	.cover__icon--2 {
+		top: -.3rem;
+		left: 31.4rem;
+		width: 5.13rem
+	}
+
+	.cover__icon--3 {
+		top: -.2rem;
+		left: -.4rem;
+		width: 5.38rem
+	}
+
+	.cover__icon--4 {
+		top: -1.2rem;
+		left: 49.3rem;
+		width: 6.88rem
+	}
+
+	.cover__icon--5 {
+		top: -1.1rem;
+		left: -1rem;
+		width: 6.31rem
+	}
+
+	.cover__icon--6 {
+		top: -1.7rem;
+		left: 31.4rem;
+		width: 5.69rem
+	}
+
+	.cover__row {
+		position: relative;
+		height: 4.75rem;
+		overflow: hidden
+	}
+
+	.cover__row:first-child .cover__row-path {
+		transition-delay: .1s
+	}
+
+	.cover__row:first-child span {
+		margin: 0 2.5rem
+	}
+
+	.cover__row:nth-child(2) .cover__row-path {
+		transition-delay: .2s
+	}
+
+	.cover__row:nth-child(3) .cover__row-path {
+		transition-delay: .3s
+	}
+
+	.cover__row:nth-child(3) span {
+		margin: 0 2.9rem
+	}
+
+	.cover__row:nth-child(4) .cover__row-path {
+		transition-delay: .4s
+	}
+
+	.cover__row:nth-child(5) .cover__row-path {
+		transition-delay: .5s
+	}
+
+	.cover__row:nth-child(5) span {
+		margin: 0 2.9rem
+	}
+
+	.cover__row:nth-child(6) .cover__row-path {
+		transition-delay: .6s
+	}
+
+	.cover__row-path {
+		position: absolute;
+		height: 5.5rem;
+		top: 0;
+		left: 0;
+		transition: all .5s ease
+	}
+
+	.cover__row-path--bottom {
+		transform: translateY(100%)
+	}
