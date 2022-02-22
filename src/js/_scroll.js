@@ -59,11 +59,11 @@ export default function Scroller() {
 			
 	// 	});
 	// }
-
+	// Cover(1);
 	scroll.on('scroll', (args) => {
 		if(typeof args.currentElements['cover-container'] === 'object') {
 			let progress = args.currentElements['cover-container'].progress;
-			if(progress > 0.50){
+			if(progress > 0.30){
 				Cover(2);
 			}else{
 				Cover(1);

@@ -16,10 +16,10 @@ section( data-spine-section="3")#test.section.test
 					.test__lottie.test__lottie--1.lottie-item 
 					.test__lottie.test__lottie--2.lottie-item
 					.test__lottie.test__lottie--3.lottie-item
-					.test__img.lazy
+					.test__img
 						picture
-							source(media="(max-width: 767px)", data-srcset=require('../../img/test-img-1-mobile.png')+', ' + require('../../img/test-img-1-2x-mobile.png')+' 2x')
-							img(  data-src=require('../../img/test-img-1.png') data-srcset=require('../../img/test-img-1-2x.png')+' 2x' alt="")
+							source(media="(max-width: 767px)", srcset=require('../../img/test-img-1-mobile.png')+', ' + require('../../img/test-img-1-2x-mobile.png')+' 2x')
+							img(  src=require('../../img/test-img-1.png') srcset=require('../../img/test-img-1-2x.png')+' 2x' alt="")
 					//- .test__lottie.test__lottie--1 
 					//- 	img(src=require('../../img/test-lottie.png'), alt="")
 						//- lottie-player(autoplay loop src='./lottie/1/data.json')

@@ -25,14 +25,14 @@ section( data-spine-section="1")#prep.section.prep
 					.prep__lottie.prep__lottie--4.lottie-item
 						//- lottie-player(autoplay loop src='./lottie/1/data.json')
 					
-					.prep__img.prep__img--1.lazy
+					.prep__img.prep__img--1
 						picture
-							source(media="(max-width: 767px)", data-srcset=require('../../img/prep-img-1-mobile.png')+', ' + require('../../img/prep-img-1-2x-mobile.png')+' 2x')
-							img(  data-src=require('../../img/prep-img-1.png') data-srcset=require('../../img/prep-img-1-2x.png')+' 2x' alt="")
-					.prep__img.prep__img--2.lazy
+							source(media="(max-width: 767px)", srcset=require('../../img/prep-img-1-mobile.png')+', ' + require('../../img/prep-img-1-2x-mobile.png')+' 2x')
+							img(  src=require('../../img/prep-img-1.png') srcset=require('../../img/prep-img-1-2x.png')+' 2x' alt="")
+					.prep__img.prep__img--2
 						picture
-							source(media="(max-width: 767px)", data-srcset=require('../../img/prep-img-3-mobile.png')+', ' + require('../../img/prep-img-3-2x-mobile.png')+' 2x')
-							img(  data-src=require('../../img/prep-img-3.png') data-srcset=require('../../img/prep-img-3-2x.png')+' 2x' alt="")
+							source(media="(max-width: 767px)", srcset=require('../../img/prep-img-3-mobile.png')+', ' + require('../../img/prep-img-3-2x-mobile.png')+' 2x')
+							img(  src=require('../../img/prep-img-3.png') srcset=require('../../img/prep-img-3-2x.png')+' 2x' alt="")
 						
 				.prep__slider.slider
 					.slider__btns
@@ -176,7 +176,7 @@ section( data-spine-section="1")#prep.section.prep
 						a(href="").section__find-btn Найти свой
 							span 
 							| центр сдачи крови
-							.section__find-btn-icon.prep__lottie--5  
+							.section__find-btn-icon.prep__lottie--5.lottie-item  
 								//- img(  src=require('../../img/menu-icon-1.png') srcset=require('../../img/menu-icon-1-2x.png') + ' 2x' alt="")
 
 	.section__hints

@@ -19,10 +19,10 @@ export default function LottieMobile() {
 
 
 	const data = [
-		{
-			'src': srcLottie1,
-			'selector': '.prep__lottie--1'
-		},
+		// {
+		// 	'src': srcLottie1,
+		// 	'selector': '.prep__lottie--1'
+		// },
 		{
 			'src': srcLottie2,
 			'selector': '.prep__lottie--2'
@@ -31,10 +31,10 @@ export default function LottieMobile() {
 			'src': srcLottie3,
 			'selector': '.prep__lottie--3'
 		},
-		{
-			'src': srcLottie4,
-			'selector': '.prep__lottie--4'
-		},
+		// {
+		// 	'src': srcLottie4,
+		// 	'selector': '.prep__lottie--4'
+		// },
 		{
 			'src': srcLottie5,
 			'selector': '.prep__lottie--5'
@@ -55,10 +55,10 @@ export default function LottieMobile() {
 			'src': srcLottie6,
 			'selector': '.donation__lottie--1'
 		},
-		{
-			'src': srcLottie7,
-			'selector': '.donation__lottie--2'
-		},
+		// {
+		// 	'src': srcLottie7,
+		// 	'selector': '.donation__lottie--2'
+		// },
 		{
 			'src': srcLottie8,
 			'selector': '.test__lottie--1'
@@ -93,8 +93,8 @@ export default function LottieMobile() {
 
 	document.addEventListener('scroll', () => {
 		data.forEach((element, index) => {
-
-			if (!document.querySelector(element.selector).classList.contains('init') && document.querySelector(element.selector).getBoundingClientRect().left - window.innerWidth * 2 < 0) {
+			console.log( document.querySelector('.prep__lottie--5').getBoundingClientRect().top - window.innerHeight);
+			if (!document.querySelector(element.selector).classList.contains('init') && document.querySelector(element.selector).getBoundingClientRect().top - window.innerHeight * 2 < 0 && document.querySelector(element.selector).getBoundingClientRect().top !==0) {
 
 				document.querySelector(element.selector).classList.add('init');
 

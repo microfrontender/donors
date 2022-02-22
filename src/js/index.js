@@ -15,6 +15,7 @@ import FoodMobile from './_food-mobile';
 import Stories from './_stories';
 import CirclesMobile from './_circles-mobile';
 import LottieInit from './_lottie-init';
+import LottieMobile from './_lottie-mobile';
 
 
 
@@ -22,7 +23,9 @@ LottieInit();
 Menu();
 if(window.innerWidth > 767){
 
-	Scroller();
+		Scroller();
+
+	
 	Food();
 	
 Circles();
@@ -31,6 +34,19 @@ Circles();
 	FoodMobile();
 	Stories();
 	CirclesMobile();
+	LottieMobile();
+	function fullHeight(){
+		let vh = window.innerHeight * 0.01;
+		let headers = document.querySelectorAll('.section__header');
+		headers.forEach(element => {
+			element.style.setProperty('--vh', `${vh}px`);
+		});
+	  }
+	  fullHeight();
+	  window.addEventListener('resize', () => {
+		// We execute the same script as before
+		fullHeight();
+	  });
 }
 Hints();
 Slider();
@@ -42,6 +58,7 @@ window.onload = () =>{
 		unobserve_entered: true
       });
 
+	  
 	//   let items = document.querySelectorAll('.lazy');
 	//   	items.forEach((element, index) => {
 	//   		// if(!element.classList.contains('loaded') && element.getBoundingClientRect().left - window.innerWidth*2 < 0 ){

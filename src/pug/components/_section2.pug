@@ -16,14 +16,14 @@ section( data-spine-section="2")#donation.section.donation
 				.donation__bg
 					.donation__lottie.donation__lottie--1.lottie-item 
 					.donation__lottie.donation__lottie--2.lottie-item 
-					.donation__img.donation__img--1.lazy
+					.donation__img.donation__img--1
 						picture
-							source(media="(max-width: 767px)", data-srcset=require('../../img/donation-img-1-mobile.png')+', ' + require('../../img/donation-img-1-2x-mobile.png')+' 2x')
-							img(  data-src=require('../../img/donation-img-1.png') data-srcset=require('../../img/donation-img-1-2x.png')+' 2x' alt="")
+							source(media="(max-width: 767px)", srcset=require('../../img/donation-img-1-mobile.png')+', ' + require('../../img/donation-img-1-2x-mobile.png')+' 2x')
+							img(  src=require('../../img/donation-img-1.png') srcset=require('../../img/donation-img-1-2x.png')+' 2x' alt="")
 					.donation__img.donation__img--2.lazy
 						picture
 							source(media="(max-width: 767px)", srcset='../../img/placeholder.png')
-							img(  data-src=require('../../img/donation-img-2.png') data-srcset=require('../../img/donation-img-2-2x.png')+' 2x' alt="")
+							img(  src=require('../../img/donation-img-2.png') srcset=require('../../img/donation-img-2-2x.png')+' 2x' alt="")
 				.donation__items
 					.donation__item.donation__item--1
 						.donation__item-title 

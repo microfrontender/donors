@@ -5,24 +5,24 @@ section( data-spine-section="4")#benefit.section.benefit
 			.section__header 
 				h2.section__title.benefit__title Зачем мне быть донором
 				.section__subtitle.title.benefit__subtitle Сдача крови полезна не только пациенту, нуждающемуся в переливании, но и самому донору
-				.section__icon.benefit__icon
-					img(  src=require('../../img/benefit-icon.png') srcset=require('../../img/benefit-icon-2x.png')+' 2x' alt="")
+				.section__icon.benefit__icon.benefit__lottie.benefit__lottie--1.lottie-item 
+					//- img(  src=require('../../img/benefit-icon.png') srcset=require('../../img/benefit-icon-2x.png')+' 2x' alt="")
 				.section__arrow 
 					img(src=require('../../img/arrow-down-mobile.png'), alt="")
 			.section__body.benefit__body
 				.benefit__bg
 				
-					.benefit__lottie.benefit__lottie--1.lottie-item 
+					
 					.benefit__lottie.benefit__lottie--2.lottie-item
 					.benefit__lottie.benefit__lottie--3.lottie-item
-					.benefit__img.benefit__img--1.lazy
+					.benefit__img.benefit__img--1
 						picture
-							source(media="(max-width: 767px)", data-srcset=require('../../img/benefit-img-1-mobile.png')+', ' + require('../../img/benefit-img-1-2x-mobile.png')+' 2x')
-							img(  data-src=require('../../img/benefit-img-1.png') data-srcset=require('../../img/benefit-img-1-2x.png')+' 2x' alt="")
-					.benefit__img.benefit__img--2.lazy
+							source(media="(max-width: 767px)", srcset=require('../../img/benefit-img-1-mobile.png')+', ' + require('../../img/benefit-img-1-2x-mobile.png')+' 2x')
+							img(  src=require('../../img/benefit-img-1.png') srcset=require('../../img/benefit-img-1-2x.png')+' 2x' alt="")
+					.benefit__img.benefit__img--2
 						picture
-							source(media="(max-width: 767px)", data-srcset=require('../../img/benefit-img-2-mobile.png')+', ' + require('../../img/benefit-img-2-2x-mobile.png')+' 2x')
-							img(  data-src=require('../../img/benefit-img-2.png') data-srcset=require('../../img/benefit-img-2-2x.png')+' 2x' alt="")
+							//- source(media="(max-width: 767px)", srcset=require('../../img/benefit-img-2-mobile.png')+', ' + require('../../img/benefit-img-2-2x-mobile.png')+' 2x')
+							img(  src=require('../../img/benefit-img-2.png') srcset=require('../../img/benefit-img-2-2x.png')+' 2x' alt="")
 				.benefit__items
 					.benefit__item.benefit__item--1
 						.benefit__item-title Регулярная проверка здоровья
