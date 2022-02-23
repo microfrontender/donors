@@ -9,15 +9,15 @@ header.header
         .header__social
             include ../../img/social.svg
             .header__social-wrap 
-                .header__social-link.header__social-link--link
+                .header__social-link.header__social-link--link.copy-link
                     include ../../img/icon-link.svg
-                .header__social-link.header__social-link--tg
+                a(href="https://telegram.me/share/url?url=https://infografika.donorsearch.org/" target="_blank").header__social-link.header__social-link--tg
                     include ../../img/icon-tg.svg
-                .header__social-link.header__social-link--tw
+                a(href="http://www.twitter.com/share?url=https://infografika.donorsearch.org/" target="_blank").header__social-link.header__social-link--tw
                     include ../../img/icon-tw.svg
-                .header__social-link.header__social-link--fb
+                a(href="https://www.facebook.com/sharer/sharer.php?u=https://infografika.donorsearch.org/" target="_blank").header__social-link.header__social-link--fb
                     include ../../img/icon-fb.svg
-                .header__social-link.header__social-link--vk
+                a(href="https://vk.com/share.php?url=https://infografika.donorsearch.org/" target="_blank").header__social-link.header__social-link--vk
                     include ../../img/icon-vk.svg
     .header__popup
         .header__menu
@@ -66,19 +66,25 @@ header.header
                 .header__about-body 
                     .header__about-col
                         .header__about-text
-                            p Проект «Быть донором» создан агентством Инфографика в партнерстве с некоммерческой организацией DonorSearch. Если у вас остались вопросы про донорство крови, на которые мы не ответили, напишите нам в соцсетях!
-                            p Если вы хотите помочь, но не можете быть донором — поделитесь этим проектом с друзьями!
+                            p Проект «Быть донором» создан агентством Инфографика в партнерстве с некоммерческой организацией DonorSearch. 
+                            p Если вы хотите помочь, но не можете быть донором, поделитесь этим проектом с друзьями! 
+                            p А если остались вопросы про донорство крови, на которые мы не ответили, напишите нам в соцсетях.
                         .header__about-socials
-                            a(href="").header__about-social
+                            a(href="https://donorsearch.org/" target="_blank").header__about-social
+                                include ../../img/icon-about-home.svg
+                            a(href="https://vk.com/donorsearch" target="_blank").header__about-social
                                 include ../../img/icon-about-vk.svg
-                            a(href="").header__about-social
+                            a(href="https://web.facebook.com/DonorSearch/?_rdc=1&_rdr" target="_blank").header__about-social
                                 include ../../img/icon-about-fb.svg
-                            a(href="").header__about-social
+                            a(href="https://www.instagram.com/donorsearch" target="_blank").header__about-social
+                                include ../../img/icon-about-inst.svg
+                            a(href="https://ok.ru/donorsearch" target="_blank").header__about-social
+                                include ../../img/icon-about-ok.svg
+                            a(href="https://twitter.com/Donor_Search" target="_blank").header__about-social
                                 include ../../img/icon-about-tw.svg
-                            a(href="").header__about-social
+                            a(href="https://t.me/DonorSearchers" target="_blank").header__about-social
                                 include ../../img/icon-about-tg.svg
-                            a(href="").header__about-social
-                                include ../../img/icon-about-link.svg
+                           
                     .header__about-col
                         .header__about-team
                             .header__about-team-title Команда проекта
@@ -111,9 +117,9 @@ header.header
                         .header__about-partner
                             .header__about-partner-title Партнеры
                             .header__about-partner-list
-                                a(href="").header__about-partner-item.header__about-partner-item--1 
+                                .header__about-partner-item.header__about-partner-item--1 
                                     img(src=require('../../img/partner-icon-1.svg'), alt="")
-                                a(href="").header__about-partner-item.header__about-partner-item--2
+                                a(href="https://xn--80afcdbalict6afooklqi5o.xn--p1ai/" target="_blank").header__about-partner-item.header__about-partner-item--2
                                     img(src=require('../../img/partner-icon-2.svg'), alt="")
                 button.header__about-back
                     .header__about-back-img   

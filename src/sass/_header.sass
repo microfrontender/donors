@@ -54,7 +54,7 @@
 
     &__spine
         border-left: none
-        border-right: 0.06rem solid $beige
+        border-right: 0.06rem solid #837C6D
         z-index: 100
         padding: 2.3rem 1.25rem
         pointer-events: auto
@@ -107,6 +107,7 @@
         height: 1.63rem
         transition: all .1s ease-out
         opacity: 0
+        cursor: pointer
         // pointer-events: auto
         svg
             width: 100%
@@ -220,10 +221,10 @@
                     margin: 0 1.1rem
         &--about
             .header__menu-img
-                bottom: -0.60rem
-                left: 22.00rem
+                bottom: -2rem
+                left: 22.9rem
                 z-index: 10
-                width: 4.94rem
+                width: 7.94rem
     &__menu-number
         position: absolute
         left: -3.8rem
@@ -284,7 +285,7 @@
         p+p
             margin-top: 0.6rem
     &__about-socials
-        margin: 2.00rem 0 0
+        margin: 1.5rem 0 0 -0.5rem
         display: flex
         align-items: center
         
@@ -293,6 +294,7 @@
         margin-right: 0.81rem
         width: 2.06rem
         height: 2.06rem
+        cursor: pointer
         svg
             width: 100%
             height: auto
@@ -303,12 +305,12 @@
             svg
                 path
                     fill: #B0B5F3
-        &:last-child
-            &:hover
-                svg
-                    path
-                        stroke: #B0B5F3
-                        fill: none
+        // &:last-child
+        //     &:hover
+        //         svg
+        //             path
+        //                 stroke: #B0B5F3
+        //                 fill: none
     &__about-team
         width: 25.00rem
         
@@ -393,7 +395,7 @@
             padding: 0 1.25rem
             border-top: none
             border-right: none
-            border-bottom: 0.06rem solid $beige
+            border-bottom: 0.06rem solid #837C6D
         &__title
             transform: none
             margin-bottom: 0

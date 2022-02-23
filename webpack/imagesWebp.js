@@ -11,7 +11,7 @@ module.exports = function() {
                       options: {
                         compress: {
                           // This will transform your png/jpg into webp.
-                          webp: true,
+                          // webp: true,
                           
                           disableOnDevelopment: true
                         },

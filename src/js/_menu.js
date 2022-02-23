@@ -5,7 +5,7 @@ export default function Menu(){
 	let about = document.querySelector('.header__menu-item--about');
 	let back = document.querySelector('.header__about-back');
 	let popup = document.querySelector('.header__popup');
-
+	let copyLinks = document.querySelectorAll('.copy-link');
 	if(window.innerWidth < 768){
 		burger = document.querySelector('.header__burger--mobile');
 	}
@@ -37,5 +37,12 @@ export default function Menu(){
 		openPopup('menu');
 	});
 
+
+	copyLinks.forEach(element => {
+		element.addEventListener('click', ()=>{
+			navigator.clipboard.writeText('https://infografika.donorsearch.org/')
+		
+		});
+	});
 	// openPopup('about');
 }
