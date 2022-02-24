@@ -15,9 +15,9 @@ body
     position: relative
     background-color: $bg
     overflow: hidden
-    text-rendering: optimizelegibility
+    
     -webkit-font-smoothing: antialiased
-    font-size: 100%
+    // font-size: 100%
     line-height: 1.31rem
     font-family: 'Proxima Nova', sans-serif
     color: $almost-black
@@ -156,14 +156,15 @@ sub
         font-size: 3.75rem
         line-height: 3.63rem
     .page-cover
+        overflow: hidden
         .cover
             display: block
         .header__number
             display: none
         .spines
-            // height: calc(100% + 2.88rem*4)
-            display: none
-            height: 100%
+            height: calc(100% + 2.88rem*4)
+            // display: none
+            // height: 100%
     .page-prep
         .prep
             display: block

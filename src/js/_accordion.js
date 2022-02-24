@@ -33,6 +33,8 @@ export default function Accordion(){
 	}
 
 	if(window.innerWidth < 768){
-		toggleAccordion(document.querySelector('.accordion--1'))
+		toggleAccordion(document.querySelector('.accordion--1'));
+		document.querySelector('.accordion--1 .accordion__body').style.width = '22.19rem'; 
+		document.querySelector('.accordion--1 .accordion__body').style.height = '22.19rem';
 	}
 }

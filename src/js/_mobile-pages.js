@@ -27,6 +27,12 @@ export default function Page(){
 		headerNumber.textContent = `0${index}`;
 		// включить на прод
 		window.scrollTo( 0, 0 );
+
+		if(window.innerWidth < 768 && href === 'prep'){
+			document.querySelector('.prep__checklist').style.transform = 'translateY(0)';
+		}else{
+			document.querySelector('.prep__checklist').style.transform = '';
+		}
 	}
 	menuItems.forEach((item, index) => {
 		item.addEventListener('click', ()=>{
@@ -74,19 +80,22 @@ export default function Page(){
 		if(delta > 0 && !isMoving){
 			Cover(1);
 			tTimeout();
+			
 		}
 		if(delta < 0 && !isMoving){
 			Cover(2);
-			
 			tTimeout();
 		}
 	}
 	function tTimeout(){
+		
 		if(!isMoving){
 		isMoving = true;
 	
 			setTimeout(() => {
 				isMoving = false;
+				
+			document.body.style.overflow = 'unset';
 			}, 1000);
 		}
 	}

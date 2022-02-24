@@ -258,6 +258,7 @@
 			font-weight: 500
 			font-family: 'TT Travels Next', sans-serif		
 		&__stories
+			display: flex
 			position: absolute
 			z-index: 10
 			left: 1.19rem
@@ -265,7 +266,7 @@
 		&__icon
 			display: none
 		&__item
-			
+			cursor: unset
 			width: 22.50rem
 			height: 33.25rem
 			left: 0
@@ -285,8 +286,10 @@
 			position: absolute
 			top: 1.19rem
 			right: 1.19rem
-			width: 0.94rem
-			height: 0.94rem
+			// width: 0.94rem
+			// height: 0.94rem
+			width: 1.13rem
+			height: 1.13rem
 			z-index: 10
 		&__wrap
 			padding: 2.19rem 1.56rem 0
@@ -317,8 +320,8 @@
 			left: unset
 			width: 12.75rem
 			height: 2.06rem
-			box-shadow: none
 			transform: none
+			box-shadow: 0px 3px 10px rgba(19, 30, 183, 0.3)
 			opacity: 1
 			transition: none
 		&__tabs
@@ -331,7 +334,7 @@
 			height: auto
 		&__tab
 			top: 0
-			left: 0
+			left: 0.5rem
 			width: 100%
 			padding-left: 0
 			height: auto

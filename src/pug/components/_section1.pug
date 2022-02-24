@@ -16,9 +16,12 @@ section( data-spine-section="1")#prep.section.prep
 			.section__body.prep__body
 				.prep__checklist-wrap#prep__checklist-wrap
 					a(href="" data-scroll data-scroll-sticky data-scroll-target="#prep__checklist-wrap").prep__checklist 
-						.prep__checklist-icon 
+						.prep__checklist-icon.desktop 
 							img(  src=require('../../img/arrow-down-white.svg'), alt="")
-						span Скачать чек-лист
+						.prep__checklist-icon.mobile 
+							img(  src=require('../../img/icon-send.svg'), alt="")
+						span.desktop Скачать чек-лист
+						span.mobile Отправить чек-лист
 				.prep__bg
 					.prep__lottie.prep__lottie--1.lottie-item 
 					.prep__lottie.prep__lottie--3.lottie-item 
@@ -108,7 +111,7 @@ section( data-spine-section="1")#prep.section.prep
 								.prep__lottie--6.lottie-item
 							.food__icon
 								include ../../img/food-icon.svg
-						a(href="" download).food__stories.stories
+						a(href=require('../../img/story-1.jpg') download).food__stories.stories
 							.stories__icon
 								img(src=require('../../img/icon-stories.svg'), alt="")
 							.stories__text 
