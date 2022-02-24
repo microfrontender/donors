@@ -21,44 +21,41 @@ import LottieMobile from './_lottie-mobile';
 
 LottieInit();
 Menu();
-if(window.innerWidth > 767){
-
-		Scroller();
-
-	
+if (window.innerWidth > 767) {
+	Scroller();
 	Food();
-	
-Circles();
-}else{
+	Circles();
+} else {
 	Page();
 	FoodMobile();
 	Stories();
 	CirclesMobile();
 	LottieMobile();
-	function fullHeight(){
+	function fullHeight() {
 		let vh = window.innerHeight * 0.01;
-		let headers = document.querySelectorAll('.section__header');
-		headers.forEach(element => {
-			element.style.setProperty('--vh', `${vh}px`);
-		});
-	  }
-	  fullHeight();
-	  window.addEventListener('resize', () => {
+		let body = document.querySelector('body');
+		// body.forEach(element => {
+		// 	body.style.setProperty('--vh', `${vh}px`);
+		// });
+		body.style.setProperty('--vh', `${vh}px`);
+	}
+	fullHeight();
+	window.addEventListener('resize', () => {
 		// We execute the same script as before
 		fullHeight();
-	  });
+	});
 }
 Hints();
 Slider();
 Accordion();
-window.onload = () =>{
-	
-	const lazysliders = new LazyLoad({
-        elements_selector: ".lazy img",
-		unobserve_entered: true
-      });
+window.onload = () => {
 
-	  
+	const lazysliders = new LazyLoad({
+		elements_selector: ".lazy img",
+		unobserve_entered: true
+	});
+
+
 	//   let items = document.querySelectorAll('.lazy');
 	//   	items.forEach((element, index) => {
 	//   		// if(!element.classList.contains('loaded') && element.getBoundingClientRect().left - window.innerWidth*2 < 0 ){
@@ -69,16 +66,16 @@ window.onload = () =>{
 	//   					item.srcset = item.getAttribute('data-srcset');
 	//   				});
 	//   			}
-				  
+
 	//   			if(element.querySelectorAll('[data-src]').length > 0){
 	//   			element.querySelector('[data-src]').src = element.querySelector('[data-src]').getAttribute('data-src');
-				  
+
 	//   			element.querySelector('[data-src]').onload = ()=>{
 	//   				element.querySelector('[data-src]').classList.add('loaded');
 	//   			}
 	//   			}
 	//   		// }
-			  
+
 	//   	});
 
 }

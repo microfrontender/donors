@@ -31,4 +31,8 @@ export default function Accordion(){
 			element.classList.add('active');
 		}
 	}
+
+	if(window.innerWidth < 768){
+		toggleAccordion(document.querySelector('.accordion--1'))
+	}
 }

@@ -13,16 +13,19 @@ export default function Menu(){
 	function closePopup(){
 		header.classList.remove('header--open');
 		popup.classList = 'header__popup';
+		
+		document.querySelector('body').style.overflow = '';
 	}
 	function openPopup(page){
 
 		header.classList.add('header--open');
 		popup.classList = `header__popup header__popup--${page}`;
 		burger.classList.add('header__burger--open');
+		document.querySelector('body').style.overflow = 'hidden';
 	}
 
 	burger.addEventListener('click', ()=>{
-		console.log('ss');
+		
 		if(burger.classList.contains('header__burger--open')){
 			closePopup();
 			burger.classList.remove('header__burger--open');

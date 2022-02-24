@@ -93,7 +93,7 @@ export default function LottieMobile() {
 
 	document.addEventListener('scroll', () => {
 		data.forEach((element, index) => {
-			console.log( document.querySelector('.prep__lottie--5').getBoundingClientRect().top - window.innerHeight);
+			
 			if (!document.querySelector(element.selector).classList.contains('init') && document.querySelector(element.selector).getBoundingClientRect().top - window.innerHeight * 2 < 0 && document.querySelector(element.selector).getBoundingClientRect().top !==0) {
 
 				document.querySelector(element.selector).classList.add('init');

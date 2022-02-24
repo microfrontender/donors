@@ -18,29 +18,69 @@ section.section.cover.cover--stage-0#cover
 					.cover__text 
 						.cover__row 
 							.cover__row-path.cover__row-path--top 
-								span 
-								|не для меня
-							.cover__row-path.cover__row-path--bottom спасать жизни
-						.cover__row 
-							.cover__row-path.cover__row-path--top это очень сложно
-							.cover__row-path.cover__row-path--bottom многих людей
-						.cover__row 
-							.cover__row-path.cover__row-path--top и вредно
+								.desktop 
+									span 
+									|не для меня
+								.mobile 
+									span 
+									|не для меня
 							.cover__row-path.cover__row-path--bottom 
-								span 
-								|заботиться
-						.cover__row 
-							.cover__row-path.cover__row-path--top непонятно, куда
-							.cover__row-path.cover__row-path--bottom о своем здоровье
+								.desktop спасать жизни
+								.mobile спасать
 						.cover__row 
 							.cover__row-path.cover__row-path--top 
-								span 
-								|идет кровь
-							.cover__row-path.cover__row-path--bottom 100
-								sub % 
-								|безопасно
+								.desktop это очень сложно
+								.mobile Это очень
+							.cover__row-path.cover__row-path--bottom 
+								.desktop многих людей
+								.mobile жизни мно-
 						.cover__row 
-							.cover__row-path.cover__row-path--top зачем мне это?
+							.cover__row-path.cover__row-path--top 
+								.desktop и вредно
+								.mobile сложно
+							.cover__row-path.cover__row-path--bottom 
+								.desktop 
+									span 
+									|заботиться
+								.mobile гих людей
+						.cover__row 
+							.cover__row-path.cover__row-path--top 
+								.desktop непонятно, куда
+								.mobile и вредно
+							.cover__row-path.cover__row-path--bottom 
+								.desktop о своем здоровье
+								.mobile заботиться
+						.cover__row 
+							.cover__row-path.cover__row-path--top 
+								.desktop
+									span 
+									|идет кровь
+								.mobile непонятно,
+							.cover__row-path.cover__row-path--bottom 
+								.desktop 100
+									sub % 
+									|безопасно
+								.mobile 
+									span 
+									| о своем
+						.cover__row 
+							.cover__row-path.cover__row-path--top 
+								.desktop зачем мне это?
+								.mobile куда идет
+							.cover__row-path.cover__row-path--bottom 
+								.desktop и просто
+								.mobile здоровье
+
+						.cover__row.mobile
+							.cover__row-path.cover__row-path--top кровь
+							.cover__row-path.cover__row-path--bottom 100% безо-
+						.cover__row.mobile
+							.cover__row-path.cover__row-path--top  
+								span 
+								|зачем
+							.cover__row-path.cover__row-path--bottom пасно
+						.cover__row.mobile
+							.cover__row-path.cover__row-path--top мне это?
 							.cover__row-path.cover__row-path--bottom и просто
 					.cover__icons 
 						.cover__icon-row
@@ -48,25 +88,41 @@ section.section.cover.cover--stage-0#cover
 								picture
 									img(  src=require('../../img/cover-img-1.png') srcset=require('../../img/cover-img-1-2x.png')+' 2x' alt="")
 						.cover__icon-row
-							.cover__icon.cover__icon--bottom.cover__icon--4
+							.cover__icon.cover__icon--bottom.cover__icon--4.desktop
 								picture
 									img(  src=require('../../img/cover-img-4.png') srcset=require('../../img/cover-img-4-2x.png')+' 2x' alt="")
 						.cover__icon-row
-							.cover__icon.cover__icon--top.cover__icon--2
+							.cover__icon.cover__icon--top.cover__icon--2.desktop
 								picture
 									img(  src=require('../../img/cover-img-2.png') srcset=require('../../img/cover-img-2-2x.png')+' 2x' alt="")
 							
-							.cover__icon.cover__icon--bottom.cover__icon--5
+							.cover__icon.cover__icon--bottom.cover__icon--5.desktop
 								picture
 									img(  src=require('../../img/cover-img-5.png') srcset=require('../../img/cover-img-5-2x.png')+' 2x' alt="")
+
+							.cover__icon.cover__icon--bottom.cover__icon--4.mobile
+								picture
+									img(  src=require('../../img/cover-img-4.png') srcset=require('../../img/cover-img-4-2x.png')+' 2x' alt="")
 						.cover__icon-row
+							.cover__icon.cover__icon--top.cover__icon--2.mobile
+								picture
+									img(  src=require('../../img/cover-img-2.png') srcset=require('../../img/cover-img-2-2x.png')+' 2x' alt="")
 						.cover__icon-row
-							.cover__icon.cover__icon--top.cover__icon--3
+							.cover__icon.cover__icon--bottom.cover__icon--5.mobile
+								picture
+									img(  src=require('../../img/cover-img-5.png') srcset=require('../../img/cover-img-5-2x.png')+' 2x' alt="")
+							.cover__icon.cover__icon--top.cover__icon--3.desktop
 								picture
 									img(  src=require('../../img/cover-img-3.png') srcset=require('../../img/cover-img-3-2x.png')+' 2x' alt="")
 						.cover__icon-row
-							.cover__icon.cover__icon--bottom.cover__icon--6
+							.cover__icon.cover__icon--bottom.cover__icon--6.desktop
 								picture
 									img(  src=require('../../img/cover-img-6.png') srcset=require('../../img/cover-img-6-2x.png')+' 2x' alt="")
+						.cover__icon-row
+						.cover__icon-row
+							.cover__icon.cover__icon--top.cover__icon--3.mobile
+								picture
+									img(  src=require('../../img/cover-img-3.png') srcset=require('../../img/cover-img-3-2x.png')+' 2x' alt="")
+						.cover__icon-row
 			.cover__logo 
 				img(src=require('../../img/logo.svg'), alt="")

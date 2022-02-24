@@ -1,3 +1,5 @@
+import Cover from './_cover';
+
 export default function Page(){
 
 	const menuItems = document.querySelectorAll('.header__menu-link[data-href]');
@@ -47,8 +49,49 @@ export default function Page(){
 		burger.classList.remove('header__burger--open');
 		header.classList.remove('header--open');
 		popup.classList = 'header__popup';
+		document.querySelector('body').style.overflow = '';
 	}
 
 	
 	setPage('cover', 1);
+
+	let isMoving = false;
+	let startingY;
+	document.addEventListener('touchstart',tStart);
+	
+	function tStart(e){
+		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') ){
+		startingY = e.touches[0].pageY;
+		document.addEventListener('touchmove', tMove);
+		document.addEventListener('touchend', tEnd);
+		} else {
+			return false;
+		}
+	}
+	function tMove(e){
+		let currentY = e.touches[0].pageY;
+		let delta = currentY - startingY;
+		if(delta > 0 && !isMoving){
+			Cover(1);
+			tTimeout();
+		}
+		if(delta < 0 && !isMoving){
+			Cover(2);
+			
+			tTimeout();
+		}
+	}
+	function tTimeout(){
+		if(!isMoving){
+		isMoving = true;
+	
+			setTimeout(() => {
+				isMoving = false;
+			}, 1000);
+		}
+	}
+	function tEnd(){
+		document.removeEventListener('touchmove',tMove, false);
+		document.removeEventListener('touchend', tEnd, false);
+	}
 }

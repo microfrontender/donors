@@ -379,6 +379,7 @@
         width: 100%
         height: auto
         &--open
+            height: 100vh
             .header__spine
                 border: none
             .spine__title
@@ -433,8 +434,9 @@
         &__popup
             position: fixed
             width: 100vw
-            height: auto
-            min-height: 100vh
+            height: 100vh
+            // min-height: 100vh
+            // min-height: 100%
         &__menu
             align-items: flex-start
             padding-top: 4.8rem
@@ -502,7 +504,10 @@
             font-size: 1.75rem
             line-height: 2.13rem
         &__about
-            overflow-x: scroll
+            overflow-x: hidden
+            overflow-y: scroll
+            height: 100vh
+            height: calc(var(--vh, 1vh) * 100)
         &__about-inner
             width: 100%
             height: auto
