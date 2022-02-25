@@ -1,3 +1,9 @@
+.circles-popup
+	display: none !important
+	&.active
+		display: flex !important
+		opacity: 1
+		
 .circles
 	position: relative
 	width: 34.88rem
@@ -225,14 +231,17 @@
 		display: none
 
 @media screen and ( max-width: 767px )
-	.circles
-		margin-left: 0
-		margin-bottom: 0
-		height: 64.38rem
-		width: 100%
-		transition: none
-		&--active-popup
-			
+	.circles-popup
+		.circles__path
+			display: none
+		&.active
+			position: fixed
+			display: block
+			top: 0
+			left: 0
+			width: 100%
+			height: 100vh
+			z-index: 1000
 			.circles__front
 				position: static
 				transform: none
@@ -247,39 +256,61 @@
 			.circles__close
 				display: block
 				pointer-events: auto
-			.circles__path-img
-				display: none
-				position: fixed
-				width: 9.63rem
-				height: 9.31rem
-				transform: rotate(-36.49deg)
-				top: unset
-				bottom: -1.6rem
-				left: 5.35rem
-		&--top-popup
+	.circles
+		margin-left: 0
+		margin-bottom: 0
+		height: 64.38rem
+		width: 100%
+		transition: none
+		// &--active-popup
 			
-			.circles__path--top
-				position: fixed
-				width: 100vw
-				height: 100vh
-				top: 0
-				bottom: 0
-				right: 0
-				left: 0
-				border-radius: 0
-				z-index: 10000
-		&--bottom-popup
-			.circles__path--bottom
-				position: fixed
-				width: 100vw
-				height: 100vh
-				top: 0
-				bottom: 0
-				right: 0
-				left: 0
-				border-radius: 0
-				z-index: 10000
-				border: none
+		// 	.circles__front
+		// 		position: static
+		// 		transform: none
+		// 	.circles__title
+		// 		font-weight: bold
+		// 		text-align: left
+		// 	.circles__back
+		// 		opacity: 1
+		// 	.circles__body
+				
+		// 		padding: 2.19rem 1.88rem 0 1.25rem
+		// 	.circles__close
+		// 		display: block
+		// 		pointer-events: auto
+		// 	.circles__path-img
+		// 		display: none
+		// 		position: fixed
+		// 		width: 9.63rem
+		// 		height: 9.31rem
+		// 		transform: rotate(-36.49deg)
+		// 		top: unset
+		// 		bottom: -1.6rem
+		// 		left: 5.35rem
+		// &--top-popup
+			
+		// 	.circles__path--top
+		// 		position: fixed
+		// 		width: 100vw
+		// 		height: 100vh
+		// 		top: 0
+		// 		bottom: 0
+		// 		right: 0
+		// 		left: 0
+		// 		border-radius: 0
+		// 		z-index: 10000
+		// &--bottom-popup
+		// 	.circles__path--bottom
+		// 		position: fixed
+		// 		width: 100vw
+		// 		height: 100vh
+		// 		top: 0
+		// 		bottom: 0
+		// 		right: 0
+		// 		left: 0
+		// 		border-radius: 0
+		// 		z-index: 10000
+		// 		border: none
 		&__man-wrap
 			bottom: 0.9rem
 			top: unset
@@ -313,6 +344,16 @@
 					bottom: unset
 					top: 7.00rem
 					left: 0.44rem
+				&.active
+					display: block
+					width: 100%
+					height: 100vh
+					top: 0
+					bottom: 0
+					right: 0
+					left: 0
+					border-radius: 0
+					z-index: 10000
 			&--bottom
 				right: unset
 				left: 0
@@ -325,6 +366,20 @@
 					bottom: unset
 					top: 5.94rem
 					left: 0rem
+				&.active
+					display: block
+					width: 100%
+					height: 100%
+					
+					height: calc(var(--vh, 1vh) * 100)
+					top: 0
+					bottom: 0
+					right: 0
+					left: 0
+					border-radius: 0
+					z-index: 10000
+					
+					border: none
 		&__close
 			position: absolute
 			width: 1.13rem
@@ -352,7 +407,7 @@
 			transition: none
 		&__man-inner
 			display: block
-			position: absolute
+			position: fixed
 			bottom: 0
 			right: 0
 			z-index: 10

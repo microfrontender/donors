@@ -1,0 +1,41 @@
+.food-popup.food__popup
+    .food__popup-close 
+        img(src=require('../../img/close-popup.svg'), alt="")
+    .food__wrap
+    
+        .food__popup-title Накануне донации крови
+        .food__btns
+            .food__btn.active Нельзя
+            .food__btn Можно
+        .food__tabs
+            .food__tab.food__tab--1.active
+                .food__tab-img
+                    picture
+                        //- source(media="(max-width: 767px)", srcset=require('../../img/tab-items-1-mobile.png')+', ' + require('../../img/tab-items-1-2x-mobile.png')+' 2x')
+                        img(  src=require('../../img/tab-items-1-mobile.png') srcset=require('../../img/tab-items-1-2x-mobile.png')+' 2x' alt="")
+                .food__tab-items
+                    .food__tab-item.food__tab-item--1 жирное
+                    .food__tab-item.food__tab-item--2 острое
+                    .food__tab-item.food__tab-item--3 копченое
+                    .food__tab-item.food__tab-item--4 яйца, жирные мясо и рыба
+                    .food__tab-item.food__tab-item--5 масло и молочные продукты
+                    .food__tab-item.food__tab-item--6 орехи и финики
+                    .food__tab-item.food__tab-item--7 шоколад
+                    .food__tab-item.food__tab-item--8 бананы, авокадо
+                    .food__tab-item.food__tab-item--9 свёклу и чернику
+
+            .food__tab.food__tab--2
+                .food__tab-img
+                    picture
+                        //- source(media="(max-width: 767px)", srcset=require('../../img/tab-items-2-mobile.png')+', ' + require('../../img/tab-items-2-2x-mobile.png')+' 2x')
+                        img(  src=require('../../img/tab-items-2-mobile.png') srcset=require('../../img/tab-items-2-2x-mobile.png')+' 2x' alt="")
+                .food__tab-items
+                    .food__tab-item.food__tab-item--10 фрукты (кроме бананов)
+                    .food__tab-item.food__tab-item--11 тушеные овощи или на пару
+                    .food__tab-item.food__tab-item--12 свежие овощи
+                    .food__tab-item.food__tab-item--13 каши на воде, без масла
+                    .food__tab-item.food__tab-item--14 макароны без масла
+                    .food__tab-item.food__tab-item--15 хлеб
+                    .food__tab-item.food__tab-item--16 соки, морсы, компоты
+                    .food__tab-item.food__tab-item--17 кофе без молока/сливок и чай
+                    .food__tab-item

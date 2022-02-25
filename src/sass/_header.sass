@@ -454,6 +454,8 @@
         &__menu-item
             margin-bottom: 2.88rem
             height: auto
+            
+            cursor: unset
             &:hover
                 .header__menu-img
                     transform: none
@@ -511,12 +513,14 @@
             display: flex
             font-size: 1.75rem
             line-height: 2.13rem
+            cursor: unset
         &__about
             overflow-x: hidden
             overflow-y: scroll
-            height: 100vh
+            height: 100%
             // height: calc(var(--vh, 1vh) * 100)
         &__about-inner
+            display: block
             width: 100%
             height: auto
             padding: 4.38rem 1.25rem 2.56rem
@@ -547,6 +551,7 @@
             &--2
                 margin-left: 1.63rem 
         &__about-back
+            cursor: unset
             margin-top: 13.19rem
         &__about-icon
             left: 16rem

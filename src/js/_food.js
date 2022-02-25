@@ -1,11 +1,11 @@
 export default function Food(){
 
-	let food = document.querySelector('.food');
-	let foodItem = document.querySelector('.food__item');
-	let foodPopup = document.querySelector('.food__popup');
-	let foodWrap = document.querySelector('.food__wrap');
+	let food = document.querySelector('.prep__food.food');
+	let foodItem = document.querySelector('.prep__food .food__item');
+	let foodPopup = document.querySelector('.prep__food .food__popup');
+	let foodWrap = document.querySelector('.prep__food .food__wrap');
 	let foodPopupWidth = foodItem.offsetWidth*.85;
-	let food__btns = document.querySelectorAll('.food__btn');
+	let food__btns = document.querySelectorAll('.prep__food .food__btn');
 	let open = false;
 	let isActive = false;
 
@@ -27,13 +27,13 @@ export default function Food(){
 	}
 
 	function setTab(index){
-		document.querySelector('.food__tab.active').classList.remove('active');
-		document.querySelector(`.food__tab--${index}`).classList.add('active');
+		document.querySelector('.prep__food .food__tab.active').classList.remove('active');
+		document.querySelector(`.prep__food .food__tab--${index}`).classList.add('active');
 	}
 
 	food__btns.forEach((btn, index) => {
 		btn.addEventListener('click', ()=>{
-			document.querySelector('.food__btn.active').classList.remove('active');
+			document.querySelector('.prep__food .food__btn.active').classList.remove('active');
 			btn.classList.add('active');
 			setTab(index+1);
 		});

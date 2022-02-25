@@ -1,8 +1,8 @@
 export default function Circles(){
 
-	let circles= document.querySelector('.circles');
-	let pathTop= document.querySelector('.circles__path--top');
-	let pathBottom= document.querySelector('.circles__path--bottom');
+	let circles= document.querySelector('.donation__circles.circles');
+	let pathTop= document.querySelector('.donation__circles .circles__path--top');
+	let pathBottom= document.querySelector('.donation__circles .circles__path--bottom');
 	
 	let isActive = false;
 	let currentPath = 0;
