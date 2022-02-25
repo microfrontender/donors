@@ -1006,6 +1006,11 @@
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
   integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
 
+"@vkontakte/vk-bridge@^2.5.3":
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.5.3.tgz#5c920746d97fa2bcdf0a91b9676953278f5b8568"
+  integrity sha512-VQaRXOixKh+hxnBPEgDqtVxiajxrZWWOlykpHsKD85qCNLW9Mrnd6GSbyK6xu7qYUSCT6n7yD6pJsm1mFRBdfQ==
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"

@@ -16,9 +16,9 @@ import Stories from './_stories';
 import CirclesMobile from './_circles-mobile';
 import LottieInit from './_lottie-init';
 import LottieMobile from './_lottie-mobile';
-
-
-
+import bridge from '@vkontakte/vk-bridge';
+import '../img/og-image.png';
+bridge.send('VKWebAppInit');
 LottieInit();
 Menu();
 if (window.innerWidth > 767) {
@@ -34,14 +34,10 @@ if (window.innerWidth > 767) {
 	function fullHeight() {
 		let vh = window.innerHeight * 0.01;
 		let body = document.querySelector('body');
-		// body.forEach(element => {
-		// 	body.style.setProperty('--vh', `${vh}px`);
-		// });
 		body.style.setProperty('--vh', `${vh}px`);
 	}
 	fullHeight();
 	window.addEventListener('resize', () => {
-		// We execute the same script as before
 		fullHeight();
 	});
 }
@@ -54,28 +50,5 @@ window.onload = () => {
 		elements_selector: ".lazy img",
 		unobserve_entered: true
 	});
-
-
-	//   let items = document.querySelectorAll('.lazy');
-	//   	items.forEach((element, index) => {
-	//   		// if(!element.classList.contains('loaded') && element.getBoundingClientRect().left - window.innerWidth*2 < 0 ){
-	//   			// console.log(element.querySelectorAll('[data-srcset]').length);
-	//   			element.classList.add('loaded');
-	//   			if(element.querySelectorAll('[data-srcset]').length > 0){
-	//   				element.querySelectorAll('[data-srcset]').forEach((item)=>{
-	//   					item.srcset = item.getAttribute('data-srcset');
-	//   				});
-	//   			}
-
-	//   			if(element.querySelectorAll('[data-src]').length > 0){
-	//   			element.querySelector('[data-src]').src = element.querySelector('[data-src]').getAttribute('data-src');
-
-	//   			element.querySelector('[data-src]').onload = ()=>{
-	//   				element.querySelector('[data-src]').classList.add('loaded');
-	//   			}
-	//   			}
-	//   		// }
-
-	//   	});
 
 }

@@ -34,13 +34,13 @@ const common = merge([
       new HtmlWebpackPlugin({
         template: PATHS.source + '/pug/index.pug',
         filename: 'index.html'
-      }),
+      })
       
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery"
-    })
+    //   new webpack.ProvidePlugin({
+    //     $: "jquery",
+    //     jQuery: "jquery",
+    //     "window.jQuery": "jquery"
+    // })
     ],
     resolve: {
       alias: {

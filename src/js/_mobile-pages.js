@@ -64,6 +64,7 @@ export default function Page(){
 	let isMoving = false;
 	let startingY;
 	document.addEventListener('touchstart',tStart);
+	document.addEventListener('wheel',onMouseWheel);
 	
 	function tStart(e){
 		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') ){
@@ -102,5 +103,23 @@ export default function Page(){
 	function tEnd(){
 		document.removeEventListener('touchmove',tMove, false);
 		document.removeEventListener('touchend', tEnd, false);
+	}
+
+	function onMouseWheel(event) {
+		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') ){
+			let delta = event.wheelDelta / 30 || -event.detail;
+			//If the user scrolled up, it goes to previous slide, otherwise - to next slide
+			if(delta > 0 && !isMoving){
+				Cover(1);
+				tTimeout();
+				
+			}
+			if(delta < 0 && !isMoving){
+				Cover(2);
+				tTimeout();
+			}
+		}else{
+			return false
+		}
 	}
 }

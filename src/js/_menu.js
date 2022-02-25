@@ -14,14 +14,16 @@ export default function Menu(){
 		header.classList.remove('header--open');
 		popup.classList = 'header__popup';
 		
-		document.querySelector('body').style.overflow = '';
+		document.querySelector('html').style.overflow = '';
+		// document.body.style.height = '';
 	}
 	function openPopup(page){
 
 		header.classList.add('header--open');
 		popup.classList = `header__popup header__popup--${page}`;
 		burger.classList.add('header__burger--open');
-		document.querySelector('body').style.overflow = 'hidden';
+		document.querySelector('html').style.overflow = 'hidden';
+		// document.body.style.height = '100vh';
 	}
 
 	burger.addEventListener('click', ()=>{

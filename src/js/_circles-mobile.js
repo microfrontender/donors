@@ -29,8 +29,9 @@ export default function CirclesMobile(){
 		if(!isOpened){
 			circles.classList = `donation__circles circles circles--${popup}-popup circles--active-popup`;
 			document.querySelector('header').style.display = 'none';
-			document.body.style.overflow = 'hidden';
-			
+			document.querySelector('html').style.overflow = 'hidden';
+			// document.body.style.height = '100vh';
+			// document.querySelector('body').style.overflow = 'hidden';
 			
 			isOpened = true;
 		}
@@ -38,7 +39,8 @@ export default function CirclesMobile(){
 	function closePopup(){
 		circles.classList = `donation__circles circles`;
 		document.querySelector('header').style.display = '';
-		document.body.style.overflow = '';
+		document.querySelector('html').style.overflow = '';
+		// document.body.style.height = '';
 		setTimeout(() => {
 				
 			isOpened = false;

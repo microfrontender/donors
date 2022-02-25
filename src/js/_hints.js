@@ -7,9 +7,16 @@ export default function Hints() {
 	let currentHint;
 
 	hoverItem.forEach(element => {
-		element.addEventListener('mouseover', () => {
-			showHint(element.getAttribute('data-hint'));
-		});
+		if(window.innerWidth > 767){
+			element.addEventListener('mouseover', () => {
+				showHint(element.getAttribute('data-hint'));
+			});
+		}else{
+			element.addEventListener('click', () => {
+				showHint(element.getAttribute('data-hint'));
+			});
+		}
+		
 	});
 
 	hintCloseBtn.forEach(element => {

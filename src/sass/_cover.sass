@@ -1,6 +1,6 @@
 .cover
 	min-width: auto
-	width: 200vw
+	width: 250vw
 	.container
 		width: calc(100vw - 16.50rem)
 	&--stage-0
@@ -27,7 +27,7 @@
 			transition: opacity ease 1s
 		.cover__body
 			transform: translate(0, 0)
-			transition: transform ease 1s
+			
 		.cover__title
 			opacity: 1
 		.cover__text
@@ -152,6 +152,7 @@
 		position: relative
 		width: 100%
 		height: 36.45rem
+		transition: transform ease 1s
 	&__text
 		font-family: 'TT Travels Next', sans-serif
 		font-weight: 500
@@ -310,6 +311,7 @@
 		min-height: auto
 		height: 100vh
 		height: calc(var(--vh, 1vh) * 100)
+		transition: height ease 0.2s
 		.container
 			width: 100%
 		&--stage-2
@@ -322,6 +324,7 @@
 			display: none
 		&__body
 			height: 30rem
+			height: calc( 100% - 4rem )
 		&__label
 			width: 11.06rem
 			height: 2.06rem
