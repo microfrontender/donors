@@ -290,7 +290,7 @@
 			right: 0
 			left: 0
 			width: 100vw
-			height: 100vh
+			height: 100%
 			// height: 100%
 			display: flex
 			align-items: center
@@ -299,12 +299,11 @@
 			background: $very-peri
 			
 			&::after
-				position: absolute
+				position: fixed
 				content: ''
-				top: 50%
-				transform: translateY(-50%)
+				top: 0
 				left: 0
-				height: 200vh
+				height: 100vh
 				width: 100%
 				z-index: -1
 				background: $very-peri

@@ -11,7 +11,8 @@ export default function FoodMobile() {
     function openFood() {
         food.classList.add('active');
         document.querySelector('body').style.overflow = 'hidden';
-        document.querySelector('main').style.height = '100vh';
+        document.querySelector('main').style.height = '100%';
+        document.querySelector('body').style.height = '100%';
         header.style.display = 'none';
     }
 
@@ -20,6 +21,7 @@ export default function FoodMobile() {
         document.querySelector('body').style.overflow = '';
         header.style.display = '';
         document.querySelector('main').style.height = '';
+        document.querySelector('body').style.height = '';
         food.classList.remove('active');
     }
 

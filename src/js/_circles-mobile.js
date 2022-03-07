@@ -31,7 +31,8 @@ export default function CirclesMobile() {
             document.querySelector(`.circles-popup .circles__path--${popup}`).classList.add('active');
             document.querySelector('header').style.display = 'none';
             document.querySelector('body').style.overflow = 'hidden';
-            document.querySelector('main').style.height = '100vh';
+            document.querySelector('body').style.height = '100%';
+            document.querySelector('main').style.height = '100%';
             // document.body.style.height = '100vh';
             // document.querySelector('body').style.overflow = 'hidden';
 
@@ -45,6 +46,7 @@ export default function CirclesMobile() {
         document.querySelector(`.circles-popup .circles__path.active`).classList.remove('active');
         document.querySelector('header').style.display = '';
         document.querySelector('body').style.overflow = '';
+        document.querySelector('body').style.height = '';
         document.querySelector('main').style.height = '';
         // document.body.style.height = '';
         setTimeout(() => {

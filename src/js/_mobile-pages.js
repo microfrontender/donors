@@ -94,6 +94,12 @@ export default function Page(){
 		if(delta < 0 && !isMoving){
 			Cover(2);
 			tTimeout();
+			if(!isInit){
+				isInit = true;
+				setTimeout(() => {
+					document.querySelector('body').style.overflow = '';
+				}, 1000);
+			}
 		}
 	}
 	

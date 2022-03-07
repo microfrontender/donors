@@ -61,7 +61,7 @@ module.exports = function(env) {
   if (env === 'production'){
       return merge([
           common,
-          imagesWebp(),
+          images(),
           uglifyjs()
       ]);
   }
