@@ -354,6 +354,16 @@
 					left: 0
 					border-radius: 0
 					z-index: 10000
+					&::after
+						position: absolute
+						content: ''
+						top: 50%
+						transform: translateY(-50%)
+						left: 0
+						height: 200vh
+						width: 100%
+						z-index: -1
+						background: $yellow
 			&--bottom
 				right: unset
 				left: 0
@@ -380,6 +390,16 @@
 					z-index: 10000
 					
 					border: none
+					&::after
+						position: absolute
+						content: ''
+						top: 50%
+						transform: translateY(-50%)
+						left: 0
+						height: 200vh
+						width: 100%
+						z-index: -1
+						background: #F8F1E6
 		&__close
 			position: absolute
 			width: 1.13rem

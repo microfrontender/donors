@@ -3,10 +3,8 @@ script.
 	//- document.body.style.overflow = 'hidden';
 	(function(){
 		window.scrollTo( 0, 0 );
-	setTimeout(()=>{
-		const cover = document.querySelector('.cover');
-		
-		document.body.style.overflow = '';
-		cover.classList = `section cover cover--stage-1`;
-	}, 1000);
+		setTimeout(()=>{
+			const cover = document.querySelector('.cover');
+			cover.classList = `section cover cover--stage-1`;
+		}, 1000);
 	})();

@@ -15,6 +15,7 @@ export default function Menu() {
         popup.classList = 'header__popup';
 
         document.querySelector('body').style.overflow = '';
+        document.querySelector('main').style.pointerEvents = '';
         // document.body.style.height = '';
     }
 
@@ -24,6 +25,7 @@ export default function Menu() {
         popup.classList = `header__popup header__popup--${page}`;
         burger.classList.add('header__burger--open');
         document.querySelector('body').style.overflow = 'hidden';
+        document.querySelector('main').style.pointerEvents = 'none';
         // document.body.style.height = '100vh';
     }
 

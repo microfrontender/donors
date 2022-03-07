@@ -21,13 +21,15 @@ export default function Page(){
 
 	}
 
+	let isInit = false;
+	let isOpen = false;
 	function setPage(href, index){
 		document.body.classList = `page-${href}`;
 		headerTitle.textContent = data[href];
 		headerNumber.textContent = `0${index}`;
 		// включить на прод
 		window.scrollTo( 0, 0 );
-
+		document.body.style.overflow = '';
 		if(window.innerWidth < 768 && href === 'prep'){
 			document.querySelector('.prep__checklist').style.transform = 'translateY(0)';
 		}else{
@@ -43,6 +45,9 @@ export default function Page(){
 		});
 	});
 
+	burger.addEventListener('click', ()=>{
+		isOpen = !isOpen;
+	});
 	spineItems.forEach((item, index) => {
 		item.addEventListener('click', ()=>{
 			let href = item.getAttribute('data-href');
@@ -56,18 +61,21 @@ export default function Page(){
 		header.classList.remove('header--open');
 		popup.classList = 'header__popup';
 		document.querySelector('body').style.overflow = '';
+		
+        document.querySelector('main').style.pointerEvents = '';
+		isOpen = false;
 	}
 
 	
 	setPage('cover', 1);
-
+	document.body.style.overflow = 'hidden';
 	let isMoving = false;
 	let startingY;
 	document.addEventListener('touchstart',tStart);
 	document.addEventListener('wheel',onMouseWheel);
 	
 	function tStart(e){
-		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') ){
+		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') && !isInit && !isOpen){
 		startingY = e.touches[0].pageY;
 		document.addEventListener('touchmove', tMove);
 		document.addEventListener('touchend', tEnd);
@@ -88,7 +96,8 @@ export default function Page(){
 			tTimeout();
 		}
 	}
-	function tTimeout(){
+	
+	function tTimeout(index = 1){
 		
 		if(!isMoving){
 		isMoving = true;
@@ -96,17 +105,17 @@ export default function Page(){
 			setTimeout(() => {
 				isMoving = false;
 				
-			document.body.style.overflow = 'unset';
-			}, 1000);
+			}, 1000*index);
 		}
 	}
+	tTimeout(2);
 	function tEnd(){
 		document.removeEventListener('touchmove',tMove, false);
 		document.removeEventListener('touchend', tEnd, false);
 	}
 
 	function onMouseWheel(event) {
-		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') ){
+		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') && !isInit && !isOpen ){
 			let delta = event.wheelDelta / 30 || -event.detail;
 			//If the user scrolled up, it goes to previous slide, otherwise - to next slide
 			if(delta > 0 && !isMoving){
@@ -117,6 +126,12 @@ export default function Page(){
 			if(delta < 0 && !isMoving){
 				Cover(2);
 				tTimeout();
+				if(!isInit){
+					isInit = true;
+					setTimeout(() => {
+						document.querySelector('body').style.overflow = '';
+					}, 1000);
+				}
 			}
 		}else{
 			return false

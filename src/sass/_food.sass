@@ -297,6 +297,17 @@
 			justify-content: center
 			z-index: 1000
 			background: $very-peri
+			
+			&::after
+				position: absolute
+				content: ''
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				height: 200vh
+				width: 100%
+				z-index: -1
+				background: $very-peri
 		&__popup-close
 			display: block
 			position: absolute
