@@ -60,6 +60,8 @@ export default function Scroller() {
 	// 	});
 	// }
 	// Cover(1);
+	window.lottieArray = [];
+	window.lottieLoading = true;
 	scroll.on('scroll', (args) => {
 		if(typeof args.currentElements['cover-container'] === 'object') {
 			let progress = args.currentElements['cover-container'].progress;
