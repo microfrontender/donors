@@ -93,7 +93,7 @@ sub
     justify-content: flex-start
     border-radius: 6.25rem
     background: $yellow
-    box-shadow: 0px 3px 20px #FED100
+    box-shadow: 0px 3px 20px rgba(245, 189, 79, 0.3)
     text-decoration: none
     transition: all ease 0.2s
     &__icon
@@ -111,7 +111,7 @@ sub
             padding-left: 0.38rem
     &.active
         padding: 0.63rem 1.25rem
-        border-radius: 6.25rem
+        border-radius: 0.88rem
 .desktop
     display: unset
 .mobile
@@ -128,7 +128,7 @@ sub
         top: 0
         left: 0
 
-@media (max-aspect-ratio: 12/8) and ( min-width: 768px )
+@media (max-aspect-ratio: 15/9) and ( min-width: 768px )
     html
         font-size: 1.7vh
 @media screen and ( max-width: 767px )
@@ -169,6 +169,8 @@ sub
             height: calc(100% + 2.88rem*3)
         .spine[data-spine-section='1']
             display: none
+        .header__number
+            display: block
     .page-donation
         .donation
             display: block
@@ -176,6 +178,8 @@ sub
             height: calc(100% + 2.88rem*2)
         .spine[data-spine-section='1'], .spine[data-spine-section='2']
             display: none
+        .header__number
+            display: block
     .page-test
         .test
             display: block
@@ -183,12 +187,16 @@ sub
             height: calc(100% + 2.88rem*1)
         .spine[data-spine-section='1'], .spine[data-spine-section='2'], .spine[data-spine-section='3']
             display: none
+        .header__number
+            display: block
     .page-benefit
         .benefit
             display: block
         .spines
             height: calc(100%)
             display: none
+        .header__number
+            display: block
     .desktop
         display: none
     .mobile

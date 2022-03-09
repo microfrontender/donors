@@ -322,27 +322,42 @@
 			right: 1rem
 			left: unset
 			
-			width: 13.31rem
-			height: 2.31rem
+			width: 2.5rem
+			height: 2.50rem
 			display: flex
 			align-items: center
 			justify-content: center
 			color: $white
 			transform: translateY(200%)
-			transition: transform ease 1s
+			transition: all ease 0.5s
 			font-family: 'TT Travels Next', sans-serif
 			font-weight: 500
 			font-size: 0.75rem
 			text-decoration: none
 			pointer-events: auto
 			background: $very-peri
-			border-radius: 0.88rem
+			border-radius: 6.25rem
 			box-shadow: 0px 3px 20px rgba(19, 30, 183, 0.3)
+			
 			z-index: 100
 			&-icon
-				width: 0.94rem
-				height: 0.94rem
-				margin-right: 0.38rem
+				width: 0.75rem
+				height: 1.25rem
+				margin-right: 0
+			&-text
+				width: 0
+				overflow: hidden
+				
+				transition: all ease 0.5s
+				span
+					padding-left: 0.38rem
+					white-space: nowrap
+			&.active
+				width: 11.88rem
+				height: 2.50rem
+				border-radius: 0.88rem
+				.prep__checklist-text
+					width: 8.63rem
 		&__find
 			margin-top: 8.2rem
 			margin-left: 0

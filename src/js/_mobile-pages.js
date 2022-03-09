@@ -30,11 +30,7 @@ export default function Page(){
 		// включить на прод
 		window.scrollTo( 0, 0 );
 		document.body.style.overflow = '';
-		if(window.innerWidth < 768 && href === 'prep'){
-			document.querySelector('.prep__checklist').style.transform = 'translateY(0)';
-		}else{
-			document.querySelector('.prep__checklist').style.transform = '';
-		}
+		
 	}
 	menuItems.forEach((item, index) => {
 		item.addEventListener('click', ()=>{

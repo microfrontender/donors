@@ -18,6 +18,7 @@ import LottieInit from './_lottie-init';
 import LottieMobile from './_lottie-mobile';
 import bridge from '@vkontakte/vk-bridge';
 import '../img/og-image.png';
+import Checklist from './_checklist-mobile';
 bridge.send('VKWebAppInit');
 LottieInit();
 Menu();
@@ -25,12 +26,19 @@ if (window.innerWidth > 767) {
 	Scroller();
 	Food();
 	Circles();
+	document.querySelector('.prep__checklist').href = './doc/DonorSearch_checklist.pdf';
 } else {
+	
+	window.onbeforeunload = function () {
+		window.scrollTo(0, 0);
+	}
 	Page();
 	FoodMobile();
 	Stories();
 	CirclesMobile();
 	LottieMobile();
+	
+	Checklist();
 	function fullHeight() {
 		let vh = window.innerHeight * 0.01;
 		let body = document.querySelector('body');
@@ -40,6 +48,7 @@ if (window.innerWidth > 767) {
 	window.addEventListener('resize', () => {
 		fullHeight();
 	});
+	document.querySelector('.prep__checklist').href = './doc/DonorSearch_checklist_mobile.png';
 }
 Hints();
 Slider();

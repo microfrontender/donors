@@ -15,13 +15,17 @@ section( data-spine-section="1")#prep.section.prep
 					img(src=require('../../img/arrow-down-mobile.png'), alt="")
 			.section__body.prep__body
 				.prep__checklist-wrap#prep__checklist-wrap
-					a(href="" data-scroll data-scroll-sticky data-scroll-target="#prep__checklist-wrap").prep__checklist 
-						.prep__checklist-icon.desktop 
+					a(href="" data-scroll data-scroll-sticky data-scroll-target="#prep__checklist-wrap" download).prep__checklist.active
+						.prep__checklist-icon 
 							img(  src=require('../../img/arrow-down-white.svg'), alt="")
-						.prep__checklist-icon.mobile 
-							img(  src=require('../../img/icon-send.svg'), alt="")
-						span.desktop Скачать чек-лист
-						span.mobile Отправить чек-лист
+						//- .prep__checklist-icon.desktop 
+						//- 	img(  src=require('../../img/arrow-down-white.svg'), alt="")
+						//- .prep__checklist-icon.mobile 
+						//- 	img(  src=require('../../img/icon-send.svg'), alt="")
+						.prep__checklist-text
+							span Скачать чек-лист
+						//- span.desktop Скачать чек-лист
+						//- span.mobile Отправить чек-лист
 				.prep__bg
 					.prep__lottie.prep__lottie--1.lottie-item 
 					.prep__lottie.prep__lottie--3.lottie-item 
@@ -115,7 +119,7 @@ section( data-spine-section="1")#prep.section.prep
 							.stories__icon
 								img(src=require('../../img/icon-stories.svg'), alt="")
 							.stories__text 
-								span Cохранить картинку для сторис
+								span Создать сторис
 						.food__popup.lazy
 							.food__popup-close 
 								img(src=require('../../img/close-popup.svg'), alt="")

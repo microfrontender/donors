@@ -6,6 +6,10 @@ export default function Menu() {
     let back = document.querySelector('.header__about-back');
     let popup = document.querySelector('.header__popup');
     let copyLinks = document.querySelectorAll('.copy-link');
+    let benefitSocials  = document.querySelector('.benefit__socials');
+    let benefitBtn = document.querySelector('.benefit__social-btn');
+
+
     if (window.innerWidth < 768) {
         burger = document.querySelector('.header__burger--mobile');
     }
@@ -53,4 +57,8 @@ export default function Menu() {
         });
     });
     // openPopup('about');
+
+    benefitBtn.addEventListener('click', ()=>{
+        benefitSocials.classList.toggle('active');
+    });
 }

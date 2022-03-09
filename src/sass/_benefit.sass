@@ -130,9 +130,24 @@
 		width: 16.00rem
 		height: 7.13rem
 		z-index: 100
+		&.active
+			.benefit__social
+				opacity: 1
+				pointer-events: auto
+	&__social-btn
+		position: absolute
+		width: 6.31rem
+		height: 5.63rem
+		top: -1.8rem
+		left: 4.6rem
+		cursor: pointer
+
 	&__social
 		position: absolute
 		cursor: pointer
+		opacity: 0
+		transition: all .2s ease-out
+		pointer-events: none
 		img
 			position: absolute
 			bottom: 0
@@ -147,21 +162,25 @@
 			left: 2.2rem
 			width: 2.94rem
 			height: 3.31rem
+			transition-delay: 20ms
 		&--tg
 			top: 4.1rem
 			left: 6.1rem
 			width: 3.38rem
 			height: 2.94rem
+			transition-delay: 40ms
 		&--fb
 			top: 3.3rem
 			left: 10.2rem
 			width: 2.88rem
 			height: 2.88rem
+			transition-delay: 60ms
 		&--vk
 			top: 0.6rem
 			left: 13rem
 			width: 3.00rem
 			height: 3.13rem
+			transition-delay: 80ms
 
 @media screen and ( max-width: 767px )
 	.benefit
@@ -293,9 +312,14 @@
 			width: 16.00rem
 			height: 7.13rem
 			z-index: 100
+		&__social-btn
+			width: 5.25rem
+			height: 4.75rem
+			top: -1rem
+			left: 5.6rem
+			cursor: unset
 		&__social
 			position: absolute
-			cursor: pointer
 			img
 				position: absolute
 				bottom: 0
