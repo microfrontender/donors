@@ -229,6 +229,9 @@
 		&__subtitle
 			width: 17.38rem
 		&__bg
+			z-index: 0
+			
+			pointer-events: none
 		&__img
 			&--1
 				top: 13.9rem
@@ -348,7 +351,7 @@
 				width: 0
 				overflow: hidden
 				
-				transition: all ease 0.5s
+				transition: width ease 0.5s
 				span
 					padding-left: 0.38rem
 					white-space: nowrap

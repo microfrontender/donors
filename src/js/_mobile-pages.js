@@ -30,6 +30,7 @@ export default function Page(){
 		// включить на прод
 		window.scrollTo( 0, 0 );
 		document.body.style.overflow = '';
+		document.body.style.height = '';
 		
 	}
 	menuItems.forEach((item, index) => {
@@ -57,14 +58,16 @@ export default function Page(){
 		header.classList.remove('header--open');
 		popup.classList = 'header__popup';
 		document.querySelector('body').style.overflow = '';
-		
+		document.body.style.height = '';
         document.querySelector('main').style.pointerEvents = '';
 		isOpen = false;
 	}
 
 	
 	setPage('cover', 1);
+	window.scrollTo( 0, 0 );
 	document.body.style.overflow = 'hidden';
+	document.body.style.height = '100vh';
 	let isMoving = false;
 	let startingY;
 	document.addEventListener('touchstart',tStart);
@@ -75,9 +78,7 @@ export default function Page(){
 		startingY = e.touches[0].pageY;
 		document.addEventListener('touchmove', tMove);
 		document.addEventListener('touchend', tEnd);
-		} else {
-			return false;
-		}
+		} 
 	}
 	function tMove(e){
 		let currentY = e.touches[0].pageY;
@@ -94,6 +95,7 @@ export default function Page(){
 				isInit = true;
 				setTimeout(() => {
 					document.querySelector('body').style.overflow = '';
+					document.body.style.height = '';
 				}, 1000);
 			}
 		}
@@ -107,7 +109,7 @@ export default function Page(){
 			setTimeout(() => {
 				isMoving = false;
 				
-			}, 1000*index);
+			}, 1500*index);
 		}
 	}
 	tTimeout(2);
@@ -132,6 +134,7 @@ export default function Page(){
 					isInit = true;
 					setTimeout(() => {
 						document.querySelector('body').style.overflow = '';
+						document.body.style.height = '';
 					}, 1000);
 				}
 			}

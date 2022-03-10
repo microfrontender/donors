@@ -1,10 +1,12 @@
 
 script.
-	//- document.body.style.overflow = 'hidden';
+
 	(function(){
 		window.scrollTo( 0, 0 );
+		
+		const cover = document.querySelector('.cover');
+		cover.classList = `section cover cover--stage-0`;
 		setTimeout(()=>{
-			const cover = document.querySelector('.cover');
 			cover.classList = `section cover cover--stage-1`;
-		}, 1000);
+		}, 1500);
 	})();

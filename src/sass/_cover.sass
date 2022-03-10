@@ -76,6 +76,13 @@
 		margin-left: 0.8rem
 		height: 2.13rem
 		width: 19.75rem
+	&__label-wrap
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		
 	&__label
 		width: 13.38rem
 		height: 2.50rem
@@ -310,7 +317,7 @@
 		width: 100%
 		min-height: auto
 		height: 100vh
-		height: calc(var(--vh, 1vh) * 100)
+		// height: calc(var(--vh, 1vh) * 100)
 		transition: height ease 0.2s
 		.container
 			width: 100%
@@ -325,6 +332,9 @@
 		&__body
 			height: 30rem
 			height: calc( 100% - 4rem )
+		&__label-wrap
+			height: calc(var(--vh, 1vh) * 81)
+			transition: height ease 0.2s
 		&__label
 			width: 11.06rem
 			height: 2.06rem
