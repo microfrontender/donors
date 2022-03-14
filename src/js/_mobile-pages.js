@@ -74,7 +74,7 @@ export default function Page(){
 	document.addEventListener('wheel',onMouseWheel);
 	
 	function tStart(e){
-		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') && !isInit && !isOpen){
+		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') && !isInit && !isOpen && !isMoving){
 		startingY = e.touches[0].pageY;
 		document.addEventListener('touchmove', tMove);
 		document.addEventListener('touchend', tEnd);
@@ -84,13 +84,15 @@ export default function Page(){
 		let currentY = e.touches[0].pageY;
 		let delta = currentY - startingY;
 		if(delta > 0 && !isMoving){
-			Cover(1);
+			
 			tTimeout();
+			Cover(1);
 			
 		}
 		if(delta < 0 && !isMoving){
-			Cover(2);
+			
 			tTimeout();
+			Cover(2);
 			if(!isInit){
 				isInit = true;
 				setTimeout(() => {
@@ -119,7 +121,7 @@ export default function Page(){
 	}
 
 	function onMouseWheel(event) {
-		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') && !isInit && !isOpen ){
+		if(document.querySelector('body').classList.contains('page-cover') && !document.querySelector('.cover').classList.contains('cover--stage-0') && !isInit && !isOpen  && !isMoving){
 			let delta = event.wheelDelta / 30 || -event.detail;
 			//If the user scrolled up, it goes to previous slide, otherwise - to next slide
 			if(delta > 0 && !isMoving){
