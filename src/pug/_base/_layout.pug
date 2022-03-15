@@ -2,10 +2,13 @@ doctype html
 html(lang="ru")
   head
     include _head
+    include _media-tags
     include _critical
-    //- include _script
+    include _metric-head.html
 
   body(style="overflow: hidden")
+  
+    include _metric-body.html
     block header
     block content
     block scripts
