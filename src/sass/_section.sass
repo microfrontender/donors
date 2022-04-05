@@ -72,7 +72,7 @@
 			bottom: -0.06rem
 			width: calc(100% - 0.16rem)
 			height: 0
-			border-bottom: 0.06rem dashed rgba(120, 92, 186, 0.3)
+			border-bottom: 0.12rem dashed rgba(120,92,186,.4)
 	&__hints
 		position: absolute
 		top: 0
@@ -164,14 +164,15 @@
 			color: $dark-purple
 			cursor: pointer
 			text-decoration: none
-			&::after
-				position: absolute
-				content: ''
-				left: 0
-				bottom: -0.06rem
-				width: calc(100% - 0.16rem)
-				height: 0
-				border-bottom: 0.06rem solid rgba(120, 92, 186, 0.3)
+			border-bottom: 0.12rem solid rgba(120, 92, 186, 0.3)
+			// &::after
+			// 	position: absolute
+			// 	content: ''
+			// 	left: 0
+			// 	bottom: -0.06rem
+			// 	width: calc(100% - 0.16rem)
+			// 	height: 0
+			// 	border-bottom: 0.06rem solid rgba(120, 92, 186, 0.3)
 		p
 			
 			line-height: 1.29rem
@@ -212,6 +213,9 @@
 			margin-top: 3.38rem
 			width: 100%
 			height: auto
+		&__hover
+			&::after
+				border-bottom: 1px dashed rgba(120,92,186,.4)
 		&__hints
 			position: fixed
 			opacity: 0
@@ -237,7 +241,9 @@
 			width: 100% !important
 			height: auto !important
 			border-radius: 1.25rem 1.25rem 0 0
-
+		&__hint-text
+			a 
+				border-bottom: 1px solid rgba(120, 92, 186, 0.3)
 		&__find-text
 			font-size: 1.69rem
 			line-height: 2.06rem

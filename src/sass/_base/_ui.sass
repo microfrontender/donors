@@ -22,6 +22,11 @@ body
     line-height: 1.31rem
     font-family: 'Proxima Nova', sans-serif
     color: $almost-black
+    &.prevent-scroll
+        touch-action: none
+        -webkit-overflow-scrolling: none
+        overflow: hidden !important
+        overscroll-behavior: none
 
 *, :after, :before
     margin: 0
@@ -126,8 +131,13 @@ sub
         opacity: 0
     img
         position: absolute
-        top: 0
-        left: 0
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        max-width: 100%
+        max-height: 100%
+        width: auto
+        height: auto
 
 @media (max-aspect-ratio: 15/9) and ( min-width: 768px )
     html

@@ -33,6 +33,10 @@ export default function CirclesMobile() {
             document.querySelector('body').style.overflow = 'hidden';
             document.querySelector('body').style.height = '100%';
             document.querySelector('main').style.height = '100%';
+            document.querySelector('main').style.pointerEvents = 'none';
+
+            document.querySelector('body').classList.add('prevent-scroll');
+
             // document.body.style.height = '100vh';
             // document.querySelector('body').style.overflow = 'hidden';
 
@@ -42,12 +46,15 @@ export default function CirclesMobile() {
 
     function closePopup() {
         circles.classList.remove('active');
-        
+
         document.querySelector(`.circles-popup .circles__path.active`).classList.remove('active');
         document.querySelector('header').style.display = '';
         document.querySelector('body').style.overflow = '';
         document.querySelector('body').style.height = '';
         document.querySelector('main').style.height = '';
+        document.querySelector('main').style.pointerEvents = '';
+
+        document.querySelector('body').classList.remove('prevent-scroll');
         // document.body.style.height = '';
         setTimeout(() => {
 

@@ -12,8 +12,14 @@ module.exports = function() {
                         compress: {
                           // This will transform your png/jpg into webp.
                           // webp: true,
-                          
-                          disableOnDevelopment: true
+                          optipng: {
+                            optimizationLevel: 2,
+                          },
+                          // pngquant: false,
+                          // pngquant: {
+                          //   quality: [0.7, 0.8],
+                          // },
+                          // disableOnDevelopment: true
                         },
                         name: 'img/[name].[ext]',
                       },

@@ -231,6 +231,18 @@
 		display: none
 
 @media screen and ( max-width: 767px )
+	[data-mini-app]
+		.circles__close
+			right: unset
+			left: 1.25rem
+		.circles-popup.active .circles__body
+			padding: 4rem 1.88rem 0 1.25rem
+		.circles__back
+			padding: 8rem 0 0 6.25rem
+		.circles__path--bottom .circles__img
+			top: 7.5rem
+		.circles__path--top .circles__img
+			top: 8.5rem
 	.circles-popup
 		.circles__path
 			display: none
@@ -397,6 +409,9 @@
 						width: 100%
 						z-index: -1
 						background: #F8F1E6
+					
+					.circles__front
+						width: 16.28rem
 		&__close
 			position: absolute
 			width: 1.13rem
@@ -408,7 +423,7 @@
 			z-index: 10
 		&__front
 			top: 50%
-			width: 10.28rem
+			width: 11.28rem
 			transform: translate(-50%, -50%)
 		&__title
 			font-size: 0.94rem

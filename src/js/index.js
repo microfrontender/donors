@@ -19,7 +19,15 @@ import LottieMobile from './_lottie-mobile';
 import bridge from '@vkontakte/vk-bridge';
 import '../img/og-image.png';
 import Checklist from './_checklist-mobile';
-bridge.send('VKWebAppInit');
+bridge.send('VKWebAppInit', {});
+bridge.subscribe(e => {
+	if(e.detail.type === "VKWebAppInitResult"){
+		if(e.detail.data.result === true ){
+			document.body.setAttribute('data-mini-app', true);
+		}
+	}
+});
+
 LottieInit();
 Menu();
 if (window.innerWidth > 767) {
@@ -28,7 +36,16 @@ if (window.innerWidth > 767) {
 	Circles();
 	document.querySelector('.prep__checklist').href = './doc/DonorSearch_checklist.pdf';
 } else {
-	
+	// document.querySelectorAll('.lazy').forEach((item)=>{
+	// 	if(item.querySelectorAll('[data-src]').length > 0){
+	// 		item.querySelectorAll('[data-src]').forEach((img)=>{
+	// 			img.setAttribute('src', img.getAttribute('data-src'));
+	// 		})
+	// 		item.querySelectorAll('[data-srcset]').forEach((img)=>{
+	// 			img.setAttribute('srcset', img.getAttribute('data-srcset'));
+	// 		})
+	// 	}
+	// });
 	window.onbeforeunload = function () {
 		window.scrollTo(0, 0);
 	}

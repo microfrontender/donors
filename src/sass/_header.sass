@@ -377,6 +377,16 @@
     transform-origin: center center
 
 @media screen and ( max-width: 767px )
+    [data-mini-app]
+        .header__spine
+            flex-direction: row
+        .header__burger
+            margin-left: 0
+            margin-right: auto
+        .burger-line--center
+            transform: translateX(-0.18rem)
+        .header__title
+            order: 1
     .header
         width: 100%
         height: auto

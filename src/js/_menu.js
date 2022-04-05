@@ -6,7 +6,7 @@ export default function Menu() {
     let back = document.querySelector('.header__about-back');
     let popup = document.querySelector('.header__popup');
     let copyLinks = document.querySelectorAll('.copy-link');
-    let benefitSocials  = document.querySelector('.benefit__socials');
+    let benefitSocials = document.querySelector('.benefit__socials');
     let benefitBtn = document.querySelector('.benefit__social-btn');
 
 
@@ -20,6 +20,9 @@ export default function Menu() {
 
         document.querySelector('body').style.overflow = '';
         document.querySelector('main').style.pointerEvents = '';
+
+        document.querySelector('body').classList.remove('prevent-scroll');
+
         // document.body.style.height = '';
     }
 
@@ -30,6 +33,8 @@ export default function Menu() {
         burger.classList.add('header__burger--open');
         document.querySelector('body').style.overflow = 'hidden';
         document.querySelector('main').style.pointerEvents = 'none';
+
+        document.querySelector('body').classList.add('prevent-scroll');
         // document.body.style.height = '100vh';
     }
 
@@ -58,7 +63,7 @@ export default function Menu() {
     });
     // openPopup('about');
 
-    benefitBtn.addEventListener('click', ()=>{
+    benefitBtn.addEventListener('click', () => {
         benefitSocials.classList.toggle('active');
     });
 }

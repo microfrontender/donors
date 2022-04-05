@@ -10,19 +10,26 @@ export default function FoodMobile() {
 
     function openFood() {
         food.classList.add('active');
+        document.querySelector('header').style.display = 'none';
         document.querySelector('body').style.overflow = 'hidden';
-        document.querySelector('main').style.height = '100%';
         document.querySelector('body').style.height = '100%';
-        header.style.display = 'none';
+        document.querySelector('main').style.height = '100%';
+        document.querySelector('main').style.pointerEvents = 'none';
+
+        document.querySelector('body').classList.add('prevent-scroll');
     }
 
     function closeFood() {
 
+        document.querySelector('header').style.display = '';
         document.querySelector('body').style.overflow = '';
-        header.style.display = '';
-        document.querySelector('main').style.height = '';
         document.querySelector('body').style.height = '';
+        document.querySelector('main').style.height = '';
+        document.querySelector('main').style.pointerEvents = '';
+
+        document.querySelector('body').classList.remove('prevent-scroll');
         food.classList.remove('active');
+
     }
 
     // openFood();
