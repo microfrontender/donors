@@ -1,5 +1,6 @@
 import Cover from './_cover';
 
+import bridge from '@vkontakte/vk-bridge';
 export default function Checklist(){
 
 	const checklist = document.querySelector('.prep__checklist');
@@ -7,9 +8,14 @@ export default function Checklist(){
 	const section = document.querySelector('.section.prep');
 	let isOpen = true;
 	checklistWrap.addEventListener('click', (e)=>{
+		let href = checklist.href;
+		let download = 'DonorSearch checklist.png';
 		if(!isOpen){
 			e.preventDefault();
 			openChecklist();
+		} else if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
+			e.preventDefault();
+			bridge.send("VKWebAppDownloadFile", {"url": href, "filename": download});
 		}
 	});
 	function openChecklist(){

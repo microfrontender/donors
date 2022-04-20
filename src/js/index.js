@@ -41,6 +41,7 @@ bridge.subscribe(e => {
 	if(e.detail.type === "VKWebAppInitResult"){
 		if(e.detail.data.result === true && isMobile){
 			document.body.setAttribute('data-mini-app', true);
+			window.isVkMiniApp = true;
 		}
 	}
 });

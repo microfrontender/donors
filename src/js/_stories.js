@@ -1,13 +1,19 @@
+
+import bridge from '@vkontakte/vk-bridge';
 export default function Stories(){
 
 	const btns = document.querySelectorAll('.stories');
 
 	btns.forEach(btn => {
 		btn.addEventListener('click', (e)=>{
-
+			let href = btn.href;
+			let download = btn.download;
 			if(!btn.classList.contains('active')){
 				e.preventDefault();
 				btnOpen(btn);
+			} else if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
+				e.preventDefault();
+				bridge.send("VKWebAppDownloadFile", {"url": href, "filename": `${download}.jpg`});
 			}
 
 		});
