@@ -19,10 +19,27 @@ import LottieMobile from './_lottie-mobile';
 import bridge from '@vkontakte/vk-bridge';
 import '../img/og-image.png';
 import Checklist from './_checklist-mobile';
+function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+    
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
+
+let isMobile = detectMob();
 bridge.send('VKWebAppInit', {});
 bridge.subscribe(e => {
 	if(e.detail.type === "VKWebAppInitResult"){
-		if(e.detail.data.result === true ){
+		if(e.detail.data.result === true && isMobile){
 			document.body.setAttribute('data-mini-app', true);
 		}
 	}
