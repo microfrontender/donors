@@ -19,8 +19,10 @@ export default function Scroller() {
 		resetNativeScroll: true
 	});
 
+    const labelCover = document.querySelector('.cover__label--bottom');
 	let spines = document.querySelectorAll('.spine[data-spine-section]');
 	
+    let stageCover = 0;
 	let updater = false;
 	function updateScroll(){
 		if(!updater){
@@ -67,8 +69,10 @@ export default function Scroller() {
 			let progress = args.currentElements['cover-container'].progress;
 			if(progress > 0.30){
 				Cover(2);
+				stageCover = 2;
 			}else{
 				Cover(1);
+				stageCover = 1;
 			}
 		}
 		Lottie();
@@ -141,5 +145,15 @@ export default function Scroller() {
 			offset: 1-headerSpine.offsetWidth*index,
 		});
 	}
+
+	     
+    labelCover.addEventListener('click', ()=>{
+        if(stageCover === 2){
+			goToSection('prep', '1');
+        }else{
+            Cover(2);
+            stageCover = 2;
+        }
+    });
 
 }

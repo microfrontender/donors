@@ -39,13 +39,15 @@ let isMobile = detectMob();
 bridge.send('VKWebAppInit', {});
 bridge.subscribe(e => {
 	if(e.detail.type === "VKWebAppInitResult"){
-		if(e.detail.data.result === true && isMobile){
-			document.body.setAttribute('data-mini-app', true);
+		if(e.detail.data.result === true){
 			window.isVkMiniApp = true;
+			if(isMobile){
+				document.body.setAttribute('data-mini-app', true);
+			}
 		}
 	}
 });
-
+bridge.send("VKWebAppSetViewSettings", {"status_bar_style": "dark", "action_bar_color": "#f8f1e6"});
 LottieInit();
 Menu();
 if (window.innerWidth > 767) {
@@ -54,16 +56,6 @@ if (window.innerWidth > 767) {
 	Circles();
 	document.querySelector('.prep__checklist').href = './doc/DonorSearch_checklist.pdf';
 } else {
-	// document.querySelectorAll('.lazy').forEach((item)=>{
-	// 	if(item.querySelectorAll('[data-src]').length > 0){
-	// 		item.querySelectorAll('[data-src]').forEach((img)=>{
-	// 			img.setAttribute('src', img.getAttribute('data-src'));
-	// 		})
-	// 		item.querySelectorAll('[data-srcset]').forEach((img)=>{
-	// 			img.setAttribute('srcset', img.getAttribute('data-srcset'));
-	// 		})
-	// 	}
-	// });
 	window.onbeforeunload = function () {
 		window.scrollTo(0, 0);
 	}

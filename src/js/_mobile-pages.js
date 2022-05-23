@@ -8,10 +8,12 @@ export default function Page() {
     const header = document.querySelector('.header');
 
     const burger = document.querySelector('.header__burger--mobile');
+    const labelCover = document.querySelector('.cover__label--bottom');
     const headerNumber = document.querySelector('.header__number');
     const headerTitle = document.querySelector('.header__title');
     const popup = document.querySelector('.header__popup');
 
+    let stageCover = 0;
     const data = {
         'cover': "Инфографика х donorsearch",
         'prep': "подготовка",
@@ -93,12 +95,14 @@ export default function Page() {
 
             tTimeout();
             Cover(1);
+            stageCover = 1;
 
         }
         if (delta < 0 && !isMoving) {
 
             tTimeout();
             Cover(2);
+            stageCover=2;
             if (!isInit) {
                 isInit = true;
                 setTimeout(() => {
@@ -135,11 +139,13 @@ export default function Page() {
             //If the user scrolled up, it goes to previous slide, otherwise - to next slide
             if (delta > 0 && !isMoving) {
                 Cover(1);
+                stageCover = 1;
                 tTimeout();
 
             }
             if (delta < 0 && !isMoving) {
                 Cover(2);
+                stageCover = 2;
                 tTimeout();
                 if (!isInit) {
                     isInit = true;
@@ -155,4 +161,26 @@ export default function Page() {
             return false
         }
     }
+
+    setTimeout(() => {
+        
+    labelCover.addEventListener('click', ()=>{
+        if(stageCover === 2){
+            setPage('prep', 1);
+        }else{
+            Cover(2);
+            stageCover = 2;
+            tTimeout();
+            if (!isInit) {
+                isInit = true;
+                setTimeout(() => {
+                    document.querySelector('body').style.overflow = '';
+                    document.body.style.height = '';
+
+                    document.querySelector('body').classList.remove('prevent-scroll');
+                }, 1000);
+            }
+        }
+    });
+    }, 2500);
 }

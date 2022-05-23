@@ -1,3 +1,4 @@
+import bridge from '@vkontakte/vk-bridge';
 export default function Menu() {
 
     let header = document.querySelector('.header');
@@ -57,7 +58,13 @@ export default function Menu() {
 
     copyLinks.forEach(element => {
         element.addEventListener('click', () => {
-            navigator.clipboard.writeText('https://infografika.donorsearch.org/')
+            if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
+                bridge.send("VKWebAppShare", {"link": "vk.com/app8087070"});
+
+            } else{
+
+                navigator.clipboard.writeText('https://infografika.donorsearch.org/')
+            }
 
         });
     });
@@ -66,4 +73,11 @@ export default function Menu() {
     benefitBtn.addEventListener('click', () => {
         benefitSocials.classList.toggle('active');
     });
+
+    if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
+        e.preventDefault();
+        // bridge.send("VKWebAppDownloadFile", {"url": href, "filename": `${download}.jpg`});
+        bridge.send("VKWebAppShowStoryBox", { "background_type" : "image", "url" : href });
+
+    }
 }

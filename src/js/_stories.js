@@ -4,6 +4,14 @@ export default function Stories(){
 
 	const btns = document.querySelectorAll('.stories');
 
+	const toDataURL = url => fetch(url)
+	.then(response => response.blob())
+	.then(blob => new Promise((resolve, reject) => {
+		const reader = new FileReader()
+		reader.onloadend = () => resolve(reader.result)
+		reader.onerror = reject
+		reader.readAsDataURL(blob)
+	}))
 	btns.forEach(btn => {
 		btn.addEventListener('click', (e)=>{
 			let href = btn.href;
@@ -13,7 +21,13 @@ export default function Stories(){
 				btnOpen(btn);
 			} else if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
 				e.preventDefault();
-				bridge.send("VKWebAppDownloadFile", {"url": href, "filename": `${download}.jpg`});
+				// bridge.send("VKWebAppDownloadFile", {"url": href, "filename": `${download}.jpg`});
+				toDataURL(href)
+				.then(dataUrl => {
+					bridge.send("VKWebAppShowStoryBox", { "background_type" : "image", "blob" : dataUrl });
+				})
+				
+
 			}
 
 		});

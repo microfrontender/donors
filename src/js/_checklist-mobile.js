@@ -2,6 +2,23 @@ import Cover from './_cover';
 
 import bridge from '@vkontakte/vk-bridge';
 export default function Checklist(){
+	function detectMob() {
+		const toMatch = [
+			/Android/i,
+			/webOS/i,
+			/iPhone/i,
+			/iPad/i,
+			/iPod/i,
+			/BlackBerry/i,
+			/Windows Phone/i
+		];
+		
+		return toMatch.some((toMatchItem) => {
+			return navigator.userAgent.match(toMatchItem);
+		});
+	}
+	
+	let isMobile = detectMob();
 
 	const checklist = document.querySelector('.prep__checklist');
 	const checklistWrap = document.querySelector('.prep__checklist-wrap');
@@ -13,7 +30,7 @@ export default function Checklist(){
 		if(!isOpen){
 			e.preventDefault();
 			openChecklist();
-		} else if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
+		} else if(window.isVkMiniApp !== undefined && window.isVkMiniApp && isMobile){
 			e.preventDefault();
 			bridge.send("VKWebAppDownloadFile", {"url": href, "filename": download});
 		}
