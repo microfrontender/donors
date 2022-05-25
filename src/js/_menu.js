@@ -9,7 +9,7 @@ export default function Menu() {
     let copyLinks = document.querySelectorAll('.copy-link');
     let benefitSocials = document.querySelector('.benefit__socials');
     let benefitBtn = document.querySelector('.benefit__social-btn');
-
+    let isOpen = false;
 
     if (window.innerWidth < 768) {
         burger = document.querySelector('.header__burger--mobile');
@@ -18,17 +18,29 @@ export default function Menu() {
     function closePopup() {
         header.classList.remove('header--open');
         popup.classList = 'header__popup';
-
         document.querySelector('body').style.overflow = '';
         document.querySelector('main').style.pointerEvents = '';
-
+        
+        if(history.state !== null && window.innerWidth < 768){
+        history.back();
+        }
+       
         document.querySelector('body').classList.remove('prevent-scroll');
-
+        isOpen = false;
         // document.body.style.height = '';
     }
-
+    window.addEventListener('popstate', function(e) {
+        // код обработчика события
+        // console.log(e);
+        if (window.innerWidth < 768) {
+            closePopup();
+            return false;
+        }
+    });
     function openPopup(page) {
-
+        if (window.innerWidth < 768) {
+        history.pushState({menu: 'open'}, "", "?menu=open");
+        }
         header.classList.add('header--open');
         popup.classList = `header__popup header__popup--${page}`;
         burger.classList.add('header__burger--open');
@@ -36,12 +48,13 @@ export default function Menu() {
         document.querySelector('main').style.pointerEvents = 'none';
 
         document.querySelector('body').classList.add('prevent-scroll');
+        isOpen = true;
         // document.body.style.height = '100vh';
     }
 
     burger.addEventListener('click', () => {
 
-        if (burger.classList.contains('header__burger--open')) {
+        if (isOpen) {
             closePopup();
             burger.classList.remove('header__burger--open');
         } else {

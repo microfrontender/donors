@@ -1,6 +1,3 @@
-
-
-
 import '../sass/index.sass';
 import Scroller from './_scroll';
 import Menu from './_menu';
@@ -19,6 +16,7 @@ import LottieMobile from './_lottie-mobile';
 import bridge from '@vkontakte/vk-bridge';
 import '../img/og-image.png';
 import Checklist from './_checklist-mobile';
+
 function detectMob() {
     const toMatch = [
         /Android/i,
@@ -29,7 +27,7 @@ function detectMob() {
         /BlackBerry/i,
         /Windows Phone/i
     ];
-    
+
     return toMatch.some((toMatchItem) => {
         return navigator.userAgent.match(toMatchItem);
     });
@@ -38,53 +36,53 @@ function detectMob() {
 let isMobile = detectMob();
 bridge.send('VKWebAppInit', {});
 bridge.subscribe(e => {
-	if(e.detail.type === "VKWebAppInitResult"){
-		if(e.detail.data.result === true){
-			window.isVkMiniApp = true;
-			if(isMobile){
-				document.body.setAttribute('data-mini-app', true);
-			}
-		}
-	}
+    if (e.detail.type === "VKWebAppInitResult") {
+        if (e.detail.data.result === true) {
+            window.isVkMiniApp = true;
+            if (isMobile) {
+                document.body.setAttribute('data-mini-app', true);
+            }
+        }
+    }
 });
-bridge.send("VKWebAppSetViewSettings", {"status_bar_style": "dark", "action_bar_color": "#f8f1e6"});
+bridge.send("VKWebAppSetViewSettings", { "status_bar_style": "dark", "action_bar_color": "#f8f1e6" });
 LottieInit();
 Menu();
 if (window.innerWidth > 767) {
-	Scroller();
-	Food();
-	Circles();
-	document.querySelector('.prep__checklist').href = './doc/DonorSearch_checklist.pdf';
+    Scroller();
+    Food();
+    Circles();
+    document.querySelector('.prep__checklist').href = './doc/DonorSearch_checklist.pdf';
 } else {
-	window.onbeforeunload = function () {
-		window.scrollTo(0, 0);
-	}
-	Page();
-	FoodMobile();
-	Stories();
-	CirclesMobile();
-	LottieMobile();
-	
-	Checklist();
-	function fullHeight() {
-		let vh = window.innerHeight * 0.01;
-		let body = document.querySelector('body');
-		body.style.setProperty('--vh', `${vh}px`);
-	}
-	fullHeight();
-	window.addEventListener('resize', () => {
-		fullHeight();
-	});
-	document.querySelector('.prep__checklist').href = './doc/DonorSearch_checklist_mobile.png';
+    window.onbeforeunload = function() {
+        window.scrollTo(0, 0);
+    }
+    Page();
+    FoodMobile();
+    Stories();
+    CirclesMobile();
+    LottieMobile();
+
+    Checklist();
+
+    function fullHeight() {
+        let vh = window.innerHeight * 0.01;
+        let body = document.querySelector('body');
+        body.style.setProperty('--vh', `${vh}px`);
+    }
+    fullHeight();
+    window.addEventListener('resize', () => {
+        fullHeight();
+    });
+    document.querySelector('.prep__checklist').href = './doc/DonorSearch_checklist_mobile.png';
 }
 Hints();
 Slider();
 Accordion();
 window.onload = () => {
-
-	const lazysliders = new LazyLoad({
-		elements_selector: ".lazy img",
-		unobserve_entered: true
-	});
+    const lazysliders = new LazyLoad({
+        elements_selector: ".lazy img",
+        unobserve_entered: true
+    });
 
 }

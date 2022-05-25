@@ -25,12 +25,16 @@ export default function Page() {
 
     let isInit = false;
     let isOpen = false;
-
+    if ('scrollRestoration' in history) {
+        // Back off, browser, I got this...
+        history.scrollRestoration = 'manual';
+    }
     function setPage(href, index) {
         document.body.classList = `page-${href}`;
         headerTitle.textContent = data[href];
         headerNumber.textContent = `0${index}`;
         // включить на прод
+        
         window.scrollTo(0, 0);
         document.body.style.overflow = '';
         document.body.style.height = '';
@@ -67,6 +71,9 @@ export default function Page() {
         document.body.style.height = '';
         document.querySelector('main').style.pointerEvents = '';
         isOpen = false;
+        if(history.state !== null && window.innerWidth < 768){
+            history.back();
+            }
     }
 
 
