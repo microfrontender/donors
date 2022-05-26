@@ -16,7 +16,11 @@ export default function Scroller() {
 		direction: 'horizontal',
 		gestureDirection: 'both',
 		touchMultiplier: 1,
-		resetNativeScroll: true
+		resetNativeScroll: true, 
+		tablet: {
+			smooth: true,
+			breakpoint: 768
+		}
 	});
 
     const labelCover = document.querySelector('.cover__label--bottom');

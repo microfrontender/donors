@@ -9,6 +9,8 @@ export default function Menu() {
     let copyLinks = document.querySelectorAll('.copy-link');
     let benefitSocials = document.querySelector('.benefit__socials');
     let benefitBtn = document.querySelector('.benefit__social-btn');
+    let alertPanel = document.querySelector('.copy-alert');
+    let vkshare = document.querySelectorAll('.vk-share');
     let isOpen = false;
 
     if (window.innerWidth < 768) {
@@ -71,26 +73,50 @@ export default function Menu() {
 
     copyLinks.forEach(element => {
         element.addEventListener('click', () => {
+            
+            copyAlert();
             if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
-                bridge.send("VKWebAppShare", {"link": "vk.com/app8087070"});
+                bridge.send("VKWebAppCopyText", {"text": "vk.com/app8087070"});
 
             } else{
-
-                navigator.clipboard.writeText('https://infografika.donorsearch.org/')
+                navigator.clipboard.writeText('https://infografika.donorsearch.org/');
             }
-
+            
         });
     });
+    
+    vkshare.forEach(element => {
+        element.addEventListener('click', (e) => {
+            
+            if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
+                e.preventDefault();
+                bridge.send("VKWebAppShare", {"link": "vk.com/app8087070"});
+
+            } 
+            
+        });
+    });
+    
+
+    let alertShown = false;
+    const copyAlert = ()=>{
+        if(!alertShown){
+            alertPanel.style.opacity = 1;
+            setTimeout(() => {
+                alertPanel.style.opacity = 0;
+            }, 500);
+        }
+    }
     // openPopup('about');
 
     benefitBtn.addEventListener('click', () => {
         benefitSocials.classList.toggle('active');
     });
 
-    if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
-        e.preventDefault();
-        // bridge.send("VKWebAppDownloadFile", {"url": href, "filename": `${download}.jpg`});
-        bridge.send("VKWebAppShowStoryBox", { "background_type" : "image", "url" : href });
+    // if(window.isVkMiniApp !== undefined && window.isVkMiniApp){
+    //     e.preventDefault();
+    //     // bridge.send("VKWebAppDownloadFile", {"url": href, "filename": `${download}.jpg`});
+    //     bridge.send("VKWebAppShowStoryBox", { "background_type" : "image", "url" : href });
 
-    }
+    // }
 }

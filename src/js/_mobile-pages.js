@@ -190,4 +190,13 @@ export default function Page() {
         }
     });
     }, 2500);
+
+
+    headerTitle.addEventListener('click', ()=>{
+        window.scrollTo(0, 0);
+    });
+    headerTitle.style.cursor = 'none';
+    headerNumber.addEventListener('click', ()=>{
+        window.scrollTo(0, 0);
+    });
 }

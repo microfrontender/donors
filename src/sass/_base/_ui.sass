@@ -138,8 +138,23 @@ sub
         max-height: 100%
         width: auto
         height: auto
-
-@media (max-aspect-ratio: 15/9) and ( min-width: 768px )
+.copy-alert
+    position: fixed
+    bottom: 1rem
+    left: 50%
+    transform: translate(-50%)
+    background: $white
+    padding: 0.3rem 0.8rem
+    border-radius: 0.5rem
+    pointer-events: none
+    box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, 0.1)
+    opacity: 0
+    transition: opacity ease 0.2s
+    z-index: 100000
+@media (max-aspect-ratio: 10/6) and ( min-width: 768px )
+    html
+        font-size: 1.85vh
+@media (max-aspect-ratio: 14/9) and ( min-width: 768px )
     html
         font-size: 1.7vh
 @media screen and ( max-width: 767px )
