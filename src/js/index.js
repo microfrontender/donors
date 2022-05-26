@@ -54,9 +54,9 @@ if (window.innerWidth > 767) {
     Circles();
     document.querySelector('.prep__checklist').href = './doc/DonorSearch_checklist.pdf';
 } else {
-    window.onbeforeunload = function() {
-        window.scrollTo(0, 0);
-    }
+    // window.onbeforeunload = function() {
+    //     window.scrollTo(0, 0);
+    // }
     Page();
     FoodMobile();
     Stories();
@@ -80,6 +80,14 @@ Hints();
 Slider();
 Accordion();
 window.onload = () => {
+	if (window.innerWidth > 767) {
+		setTimeout(()=>{
+			cover.classList = `section cover cover--stage-1`;
+		}, 1000);
+	} else {
+		
+		cover.classList = `section cover cover--stage-1`;
+	}
     const lazysliders = new LazyLoad({
         elements_selector: ".lazy img",
         unobserve_entered: true

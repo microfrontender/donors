@@ -78,7 +78,7 @@ export default function Page() {
 
 
     setPage('cover', 1);
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     document.body.style.overflow = 'hidden';
     document.body.style.height = '100vh';
     document.querySelector('body').classList.add('prevent-scroll');
