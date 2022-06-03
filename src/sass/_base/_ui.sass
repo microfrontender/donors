@@ -11,11 +11,11 @@ html
     background: $bg
     font-size: 16px
     font-size: 1.95vh
+    -webkit-text-size-adjust: 100%
 body
     position: relative
     background-color: $bg
     overflow: hidden
-    
     -webkit-font-smoothing: antialiased
     // font-size: 100%
     -webkit-overflow-scrolling: auto
@@ -34,7 +34,6 @@ body
     border: none
     box-sizing: border-box
     flex-shrink: 0
-
 a, button, p, ul, li
     font: inherit
     color: inherit
@@ -153,16 +152,17 @@ sub
     z-index: 100000
 @media (max-aspect-ratio: 10/6) and ( min-width: 768px )
     html
-        font-size: 1.85vh
+        font-size: 1.9vh
 @media (max-aspect-ratio: 14/9) and ( min-width: 768px )
     html
         font-size: 1.7vh
 @media screen and ( max-width: 767px )
     html
         font-size: 4.267vw
-        
+        -webkit-text-size-adjust: 100%
         overscroll-behavior: none
     *
+        
     //     -ms-overflow-style: none
     //     scrollbar-width: none 
     //     &::-webkit-scrollbar
@@ -170,6 +170,7 @@ sub
     body
         overflow: unset
         
+        -webkit-text-size-adjust: 100%
         overscroll-behavior: none
     main
         height: auto

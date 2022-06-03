@@ -100,7 +100,7 @@ export default function LottieMobile() {
 
 				let lottieItem = lottie.loadAnimation({
 					container: document.querySelector(element.selector), // the dom element that will contain the animation
-					renderer: 'canvas',
+					renderer: 'svg',
 					loop: true,
 					autoplay: false,
 					animationData: element.src
@@ -110,7 +110,7 @@ export default function LottieMobile() {
 					lottie.setQuality('low');
 
 					document.querySelector(`${element.selector} img`).style.opacity = '0';
-					document.querySelector(`${element.selector} canvas`).style.opacity = '1';
+					document.querySelector(`${element.selector} svg`).style.opacity = '1';
 					lottieItem.play();
 
 				});

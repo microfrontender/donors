@@ -109,7 +109,7 @@ export default function Lottie(){
 		
 		let lottieItem = lottie.loadAnimation({
 			container: document.querySelector(element.selector), // the dom element that will contain the animation
-			renderer: 'svg',
+			renderer: 'canvas',
 			loop: true,
 			autoplay: false,
 			animationData: element.src  
@@ -119,7 +119,7 @@ export default function Lottie(){
 			lottie.setQuality('low') ;
 			
 			document.querySelector(`${element.selector} img`).style.opacity = '0';
-			document.querySelector(`${element.selector} svg`).style.opacity = '1';
+			document.querySelector(`${element.selector} canvas`).style.opacity = '1';
 			lottieItem.play();
 			
 			window.lottieArray.shift();
