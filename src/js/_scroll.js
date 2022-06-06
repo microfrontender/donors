@@ -153,7 +153,7 @@ export default function Scroller() {
 	function goToSection(href, index){
 		scroll.scrollTo(document.querySelector(`#${href}`),{
 			duration: 100,
-			offset: 1-headerSpine.offsetWidth*index,
+			offset: 5-headerSpine.offsetWidth*index,
 		});
 	}
 

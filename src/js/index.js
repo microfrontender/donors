@@ -43,6 +43,7 @@ bridge.subscribe(e => {
                 document.body.setAttribute('data-mini-app', true);
             } else{
                 document.body.setAttribute('data-mini-app-desktop', true);
+                document.querySelector('html').classList.add('vk-desktop');
             }
         }
     }

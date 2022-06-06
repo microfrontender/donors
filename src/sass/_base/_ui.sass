@@ -12,6 +12,12 @@ html
     font-size: 16px
     font-size: 1.95vh
     -webkit-text-size-adjust: 100%
+    &.vk-desktop
+        .c-scrollbar
+            visibility: visible
+            opacity: 1
+            &_thumb
+                pointer-events: auto 
 body
     position: relative
     background-color: $bg
@@ -180,12 +186,6 @@ sub
         .c-scrollbar_thumb
             opacity: 0.8
             border-radius: 0.5rem
-[data-mini-app-desktop]
-    .c-scrollbar
-        visibility: visible
-        opacity: 1
-        &_thumb
-            pointer-events: auto 
 @media (max-aspect-ratio: 10/6) and ( min-width: 768px )
     html
         font-size: 1.9vh
@@ -193,15 +193,15 @@ sub
     html
         font-size: 1.7vh
 @media screen and ( max-width: 767px )
-    [data-mini-app-desktop]
-        .c-scrollbar
-            display: none
-            visibility: hidden
-            opacity: 0
     html
         font-size: 4.267vw
         -webkit-text-size-adjust: 100%
         overscroll-behavior: none
+        &.vk-desktop
+            .c-scrollbar
+                display: none
+                visibility: hidden
+                opacity: 0
     *
         
     //     -ms-overflow-style: none
