@@ -9,7 +9,7 @@ export default function Scroller() {
 
 
 	
-
+	const btns = document.querySelectorAll('.prep__food, .circles__path');
 	const scroll = new LocomotiveScroll({
 		el: document.querySelector('[data-scroll-container]'),
 		smooth: true,
@@ -17,12 +17,14 @@ export default function Scroller() {
 		gestureDirection: 'both',
 		touchMultiplier: 1,
 		resetNativeScroll: true, 
+		scrollbarContainer: document.body,
 		tablet: {
 			smooth: true,
 			breakpoint: 768
 		}
 	});
-
+	
+	scroll.update();
     const labelCover = document.querySelector('.cover__label--bottom');
 	let spines = document.querySelectorAll('.spine[data-spine-section]');
 	
@@ -35,13 +37,18 @@ export default function Scroller() {
 			setTimeout(()=>{
 				scroll.update();
 				updater = false;
-			}, 5000);
+			}, 2500);
 		}
 	}
 	
 
-	
+	window.addEventListener('resize', ()=>{
+		updateScroll();
+	});
 
+	btns.forEach(btn => {
+		btn.addEventListener('click', updateScroll);
+	});
 	// function lazyload(){
 	// 	let items = document.querySelectorAll('.lazy');
 	// 	items.forEach((element, index) => {
@@ -80,7 +87,7 @@ export default function Scroller() {
 			}
 		}
 		Lottie();
-		updateScroll();
+		// updateScroll();
 		spines.forEach((spine) => {
 			let attr = spine.getAttribute('data-spine-section');
 			let section = document.querySelector(`section[data-spine-section='${attr}']`);

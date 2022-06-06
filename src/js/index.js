@@ -41,6 +41,8 @@ bridge.subscribe(e => {
             window.isVkMiniApp = true;
             if (isMobile) {
                 document.body.setAttribute('data-mini-app', true);
+            } else{
+                document.body.setAttribute('data-mini-app-desktop', true);
             }
         }
     }

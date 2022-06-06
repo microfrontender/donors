@@ -34,6 +34,7 @@ body
     border: none
     box-sizing: border-box
     flex-shrink: 0
+    user-select: none
 a, button, p, ul, li
     font: inherit
     color: inherit
@@ -66,6 +67,7 @@ sub
     font-size: 0.7em
 .wrap
     display: flex
+
 
 .checklist
     position: fixed
@@ -150,6 +152,40 @@ sub
     opacity: 0
     transition: opacity ease 0.2s
     z-index: 100000
+
+.c-scrollbar
+    position: fixed
+    display: flex
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 0.5rem
+    background: rgba(0, 0, 0, 0)
+    visibility: hidden
+    pointer-events: none
+    z-index: 100000
+    transition: all ease 0.2s
+    opacity: 0
+    &_thumb
+        background: #a7a7a7
+        display: flex
+        border-radius: 0.2rem
+        opacity: 0.3
+        transition: opacity ease 0.2s
+        cursor: pointer
+        width: 6rem !important
+    &:hover
+        height: 1rem
+        background: rgba(0, 0, 0, 0.1)
+        .c-scrollbar_thumb
+            opacity: 0.8
+            border-radius: 0.5rem
+[data-mini-app-desktop]
+    .c-scrollbar
+        visibility: visible
+        opacity: 1
+        &_thumb
+            pointer-events: auto 
 @media (max-aspect-ratio: 10/6) and ( min-width: 768px )
     html
         font-size: 1.9vh
@@ -157,6 +193,11 @@ sub
     html
         font-size: 1.7vh
 @media screen and ( max-width: 767px )
+    [data-mini-app-desktop]
+        .c-scrollbar
+            display: none
+            visibility: hidden
+            opacity: 0
     html
         font-size: 4.267vw
         -webkit-text-size-adjust: 100%
