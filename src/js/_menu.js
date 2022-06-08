@@ -4,6 +4,7 @@ export default function Menu() {
     let header = document.querySelector('.header');
     let burger = document.querySelector('.header__burger');
     let about = document.querySelector('.header__menu-item--about');
+    let links = document.querySelectorAll('.header__menu-link[data-href]');
     let back = document.querySelector('.header__about-back');
     let popup = document.querySelector('.header__popup');
     let copyLinks = document.querySelectorAll('.copy-link');
@@ -26,7 +27,6 @@ export default function Menu() {
         if(history.state !== null && window.innerWidth < 768){
         history.back();
         }
-       
         document.querySelector('body').classList.remove('prevent-scroll');
         isOpen = false;
         // document.body.style.height = '';
@@ -53,7 +53,11 @@ export default function Menu() {
         isOpen = true;
         // document.body.style.height = '100vh';
     }
-
+    links.forEach(link => {
+        link.addEventListener('click', ()=>{
+            closePopup();
+        });
+    });
     burger.addEventListener('click', () => {
 
         if (isOpen) {
